@@ -32,9 +32,6 @@ public class PlayerMovement : MonoBehaviour
         _fuel = GetComponent<PlayerFuel>();
         if (_fuel == null)
             _fuel = gameObject.AddComponent<PlayerFuel>();
-
-        if (_controller == null)
-            Debug.LogError("PlayerMovement requires a CharacterController.", this);
     }
 
     void Update()

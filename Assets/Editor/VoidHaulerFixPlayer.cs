@@ -22,10 +22,7 @@ public static class VoidHaulerFixPlayer
         }
 
         if (roots.Count == 0)
-        {
-            Debug.LogWarning("Void Hauler: No PlayerMovement in the scene.");
             return;
-        }
 
         foreach (var go in roots)
         {
@@ -50,8 +47,6 @@ public static class VoidHaulerFixPlayer
 
             EditorSceneManager.MarkSceneDirty(go.scene);
         }
-
-        Debug.Log("Void Hauler: Player fixed — one PlayerMovement, PlayerFuel present, camera assigned if it was empty.");
     }
 }
 #endif
