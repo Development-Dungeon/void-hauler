@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63955f94-524d-4979-be8b-736cf38a9537" name="Changes" comment="" />
+    <list default="true" id="63955f94-524d-4979-be8b-736cf38a9537" name="Changes" comment="added untracked files">
+      <change beforePath="$PROJECT_DIR$/Assets/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameLifetimeScope.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +117,7 @@
       <updated>1774412956885</updated>
       <workItem from="1774412958913" duration="4636000" />
       <workItem from="1774463207546" duration="1927000" />
+      <workItem from="1774497632518" duration="216000" />
     </task>
     <task id="LOCAL-00001" summary="added v container and player move">
       <option name="closed" value="true" />
@@ -123,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774497322167</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added untracked files">
+      <option name="closed" value="true" />
+      <created>1774497741150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774497741150</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="added v container and player move" />
-    <option name="LAST_COMMIT_MESSAGE" value="added v container and player move" />
+    <MESSAGE value="added untracked files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added untracked files" />
   </component>
 </project>
