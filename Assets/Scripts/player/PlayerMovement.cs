@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         if (_userMovementInput == Vector2.zero)
             return;
         
-        var move = new Vector2(_userMovementInput.x, _userMovementInput.y);
+        var move = new Vector3(_userMovementInput.x,0, _userMovementInput.y);
         
         move = transform.TransformDirection(move);
         
