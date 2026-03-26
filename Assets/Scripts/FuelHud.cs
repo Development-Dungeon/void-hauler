@@ -45,10 +45,7 @@ public class FuelHud : MonoBehaviour
         trt.sizeDelta = new Vector2(-32f, 8f);
         var whiteSprite = UiWhiteSprite();
         if (whiteSprite == null)
-        {
-            Debug.LogError("FuelHud: missing white texture for UI sprites.", this);
             return;
-        }
 
         var trackImg = track.AddComponent<Image>();
         trackImg.sprite = whiteSprite;
