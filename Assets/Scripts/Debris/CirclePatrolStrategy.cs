@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Debris_Movement
+namespace Debris
 {
     [CreateAssetMenu(fileName = "PatrolPattern", menuName = "PatrolPattern/CirclePatrolStrategy")]
     public class CirclePatrolStrategy : PatrolPattern

@@ -1,3 +1,6 @@
+using Attributes;
+using player;
+using test;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -9,14 +12,14 @@ public class GameLifetimeScope : LifetimeScope
     {
         // We tell VContainer: "Look for the CharacterController on my Player and use it for injection."
         builder.RegisterComponentInHierarchy<CharacterController>();
-        builder.RegisterComponentInHierarchy<PlayerMovement>();
-        builder.RegisterComponent(playerHealth).Keyed(LifeTimeKeys.PLAYER_HEALTH);
+        builder.RegisterComponentInHierarchy<Movement>();
+        builder.RegisterComponent(playerHealth).Keyed(LifeTimeKeys.PlayerHealth);
 
         builder.RegisterEntryPoint<DamagePlayer>();
     }
 
     public enum LifeTimeKeys 
     {
-       PLAYER_HEALTH 
+       PlayerHealth 
     }
 }

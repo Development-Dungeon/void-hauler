@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Debris_Movement
+namespace Debris
 {
     public abstract class PatrolPattern : ScriptableObject
     {

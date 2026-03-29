@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Debris_Movement
+namespace Debris
 {
     [CreateAssetMenu(fileName = "ZRotateStrategy", menuName = "RotationStrategy/ZRotationStrategy")]
     public class ZRotateStrategy : RotateStrategy 

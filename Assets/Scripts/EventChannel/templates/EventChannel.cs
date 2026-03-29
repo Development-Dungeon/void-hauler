@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EventChannel
+namespace EventChannel.templates
 {
     public abstract class EventChannel<T> : ScriptableObject
     {
@@ -9,9 +9,9 @@ namespace EventChannel
 
         public void Invoke(T value)
         {
-            foreach (var listener  in _observers)
+            foreach (var listener in _observers)
             {
-                listener.Raise(value); 
+                listener.Raise(value);
             }
         }
 
@@ -20,10 +20,10 @@ namespace EventChannel
     }
 
 
-    public readonly struct Empty { }
-
-    [CreateAssetMenu(fileName = "EventChannel", menuName = "Events/EventChannel")]
-    public class EventChannel : EventChannel<Empty>
+    public readonly struct Empty
     {
     }
+
+    [CreateAssetMenu(fileName = "EventChannel", menuName = "Events/EventChannel")]
     public class EventChannel : EventChannel<Empty> { }
+}
