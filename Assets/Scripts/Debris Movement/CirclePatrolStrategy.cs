@@ -17,7 +17,7 @@ namespace Debris_Movement
             // 1. Increment the angle based on time and speed
             angle += speed * Time.deltaTime;
 
-            // 2. Calculate the new X and Z positions (for a horizontal circle)
+            // 2. Calculate the new X and Y positions (for a horizontal circle)
             float x = Mathf.Cos(angle) * radius;
             float y = Mathf.Sin(angle) * radius;
 
