@@ -4,61 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63955f94-524d-4979-be8b-736cf38a9537" name="Changes" comment="removed examples">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attributes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attributes/Health.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debris.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/abstract.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/HealthEventListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/FloatToTextAdaptor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/Timer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/player/Movement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/player/Movement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/test.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/test/DamagePlayer.cs" afterDir="false" />
+    <list default="true" id="63955f94-524d-4979-be8b-736cf38a9537" name="Changes" comment="move files around">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.void-hauler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.void-hauler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamagePlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamagePlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/test/DamagePlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/CirclePatrolStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/CirclePatrolStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/CirclePatrolStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/CirclePatrolStrategy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/PatrolPattern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/PatrolPattern.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/PatrolPattern.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/PatrolPattern.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/RockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/RockController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/RockController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/RockController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/RotateStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/RotateStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/RotateStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/RotateStrategy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/ZRotateStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/ZRotateStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debris Movement/ZRotateStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debris/ZRotateStrategy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/EventChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/abstract/EventChannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/EventChannel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/abstract/EventChannel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/EventListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/abstract/EventListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/EventListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/abstract/EventListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/FloatEventChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/FloatEventChannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/FloatEventChannel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/FloatEventChannel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/FloatEventListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/FloatEventListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/FloatEventListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/FloatEventListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/HealthEventChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/HealthEventChannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/HealthEventChannel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/HealthEventChannel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/HealthEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/HealthEventListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/HealthEventListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/IntEventChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/IntEventChannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/IntEventChannel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/IntEventChannel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/IntEventListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/IntEventListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventChannel/IntEventListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventChannel/concrete/IntEventListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FloatToTextAdaptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FloatToTextAdaptor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/FloatToTextAdaptor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GetPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/GetPropertyDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GetPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/GetPropertyDrawer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attributes/Health.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/Timer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/PlayerMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/PlayerMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attributes/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attributes/Health.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774766316166</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move files around">
+      <option name="closed" value="true" />
+      <created>1774806103138</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774806103138</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +215,8 @@
     <MESSAGE value="moved some files" />
     <MESSAGE value="added health and a few other structures qol" />
     <MESSAGE value="removed examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed examples" />
+    <MESSAGE value="move files around" />
+    <option name="LAST_COMMIT_MESSAGE" value="move files around" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
