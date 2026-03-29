@@ -12,7 +12,7 @@ public class GameLifetimeScope : LifetimeScope
     {
         // We tell VContainer: "Look for the CharacterController on my Player and use it for injection."
         builder.RegisterComponentInHierarchy<CharacterController>();
-        builder.RegisterComponentInHierarchy<Movement>();
+        builder.RegisterComponentInHierarchy<PlayerMovementController>();
         builder.RegisterComponent(playerHealth).Keyed(LifeTimeKeys.PlayerHealth);
 
         builder.RegisterEntryPoint<DamagePlayer>();

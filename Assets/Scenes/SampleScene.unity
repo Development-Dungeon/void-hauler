@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 22135485}
   - component: {fileID: 22135484}
   - component: {fileID: 22135487}
+  - component: {fileID: 22135488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -222,7 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0710c249d780b4d549da4d7077fc5cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 2
 --- !u!114 &22135487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +240,19 @@ MonoBehaviour:
   healthPercentChannel: {fileID: 11400000, guid: 87b007b49340e4880964abd23d490d33, type: 2}
   onDeathChannel: {fileID: 11400000, guid: c9ff1479885c343c4a131124c59d5974, type: 2}
   onAliveChannel: {fileID: 0}
+--- !u!114 &22135488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22135481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d5d26aaf1d4104ada4d344e4c6133d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::player.Movement
+  moveSpeed: 2
 --- !u!1 &229612978
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +482,8 @@ GameObject:
   - component: {fileID: 510808650}
   - component: {fileID: 510808649}
   - component: {fileID: 510808648}
+  - component: {fileID: 510808654}
+  - component: {fileID: 510808653}
   m_Layer: 0
   m_Name: Debris
   m_TagString: Untagged
@@ -488,11 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb971624aa864a248c205d836f6e9bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  canRotate: 1
-  canPatrol: 1
-  rotationStrategy: {fileID: 11400000, guid: fa16b385543b34ab0987ccaa32a27e16, type: 2}
-  patrolPattern: {fileID: 11400000, guid: 954be053370584fcebe15255afc88a29, type: 2}
-  radius: 1
+  contactDamage: 10
 --- !u!64 &510808649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -587,6 +598,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &510808653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510808647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3f4cb00d584553867e0a9d02add329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Debris.ZRotator
+  rotationSpeed: 3.94
+--- !u!114 &510808654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510808647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652f0088d84c49259ea1f7ef1ed29c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Debris.CirclePatrol
+  speed: 0.67
+  radius: 2.24
 --- !u!1 &579343612
 GameObject:
   m_ObjectHideFlags: 0

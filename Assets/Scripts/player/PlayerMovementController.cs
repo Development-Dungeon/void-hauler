@@ -5,7 +5,7 @@ using VContainer;
 namespace player
 {
     [RequireComponent(typeof(CharacterController))]
-    public class Movement : MonoBehaviour
+    public class PlayerMovementController : MonoBehaviour
     {
         [Inject]
         private CharacterController _controller;
@@ -22,7 +22,7 @@ namespace player
             if (_userInput == Vector2.zero)
                 return;
         
-            var move = new Vector3(_userInput.x,0, _userInput.y);
+            var move = new Vector3(_userInput.x,_userInput.y, 0);
         
             move = transform.TransformDirection(move);
         
