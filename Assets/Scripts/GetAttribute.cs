@@ -2,7 +2,4 @@ using System;
 using UnityEngine;
 
 [AttributeUsage(AttributeTargets.Field)]
-public class GetAttribute : PropertyAttribute
-{
-        
-}
+public class GetAttribute : PropertyAttribute { }

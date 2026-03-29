@@ -7,7 +7,6 @@ using VContainer.Unity;
 public class DamagePlayer : ITickable
 {
     
-    // I want to take the channel and publish to it
     private Health _playerHealth;
     private CountdownTimer _damageCounter;
 

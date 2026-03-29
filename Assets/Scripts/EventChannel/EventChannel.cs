@@ -26,4 +26,4 @@ namespace EventChannel
     public class EventChannel : EventChannel<Empty>
     {
     }
-}
+    public class EventChannel : EventChannel<Empty> { }
