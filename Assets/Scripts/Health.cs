@@ -1,62 +1,49 @@
 using System;
-using DefaultNamespace;
 using EventChannel;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Health : MonoBehaviour
 {
     // attributes
-    public float maxHealth = 100f;
-    private float _currentHealth;
+    [SerializeField] public float maxHealth = 100f;
+    [SerializeField] private float currentHealth;
     
-    public EventChannel<float> eventChannel;
-
-    // events
-    public event Action<float> OnHealthChanged;
-    public event Action OnDeath;
-    public event Action OnAlive;
-
-    private CountdownTimer damageTimer;
-
-    public float timer = 4;
+    public EventChannel<float> healthPercentChannel;
+    public EventChannel<Health> onDeathChannel;
+    public EventChannel<Health> onAliveChannel;
 
     private void Awake()
     {
-        _currentHealth = maxHealth;
-        damageTimer = new CountdownTimer(timer);
-        damageTimer.OnTimerStop += TakeTimerDamage;
+        SetCurrentHealth(maxHealth);
     }
 
-    private void TakeTimerDamage()
+    private void SetCurrentHealth(float toBeCurrentHealth)
     {
-        TakeDamage(1.1f);
+        var previousState = IsDead;
         
-        damageTimer.Reset(timer);
-        damageTimer.Start();
+        currentHealth = toBeCurrentHealth;
+
+        var newState = IsDead;
+
+        if (previousState != newState) 
+        {
+            if(IsDead)
+                onDeathChannel?.Invoke(this);
+            else
+                onAliveChannel?.Invoke(this);
+        }
+        
+        healthPercentChannel?.Invoke(currentHealth / maxHealth);
+
     }
 
-    private void Start()
-    {
-        damageTimer.Start();
-    }
-
-    public bool IsDead => _currentHealth <= 0;
+    public bool IsDead => currentHealth <= 0;
+    public bool IsAlive => !IsDead;
     
-    // take damage
     public void TakeDamage(float damage)
     {
-        if (IsDead)
-            return;
-        
-        _currentHealth = Math.Max(_currentHealth - damage, 0f); 
-        
-        eventChannel?.Invoke(_currentHealth / maxHealth);
+        SetCurrentHealth(Math.Max(currentHealth - damage, 0f)); 
     }
 
-    private void Update()
-    {
-        if(damageTimer.IsRunning)
-            damageTimer.Tick(Time.deltaTime);
-        
-    }
 }
