@@ -5,7 +5,6 @@ using UnityEngine.Serialization;
 
 public class Health : MonoBehaviour
 {
-    // attributes
     [SerializeField] public float maxHealth = 100f;
     [SerializeField] private float currentHealth;
     
