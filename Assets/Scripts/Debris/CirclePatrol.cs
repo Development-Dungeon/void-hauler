@@ -6,8 +6,8 @@ namespace Debris
     public class CirclePatrol : MonoBehaviour 
     {
         private float _angle;
-        public float speed = 10;
-        public float radius = 4;
+        public float speed = 1;
+        public float radius = 0.67f;
         private Vector3 _centerPoint;
 
         private void Awake()
