@@ -1,6 +1,5 @@
 using Attributes;
 using player;
-using test;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -16,7 +15,6 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterComponentInHierarchy<PlayerMovementController>();
         builder.RegisterComponent(playerHealth).Keyed(LifeTimeKeys.PlayerHealth);
 
-        builder.RegisterEntryPoint<DamagePlayer>();
     }
 
     public enum LifeTimeKeys 
