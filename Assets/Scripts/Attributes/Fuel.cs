@@ -7,7 +7,7 @@ namespace Attributes
     public class Fuel : MonoBehaviour
     {
         [SerializeField] private float maxFuel = 100f;
-        [SerializeField] private float fuelPerMeter = 1f;
+        [SerializeField] private float fuelPerMeter = 0.25f;
         [SerializeField] private float currentFuel;
 
         public EventChannel<float> fuelChannel;
