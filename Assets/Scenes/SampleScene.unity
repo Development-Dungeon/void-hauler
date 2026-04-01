@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 475221177}
   - component: {fileID: 475221178}
   - component: {fileID: 475221179}
+  - component: {fileID: 475221180}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -997,6 +998,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!64 &475221180
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475221166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &579343612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,10 +1150,10 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 605497169}
-        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
-        m_MethodName: SetText
-        m_Mode: 5
+      - m_Target: {fileID: 605497171}
+        m_TargetAssemblyTypeName: Utility.FloatToTextAdaptor, Assembly-CSharp
+        m_MethodName: SetTextFromFloat
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1579,8 +1602,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 6.86
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
