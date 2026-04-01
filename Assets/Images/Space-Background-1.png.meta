@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6b280a8ed202d14b84f0beeae445e0b
+guid: f7fafb36a38b2b94ea883ff5213b8b68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6101551721642415384
-    second: jeremy-perkins-uhjiu8FjnsQ-unsplash_0
+      213: 5648074269704070595
+    second: Space-Background-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 1227, z: 2029, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jeremy-perkins-uhjiu8FjnsQ-unsplash_0
+      name: Space-Background-1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2400
-        height: 1560
+        y: 2799
+        width: 201
+        height: 201
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8155b23a6f01da450800000000000000
-      internalID: 6101551721642415384
+      spriteID: 3c52cbe9f9df16e40800000000000000
+      internalID: 5648074269704070595
       vertices: []
       indices: 
       edges: []
@@ -125,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jeremy-perkins-uhjiu8FjnsQ-unsplash_0: 6101551721642415384
+      Space-Background-1_0: 5648074269704070595
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
