@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 85491817}
   - component: {fileID: 85491819}
   - component: {fileID: 85491818}
+  - component: {fileID: 85491820}
   m_Layer: 0
   m_Name: Astroid
   m_TagString: Untagged
@@ -188,7 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.CirclePatrol
   speed: 1
   radius: 1.73
-  rotationSpeed: 100
 --- !u!65 &85491813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -339,6 +339,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85491811}
   m_CullTransparentMesh: 1
+--- !u!114 &85491820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85491811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3f4cb00d584553867e0a9d02add329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Debris.ZRotator
+  rotationSpeed: 50
 --- !u!1 &138370913
 GameObject:
   m_ObjectHideFlags: 0

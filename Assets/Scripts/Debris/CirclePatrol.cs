@@ -9,7 +9,7 @@ namespace Debris
         public float speed = 1;
         public float radius = 0.67f;
         private Vector3 _centerPoint;
-        public float rotationSpeed = 100f;
+       
 
         private void Awake()
         {
@@ -29,8 +29,6 @@ namespace Debris
             Vector3 offset = new Vector3(x, y, 0);
             transform.position = Vector3.Lerp(transform.position, _centerPoint + offset, Time.deltaTime * speed);
             
-            // Rotation (spin on Z axis)
-            transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
         }
 
     }
