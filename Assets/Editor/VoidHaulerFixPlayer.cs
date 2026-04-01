@@ -1,11 +1,12 @@
 #if UNITY_EDITOR
 using System.Collections.Generic;
+using Attributes;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
 /// <summary>
-/// One-click repair when Player has duplicate PlayerMovement and/or missing PlayerFuel.
+/// One-click repair when Player has duplicate PlayerMovement and/or missing Fuel.
 /// </summary>
 public static class VoidHaulerFixPlayer
 {
@@ -30,8 +31,8 @@ public static class VoidHaulerFixPlayer
             for (var i = list.Length - 1; i >= 1; i--)
                 Undo.DestroyObjectImmediate(list[i]);
 
-            if (go.GetComponent<PlayerFuel>() == null)
-                Undo.AddComponent<PlayerFuel>(go);
+            if (go.GetComponent<Fuel>() == null)
+                Undo.AddComponent<Fuel>(go);
 
             var main = Camera.main;
             if (main != null)
