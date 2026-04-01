@@ -29,6 +29,13 @@ public class PlayerMovement : MonoBehaviour
     {
         ApplyMouseFacing();
         ApplyThrust(_userInput);
+        ApplyCameraFollow();
+    }
+
+    private void ApplyCameraFollow()
+    {
+        var currentPlayerPosition = transform.position;
+        _camera.transform.position = new Vector3(currentPlayerPosition.x, currentPlayerPosition.y, _camera.transform.position.z);
     }
 
     void ApplyThrust(Vector2 userMovementInput)
