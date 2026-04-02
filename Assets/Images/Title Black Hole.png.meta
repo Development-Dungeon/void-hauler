@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 79924bc499af24148a62a6a99f765868
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4578498783149040001
+    second: Title Black Hole_0
+  - first:
+      213: 8642363763030365322
+    second: Title Black Hole_1
+  - first:
+      213: -6766884060869537050
+    second: Title Black Hole_2
+  - first:
+      213: -2039248605444260074
+    second: Title Black Hole_3
+  - first:
+      213: -2542211287764186315
+    second: Title Black Hole_4
+  - first:
+      213: 8193581511137063271
+    second: Title Black Hole_5
+  - first:
+      213: 7702410955469068881
+    second: Title Black Hole_6
+  - first:
+      213: 5774601090625582149
+    second: Title Black Hole_7
+  - first:
+      213: 6587455796137594576
+    second: Title Black Hole_8
+  - first:
+      213: -7371745455704080017
+    second: Title Black Hole_9
+  - first:
+      213: -2681562240830251298
+    second: Title Black Hole_10
+  - first:
+      213: -5656761453578877320
+    second: Title Black Hole_11
+  - first:
+      213: -2388819605053855822
+    second: Title Black Hole_12
+  - first:
+      213: -2940487540887433117
+    second: Title Black Hole_13
+  - first:
+      213: -7443034173499795956
+    second: Title Black Hole_14
+  - first:
+      213: 3802826820922159298
+    second: Title Black Hole_15
+  - first:
+      213: 1936678250484655652
+    second: Title Black Hole_16
+  - first:
+      213: 6994606768408433430
+    second: Title Black Hole_17
+  - first:
+      213: -1774497998549401704
+    second: Title Black Hole_18
+  - first:
+      213: 159040334698342786
+    second: Title Black Hole_19
+  - first:
+      213: -2834078765710502510
+    second: Title Black Hole_20
+  - first:
+      213: 3836524272553403320
+    second: Title Black Hole_21
+  - first:
+      213: 4718283269681657244
+    second: Title Black Hole_22
+  - first:
+      213: 6136604980529269985
+    second: Title Black Hole_23
+  - first:
+      213: -3640166426280624213
+    second: Title Black Hole_24
+  - first:
+      213: 8513813299956982583
+    second: Title Black Hole_25
+  - first:
+      213: 2172362620988805528
+    second: Title Black Hole_26
+  - first:
+      213: 7930654448600411210
+    second: Title Black Hole_27
+  - first:
+      213: 9172998309904196236
+    second: Title Black Hole_28
+  - first:
+      213: -190245691047012760
+    second: Title Black Hole_29
+  - first:
+      213: -1581931118208632929
+    second: Title Black Hole_30
+  - first:
+      213: 6507704587860545290
+    second: Title Black Hole_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Title Black Hole_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 84
+        width: 407
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ed7d95d97e570c0800000000000000
+      internalID: -4578498783149040001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_1
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 83
+        width: 406
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a841223ad08dfe770800000000000000
+      internalID: 8642363763030365322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_2
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 81
+        width: 404
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e25e939cc23712a0800000000000000
+      internalID: -6766884060869537050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_3
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 82
+        width: 405
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fb8cf923223b3e0800000000000000
+      internalID: -2039248605444260074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_4
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 82
+        width: 404
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53bc3d09d4048bcd0800000000000000
+      internalID: -2542211287764186315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_5
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 82
+        width: 405
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761788119f275b170800000000000000
+      internalID: 8193581511137063271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_6
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 82
+        width: 406
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a9fc274f574ea60800000000000000
+      internalID: 7702410955469068881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_7
+      rect:
+        serializedVersion: 2
+        x: 3636
+        y: 83
+        width: 409
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5443256c811832050800000000000000
+      internalID: 5774601090625582149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_8
+      rect:
+        serializedVersion: 2
+        x: 4149
+        y: 85
+        width: 408
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de8e5e05285b6b50800000000000000
+      internalID: 6587455796137594576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_9
+      rect:
+        serializedVersion: 2
+        x: 4659
+        y: 85
+        width: 410
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f618822b09c42b990800000000000000
+      internalID: -7371745455704080017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_10
+      rect:
+        serializedVersion: 2
+        x: 5170
+        y: 87
+        width: 413
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede5638795d29cad0800000000000000
+      internalID: -2681562240830251298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_11
+      rect:
+        serializedVersion: 2
+        x: 5682
+        y: 87
+        width: 413
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8760f44cd652f71b0800000000000000
+      internalID: -5656761453578877320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_12
+      rect:
+        serializedVersion: 2
+        x: 6194
+        y: 87
+        width: 414
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7a648c93539ded0800000000000000
+      internalID: -2388819605053855822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_13
+      rect:
+        serializedVersion: 2
+        x: 6707
+        y: 86
+        width: 411
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36051f2392a4137d0800000000000000
+      internalID: -2940487540887433117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_14
+      rect:
+        serializedVersion: 2
+        x: 7219
+        y: 86
+        width: 411
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c069375aad705b890800000000000000
+      internalID: -7443034173499795956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_15
+      rect:
+        serializedVersion: 2
+        x: 7732
+        y: 85
+        width: 409
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0b46b68da56c430800000000000000
+      internalID: 3802826820922159298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_16
+      rect:
+        serializedVersion: 2
+        x: 8245
+        y: 84
+        width: 407
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426ec5c9b9670ea10800000000000000
+      internalID: 1936678250484655652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_17
+      rect:
+        serializedVersion: 2
+        x: 8757
+        y: 82
+        width: 406
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613178efbc5d11160800000000000000
+      internalID: 6994606768408433430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_18
+      rect:
+        serializedVersion: 2
+        x: 9270
+        y: 81
+        width: 406
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f32d5d877bf57e0800000000000000
+      internalID: -1774497998549401704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_19
+      rect:
+        serializedVersion: 2
+        x: 9784
+        y: 82
+        width: 402
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28967ae7756053200800000000000000
+      internalID: 159040334698342786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_20
+      rect:
+        serializedVersion: 2
+        x: 10294
+        y: 81
+        width: 404
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2951950d0645ba8d0800000000000000
+      internalID: -2834078765710502510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_21
+      rect:
+        serializedVersion: 2
+        x: 10806
+        y: 82
+        width: 405
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3a5b5cf721e3530800000000000000
+      internalID: 3836524272553403320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_22
+      rect:
+        serializedVersion: 2
+        x: 11317
+        y: 83
+        width: 407
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c953b0f92a5ba7140800000000000000
+      internalID: 4718283269681657244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_23
+      rect:
+        serializedVersion: 2
+        x: 11829
+        y: 84
+        width: 408
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec075777b9992550800000000000000
+      internalID: 6136604980529269985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_24
+      rect:
+        serializedVersion: 2
+        x: 12340
+        y: 84
+        width: 409
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf7d36fbe78b7dc0800000000000000
+      internalID: -3640166426280624213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_25
+      rect:
+        serializedVersion: 2
+        x: 12851
+        y: 86
+        width: 411
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733aee39614272670800000000000000
+      internalID: 8513813299956982583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_26
+      rect:
+        serializedVersion: 2
+        x: 13363
+        y: 87
+        width: 412
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891df5b4b48c52e10800000000000000
+      internalID: 2172362620988805528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_27
+      rect:
+        serializedVersion: 2
+        x: 13874
+        y: 87
+        width: 413
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ce23dd3385f0e60800000000000000
+      internalID: 7930654448600411210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_28
+      rect:
+        serializedVersion: 2
+        x: 14386
+        y: 86
+        width: 413
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82291bbc590d4f70800000000000000
+      internalID: 9172998309904196236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_29
+      rect:
+        serializedVersion: 2
+        x: 14898
+        y: 86
+        width: 414
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866181d4d8c1c5df0800000000000000
+      internalID: -190245691047012760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_30
+      rect:
+        serializedVersion: 2
+        x: 15412
+        y: 86
+        width: 410
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97b908870adb0ae0800000000000000
+      internalID: -1581931118208632929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Black Hole_31
+      rect:
+        serializedVersion: 2
+        x: 15923
+        y: 84
+        width: 410
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0f8b96e7d2005a50800000000000000
+      internalID: 6507704587860545290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Title Black Hole_0: -4578498783149040001
+      Title Black Hole_1: 8642363763030365322
+      Title Black Hole_10: -2681562240830251298
+      Title Black Hole_11: -5656761453578877320
+      Title Black Hole_12: -2388819605053855822
+      Title Black Hole_13: -2940487540887433117
+      Title Black Hole_14: -7443034173499795956
+      Title Black Hole_15: 3802826820922159298
+      Title Black Hole_16: 1936678250484655652
+      Title Black Hole_17: 6994606768408433430
+      Title Black Hole_18: -1774497998549401704
+      Title Black Hole_19: 159040334698342786
+      Title Black Hole_2: -6766884060869537050
+      Title Black Hole_20: -2834078765710502510
+      Title Black Hole_21: 3836524272553403320
+      Title Black Hole_22: 4718283269681657244
+      Title Black Hole_23: 6136604980529269985
+      Title Black Hole_24: -3640166426280624213
+      Title Black Hole_25: 8513813299956982583
+      Title Black Hole_26: 2172362620988805528
+      Title Black Hole_27: 7930654448600411210
+      Title Black Hole_28: 9172998309904196236
+      Title Black Hole_29: -190245691047012760
+      Title Black Hole_3: -2039248605444260074
+      Title Black Hole_30: -1581931118208632929
+      Title Black Hole_31: 6507704587860545290
+      Title Black Hole_4: -2542211287764186315
+      Title Black Hole_5: 8193581511137063271
+      Title Black Hole_6: 7702410955469068881
+      Title Black Hole_7: 5774601090625582149
+      Title Black Hole_8: 6587455796137594576
+      Title Black Hole_9: -7371745455704080017
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
