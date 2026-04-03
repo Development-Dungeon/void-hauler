@@ -10,8 +10,7 @@ public class GameLifetimeScope : LifetimeScope
     
     protected override void Configure(IContainerBuilder builder)
     {
-        // We tell VContainer: "Look for the CharacterController on my Player and use it for injection."
-        builder.RegisterComponentInHierarchy<CharacterController>();
+        builder.RegisterComponentInHierarchy<Rigidbody>();
         builder.RegisterComponentInHierarchy<PlayerMovement>();
         // Keyed Health breaks at runtime: RegisterComponent<T> adds a build callback that calls
         // Resolve<Health>() with no key, so keyed-only registration fails. Uncomment only if you

@@ -20,6 +20,11 @@ namespace Attributes
             currentFuel = maxFuel;
         }
 
+        void Start()
+        {
+            fuelChannel?.Invoke(currentFuel);
+        }
+
         public void RegisterMovement(float metersOnXYPlane)
         {
             if (metersOnXYPlane <= 0f || currentFuel <= 0f)

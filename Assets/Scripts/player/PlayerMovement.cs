@@ -1,35 +1,58 @@
-using System;
 using Attributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using Utility;
 using VContainer;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(PlayerMovementController))]
 [RequireComponent(typeof(Fuel))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Get] [SerializeField] private CharacterController controller;
+    [Get] [SerializeField] private PlayerMovementController controller;
     [Get] [SerializeField] private Fuel fuel;
 
     [Inject] private Camera _camera;
-    
+
     private Vector2 _userInput;
-    
-    [SerializeField] private float thrustSpeed = 2f;
+    private Quaternion _rotationTarget;
+    private Vector2 _lastPositionForFuel;
+
     [SerializeField] private float turnSmoothing = 25f;
+
+    void Awake()
+    {
+        _rotationTarget = transform.rotation;
+        _lastPositionForFuel = new Vector2(transform.position.x, transform.position.y);
+    }
 
     public void OnMove(InputValue value)
     {
         _userInput = value.Get<Vector2>();
     }
-    
+
     void Update()
     {
         ApplyMouseFacing();
         ApplyThrust(_userInput);
         ApplyCameraFollow();
+    }
+
+    void FixedUpdate()
+    {
+        controller.SyncRotation(_rotationTarget);
+    }
+
+    void LateUpdate()
+    {
+        var xy = new Vector2(transform.position.x, transform.position.y);
+        if (_userInput != Vector2.zero && fuel != null && fuel.HasFuel)
+        {
+            var traveled = Vector2.Distance(xy, _lastPositionForFuel);
+            if (traveled > 1e-5f)
+                fuel.RegisterMovement(traveled);
+        }
+
+        _lastPositionForFuel = xy;
     }
 
     private void ApplyCameraFollow()
@@ -40,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
     void ApplyThrust(Vector2 userMovementInput)
     {
-        if (controller == null || fuel == null)
+        controller.ClearThrust();
+        if (fuel == null)
             return;
         if (userMovementInput == Vector2.zero)
             return;
@@ -58,15 +82,7 @@ public class PlayerMovement : MonoBehaviour
         if (move.sqrMagnitude > 1f)
             move.Normalize();
 
-        var motion = new Vector3(move.x, move.y, 0f) * (thrustSpeed * Time.deltaTime);
-        var before = transform.position;
-        controller.Move(motion);
-
-        var after = transform.position;
-        var traveled = new Vector2(after.x - before.x, after.y - before.y).magnitude;
-        if (traveled < 1e-5f)
-            traveled = motion.magnitude;
-        fuel.RegisterMovement(traveled);
+        controller.SetPlanarThrust(move);
     }
 
     void ApplyMouseFacing()
@@ -82,8 +98,8 @@ public class PlayerMovement : MonoBehaviour
         forward.Normalize();
 
         var target = Quaternion.LookRotation(forward, dir);
-        transform.rotation = Quaternion.Slerp(
-            transform.rotation,
+        _rotationTarget = Quaternion.Slerp(
+            _rotationTarget,
             target,
             1f - Mathf.Exp(-turnSmoothing * Time.deltaTime));
     }

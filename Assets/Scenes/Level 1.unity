@@ -321,8 +321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69, y: 2.42}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 3.18, y: 2.1}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85491817
 MonoBehaviour:
@@ -424,7 +424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.7, y: 515}
+  m_AnchoredPosition: {x: 327, y: 361}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111109769
@@ -1101,7 +1101,9 @@ GameObject:
   m_Component:
   - component: {fileID: 475221167}
   - component: {fileID: 475221171}
-  - component: {fileID: 475221175}
+  - component: {fileID: 475221181}
+  - component: {fileID: 475221183}
+  - component: {fileID: 475221182}
   - component: {fileID: 475221174}
   - component: {fileID: 475221172}
   - component: {fileID: 475221176}
@@ -1143,8 +1145,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475221166}
   serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 14
+  m_LinearDamping: 2.2
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1157,10 +1159,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 1
 --- !u!114 &475221172
 MonoBehaviour:
@@ -1209,31 +1211,6 @@ MonoBehaviour:
   healthPercentChannel: {fileID: 11400000, guid: 87b007b49340e4880964abd23d490d33, type: 2}
   onDeathChannel: {fileID: 11400000, guid: c9ff1479885c343c4a131124c59d5974, type: 2}
   onAliveChannel: {fileID: 0}
---- !u!143 &475221175
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475221166}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &475221176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,9 +1237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0710c249d780b4d549da4d7077fc5cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  controller: {fileID: 475221175}
+  controller: {fileID: 475221183}
   fuel: {fileID: 475221178}
-  thrustSpeed: 6.58
   turnSmoothing: 25
 --- !u!114 &475221178
 MonoBehaviour:
@@ -1275,9 +1251,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 233ec8a87f184b678c4d3a27ba1dfcf7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerFuel
+  m_EditorClassIdentifier: Assembly-CSharp::Attributes.Fuel
   maxFuel: 100
-  fuelPerMeter: 1
+  fuelPerMeter: 0.25
   currentFuel: 0
   fuelChannel: {fileID: 11400000, guid: 2e7776bb77d594962992cd4189bf8092, type: 2}
 --- !u!212 &475221179
@@ -1361,6 +1337,60 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &475221181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475221166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8e9f0a1b2c4d5e6f708192a3b4c5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Utility.PlanarForceMotor
+  body: {fileID: 475221171}
+  thrustAcceleration: 38
+  maxPlanarSpeed: 5.2
+  forceMode: 5
+  clampPlanarSpeed: 1
+--- !u!136 &475221182
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475221166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &475221183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475221166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ffee00beef0000cafebabec0ffee01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
+  body: {fileID: 475221171}
+  motor: {fileID: 475221181}
 --- !u!1 &579343612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 121.98, y: 410.6}
+  m_AnchoredPosition: {x: 433, y: 258}
   m_SizeDelta: {x: 285.03, y: 8.0036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869504057
@@ -2087,7 +2117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 204, y: 382}
+  m_AnchoredPosition: {x: 518, y: 222}
   m_SizeDelta: {x: 221, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953219425
@@ -2357,7 +2387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000095367, y: 436.6}
+  m_AnchoredPosition: {x: 311.02, y: 284.00003}
   m_SizeDelta: {x: 41.0603, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368051919
@@ -2912,7 +2942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c48853207dd8d43bf0bc199ab8bc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  pickupSound: {fileID: 8300000, guid: fd973d4fcd60b144789410fd52119fe7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
