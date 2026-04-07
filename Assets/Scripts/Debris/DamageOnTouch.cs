@@ -1,80 +1,113 @@
 using System;
+using System.Collections.Generic;
 using Attributes;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utility;
 
 namespace Debris
 {
-    public class DamageOnTouch : MonoBehaviour
+    public class DamageOnTouchController
     {
-        public float contactDamage = 10;
-        public float damageCooldownTimer = .5f;
-        public bool waitingForExit = false;
-        private CountdownTimer _damageTimer;
-        private Health _health;
+        
+        private readonly float _contactDamage ;
+        private readonly float _damageCooldownTimer ;
+        private readonly CountdownTimer _damageTimer;
+        private readonly Health _currentOtherHealth;
 
-        private void Start()
+        public DamageOnTouchController(float contactDamage, float damageCooldownTimer, Health currentOtherHealth)
         {
-           _damageTimer = new CountdownTimer(damageCooldownTimer);
-           _damageTimer.OnTimerStop += OnDamageTimer;
+            _contactDamage = contactDamage;
+            _damageCooldownTimer = damageCooldownTimer;
+            _currentOtherHealth = currentOtherHealth;
+            
+            // set the timer
+            _damageTimer = new CountdownTimer(damageCooldownTimer);
+            _damageTimer.OnTimerStop += OnDamageTimer;
+            _damageTimer.Start();
         }
 
         private void OnDamageTimer()
         {
             // at this point i must still be inside the object so i should take more damage
-            if (_health == null)
+            if (_currentOtherHealth == null)
             {
                 // i won't restart the timer. i think this block is never reachable 
                 return;
             }
             
-            _health.TakeDamage(contactDamage);
+            _currentOtherHealth.TakeDamage(_contactDamage);
             
             StartTimer();
         }
+        
+        private void StartTimer()
+        {
+            if (!(_damageCooldownTimer > 0)) return;
+            
+            _damageTimer.Reset(_damageCooldownTimer);
+            _damageTimer.Start();
+        }
+
+        public void Tick(float deltaTime)
+        {
+            if (_damageTimer == null) return;
+            
+            if(_damageTimer.IsRunning) 
+                _damageTimer.Tick(deltaTime);
+        }
+
+        public void TakeDamage()
+        {
+           OnDamageTimer(); 
+        }
+    }
+    public class DamageOnTouch : MonoBehaviour
+    {
+        public float contactDamage = 10;
+        public float damageCooldownTimer = .5f;
+        public bool waitingForExit = false;
+
+
+        private Dictionary<Collider, DamageOnTouchController> _touches = new();
 
         private void Update()
         {
-            if(_damageTimer.IsRunning)
-                _damageTimer.Tick(Time.deltaTime);
-        }
+            foreach (var keyValuePair in _touches)
+            {
+                var touch = keyValuePair.Value;
+                touch.Tick(Time.deltaTime);
+            }
 
-        private void OnDestroy()
-        {
-           _damageTimer.OnTimerStop -= OnDamageTimer;
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (waitingForExit) return;
             
-            _health = other.gameObject.GetComponent<Health>();
+            // if (waitingForExit) return;
+            
+            var health = other.gameObject.GetComponent<Health>();
 
-            if (_health == null) return;
-            
-            _health.TakeDamage(contactDamage);
-            
-            waitingForExit = true;
+            if (health == null) return;
 
-            StartTimer();
+            var damageController = new DamageOnTouchController(contactDamage, damageCooldownTimer, health);
+
+            damageController.TakeDamage();
+                
+            _touches.Add(other,damageController) ;
+            
+        }
+
+        private void OnDestroy()
+        {
+            _touches.Clear();
         }
 
         private void OnTriggerExit(Collider other)
         {
-            waitingForExit = false;
-
-            _health = null;
-
-            StartTimer();
+            _touches.Remove(other);
         }
 
-        private void StartTimer()
-        {
-            if (!(damageCooldownTimer > 0)) return;
-            
-            _damageTimer.Reset(damageCooldownTimer);
-            _damageTimer.Start();
-        }
     }
 }

@@ -11,8 +11,7 @@ namespace Debris
             if (Item == null)
                 return;
             
-            var inventory = other.gameObject.GetComponent<Inventory.Inventory>();
-            
+            var inventory = other.GetComponentInParent<Inventory.Inventory>();
             if (inventory == null)
                 return;
             
