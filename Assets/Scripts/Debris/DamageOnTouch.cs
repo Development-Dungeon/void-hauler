@@ -74,7 +74,6 @@ namespace Debris
 
         private void Update()
         {
-            // on the update, i need to cycle through all the colliders and tick the timer
             foreach (var keyValuePair in _touches)
             {
                 var touch = keyValuePair.Value;
