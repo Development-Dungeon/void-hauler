@@ -67,7 +67,6 @@ namespace Debris
     {
         public float contactDamage = 10;
         public float damageCooldownTimer = .5f;
-        public bool waitingForExit = false;
 
 
         private Dictionary<Collider, DamageOnTouchController> _touches = new();
@@ -84,8 +83,6 @@ namespace Debris
 
         private void OnTriggerEnter(Collider other)
         {
-            
-            // if (waitingForExit) return;
             
             var health = other.gameObject.GetComponent<Health>();
 
