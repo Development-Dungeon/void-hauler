@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VContainer;
 
 /// <summary>
 /// Places <see cref="clawTip"/> along the ship forward (same XY direction as thrust: hull <see cref="Transform.up"/>)
@@ -8,7 +10,7 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class ClawExtender : MonoBehaviour
 {
-    [SerializeField] Camera cameraOverride;
+    [Inject] Camera cam;
     [Tooltip("Object that rotates with the ship (e.g. Capsule with PlayerMovement). Uses its up = thrust/facing direction.")]
     [SerializeField] Transform shipForward;
     [Tooltip("End of the claw / grab point. World position is driven each frame.")]
@@ -22,8 +24,6 @@ public class ClawExtender : MonoBehaviour
     [Tooltip("How far the tip reaches from the mount at full extension.")]
     [SerializeField] float maxReach = 2.2f;
 
-    Camera Cam => cameraOverride != null ? cameraOverride : Camera.main;
-
     void Reset()
     {
         mount = transform;
@@ -34,7 +34,7 @@ public class ClawExtender : MonoBehaviour
 
     void Update()
     {
-        if (clawTip == null || Cam == null || Mouse.current == null)
+        if (clawTip == null || cam == null || Mouse.current == null)
             return;
 
         var origin = mount != null ? mount : transform;
@@ -67,7 +67,7 @@ public class ClawExtender : MonoBehaviour
     bool TryMouseOnPlayPlane(out Vector3 point)
     {
         point = default;
-        var ray = Cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+        var ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
         var plane = new Plane(Vector3.forward, Hull.position);
         if (!plane.Raycast(ray, out float dist))
             return false;

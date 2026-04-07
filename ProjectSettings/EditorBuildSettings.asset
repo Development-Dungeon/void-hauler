@@ -7,10 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
-    guid: eec955dbedc7df34ab3adfa1265c8931
+    guid: 2bc751e99a2004f36b65f26b036f612f
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Upgrade Shop.unity
+    guid: eec955dbedc7df34ab3adfa1265c8931
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

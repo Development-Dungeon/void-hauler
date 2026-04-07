@@ -10,22 +10,12 @@ namespace Utility
     [RequireComponent(typeof(Rigidbody))]
     public class PlanarForceMotor : MonoBehaviour
     {
-        [SerializeField] private Rigidbody body;
-        [FormerlySerializedAs("thrustForce")]
+        [SerializeField] [Get] private Rigidbody body;
         [SerializeField] private float thrustAcceleration = 35f;
         [SerializeField] private float maxPlanarSpeed = 10f;
         [SerializeField] private ForceMode forceMode = ForceMode.Acceleration;
         [SerializeField] private bool clampPlanarSpeed = true;
-
         private Vector2 _thrustInput;
-
-        void Awake()
-        {
-            if (body == null)
-                body = GetComponent<Rigidbody>();
-        }
-
-        public Rigidbody Body => body;
 
         /// <summary>
         /// World-space direction on the XY plane. Magnitude is clamped to 0–1.
