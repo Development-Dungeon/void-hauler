@@ -6,8 +6,8 @@ namespace Inventory
     public class InventoryEntry
     {
         public Item item;
-        public int count;
-        public InventoryEntry(Item item, int count = 1)
+        public float count;
+        public InventoryEntry(Item item, float count = 1)
         {
             this.item = item;
             this.count = count;

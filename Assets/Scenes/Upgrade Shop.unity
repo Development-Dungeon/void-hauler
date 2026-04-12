@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sell
+  m_text: Sell Junk (1)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -555,8 +555,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d27e2b2efaec84426b8c686272798f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  catalog:
+  - itemType: 1
+    salePrice: 1
   playerHealth: {fileID: 11400000, guid: 756a4368e16a0400f9479414f581093c, type: 2}
   planarForceMotor: {fileID: 11400000, guid: 0aeeefcea765747ec9686fd035e70554, type: 2}
+  playerInventory: {fileID: 11400000, guid: b4c38931c0eda47eb9167204188e3757, type: 2}
+  coinText: {fileID: 1041482499}
+  junkText: {fileID: 1067400641}
+  sellJunkButton: {fileID: 2115480055}
 --- !u!4 &487195997
 Transform:
   m_ObjectHideFlags: 0
@@ -691,7 +698,7 @@ GameObject:
   - component: {fileID: 1038058205}
   - component: {fileID: 1038058204}
   m_Layer: 5
-  m_Name: Sell Button (1)
+  m_Name: Update Buy Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,7 +863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins :'
+  m_text: 'Coins : 125'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -948,7 +955,7 @@ GameObject:
   - component: {fileID: 1067400642}
   - component: {fileID: 1067400641}
   m_Layer: 5
-  m_Name: Inventory
+  m_Name: Junk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -993,7 +1000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Junk : 1
+  m_text: 'Junk : 7
 
 '
   m_isRightToLeft: 0
@@ -1238,7 +1245,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 30.38
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1518,7 +1525,7 @@ GameObject:
   - component: {fileID: 1684847676}
   - component: {fileID: 1684847675}
   m_Layer: 5
-  m_Name: Inventory (1)
+  m_Name: Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1864,7 +1871,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115480056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 487195996}
+        m_TargetAssemblyTypeName: Upgrades.ShopManager, Assembly-CSharp
+        m_MethodName: SellButtonJunk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2115480056
 MonoBehaviour:
   m_ObjectHideFlags: 0

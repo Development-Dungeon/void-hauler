@@ -558,8 +558,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3905402e41044db2b50f33b81c5fd76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
-  Item:
-    itemName: Currency
+  inventoryEntries:
+  - item:
+      itemType: 1
+    count: 1
+  destroyOnTouch: 1
 --- !u!114 &138370915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,8 +1041,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3905402e41044db2b50f33b81c5fd76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
-  Item:
-    itemName: Currency
+  inventoryEntries:
+  - item:
+      itemType: 1
+    count: 1
+  destroyOnTouch: 1
 --- !u!114 &372088753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,8 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10fef98491245249c620863b0629ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player.Inventory
-  items: []
-  maxInventorySize: 5
+  inventoryDataTemplate: {fileID: 11400000, guid: b4c38931c0eda47eb9167204188e3757, type: 2}
 --- !u!114 &475221177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1986,8 +1991,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3905402e41044db2b50f33b81c5fd76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
-  Item:
-    itemName: Currency
+  inventoryEntries:
+  - item:
+      itemType: 1
+    count: 1
+  destroyOnTouch: 1
 --- !u!114 &861945414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2675,8 +2683,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3905402e41044db2b50f33b81c5fd76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
-  Item:
-    itemName: Currency
+  inventoryEntries:
+  - item:
+      itemType: 1
+    count: 1
+  destroyOnTouch: 1
 --- !u!114 &1507711731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,6 +3000,7 @@ MonoBehaviour:
   cam: {fileID: 948884653}
   playerHealthData: {fileID: 11400000, guid: 756a4368e16a0400f9479414f581093c, type: 2}
   playerMovementData: {fileID: 11400000, guid: 66acfd2eb20454df8960b7c9a63e0312, type: 2}
+  playerInventoryData: {fileID: 11400000, guid: b4c38931c0eda47eb9167204188e3757, type: 2}
 --- !u!4 &1735995952
 Transform:
   m_ObjectHideFlags: 0
@@ -3036,8 +3048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3905402e41044db2b50f33b81c5fd76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
-  Item:
-    itemName: Currency
+  inventoryEntries:
+  - item:
+      itemType: 1
+    count: 1
+  destroyOnTouch: 1
 --- !u!114 &1846780426
 MonoBehaviour:
   m_ObjectHideFlags: 0
