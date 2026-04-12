@@ -338,7 +338,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.DamageOnTouch
   contactDamage: 10
   damageCooldownTimer: 3
-  waitingForExit: 0
 --- !u!114 &85491818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,6 +1265,7 @@ GameObject:
   - component: {fileID: 475221180}
   - component: {fileID: 475221184}
   - component: {fileID: 475221185}
+  - component: {fileID: 475221186}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1363,8 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30e00ff86cc49be9095ff2f7e6e0f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.Health
-  maxHealth: 100
-  currentHealth: 0
+  templateHealthData: {fileID: 11400000, guid: 756a4368e16a0400f9479414f581093c, type: 2}
   healthPercentChannel: {fileID: 11400000, guid: 87b007b49340e4880964abd23d490d33, type: 2}
   onDeathChannel: {fileID: 11400000, guid: c9ff1479885c343c4a131124c59d5974, type: 2}
   onAliveChannel: {fileID: 0}
@@ -1396,7 +1395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 475221183}
   fuel: {fileID: 475221178}
-  turnSmoothing: 25
+  movementDataTemplate: {fileID: 11400000, guid: 66acfd2eb20454df8960b7c9a63e0312, type: 2}
 --- !u!114 &475221178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,10 +1408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233ec8a87f184b678c4d3a27ba1dfcf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.Fuel
-  maxFuel: 100
-  fuelPerMeter: 0.25
-  currentFuel: 0
+  templateFuel: {fileID: 11400000, guid: 80a7aab8f4021440f993c79333e7b616, type: 2}
   fuelChannel: {fileID: 11400000, guid: 2e7776bb77d594962992cd4189bf8092, type: 2}
+  emptyFuelChannel: {fileID: 11400000, guid: 114fced4f81e74ebd9678f5b27c9165d, type: 2}
 --- !u!212 &475221179
 SpriteRenderer:
   serializedVersion: 2
@@ -1507,10 +1505,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Utility.PlanarForceMotor
   body: {fileID: 475221171}
-  thrustAcceleration: 38
-  maxPlanarSpeed: 5.2
   forceMode: 5
-  clampPlanarSpeed: 1
+  planarForceMotorData: {fileID: 11400000, guid: 0aeeefcea765747ec9686fd035e70554, type: 2}
 --- !u!136 &475221182
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1594,6 +1590,34 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   channel: {fileID: 11400000, guid: c9ff1479885c343c4a131124c59d5974, type: 2}
+--- !u!114 &475221186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475221166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f631c644504676a2ff0887db6216d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventChannel.concrete.EmptyEventListener
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1037225092}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadUpgradeShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  channel: {fileID: 11400000, guid: 114fced4f81e74ebd9678f5b27c9165d, type: 2}
 --- !u!1 &579343612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2962,8 +2986,9 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 475221166}
-  playerHealth: {fileID: 475221174}
   cam: {fileID: 948884653}
+  playerHealthData: {fileID: 11400000, guid: 756a4368e16a0400f9479414f581093c, type: 2}
+  playerMovementData: {fileID: 11400000, guid: 66acfd2eb20454df8960b7c9a63e0312, type: 2}
 --- !u!4 &1735995952
 Transform:
   m_ObjectHideFlags: 0

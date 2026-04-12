@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VContainer;

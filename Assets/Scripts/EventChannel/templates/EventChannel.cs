@@ -23,7 +23,5 @@ namespace EventChannel.templates
     public readonly struct Empty
     {
     }
-
-    [CreateAssetMenu(fileName = "EventChannel", menuName = "Events/EventChannel")]
-    public class EventChannel : EventChannel<Empty> { }
+    
 }
