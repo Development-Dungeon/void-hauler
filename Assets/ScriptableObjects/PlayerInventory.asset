@@ -15,8 +15,8 @@ MonoBehaviour:
   items:
   - item:
       itemType: 0
-    count: 1
+    count: 13
   - item:
       itemType: 1
-    count: 5
+    count: 3
   maxInventorySize: 5

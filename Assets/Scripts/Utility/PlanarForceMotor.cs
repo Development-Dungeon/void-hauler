@@ -32,13 +32,13 @@ namespace Utility
 
             body.AddForce(new Vector3(_thrustInput.x, _thrustInput.y, 0f) * planarForceMotorData.thrustAcceleration, forceMode);
 
-            if (planarForceMotorData.clampPlanarSpeed && planarForceMotorData.maxPlanarSpeed > 0f)
+            if (planarForceMotorData.clampPlanarSpeed && planarForceMotorData.MaxPlanarSpeed > 0f)
             {
                 var v = body.linearVelocity;
                 var planar = new Vector2(v.x, v.y);
-                if (planar.sqrMagnitude > planarForceMotorData.maxPlanarSpeed * planarForceMotorData.maxPlanarSpeed)
+                if (planar.sqrMagnitude > planarForceMotorData.MaxPlanarSpeed * planarForceMotorData.MaxPlanarSpeed)
                 {
-                    planar = planar.normalized * planarForceMotorData.maxPlanarSpeed;
+                    planar = planar.normalized * planarForceMotorData.MaxPlanarSpeed;
                     body.linearVelocity = new Vector3(planar.x, planar.y, v.z);
                 }
             }

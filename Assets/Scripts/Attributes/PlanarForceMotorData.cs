@@ -7,9 +7,27 @@ namespace Attributes
     {
         public float thrustAcceleration;
         public bool clampPlanarSpeed;
-        public float maxPlanarSpeed;
+        [SerializeField]
+        private float _maxPlanarSpeed;
+
+        public float MaxPlanarSpeed
+        {
+            get
+            {
+                if (boostUpgradeEnabled)
+                    return _maxPlanarSpeed + boostUpgrade;
+                
+                return _maxPlanarSpeed;
+            }
+
+            set
+            {
+                _maxPlanarSpeed = value;
+            }
+        }
         
-        // how to include upgrades
+        public float boostUpgrade = 0f;
+        public bool boostUpgradeEnabled = false;
 
     }
 }

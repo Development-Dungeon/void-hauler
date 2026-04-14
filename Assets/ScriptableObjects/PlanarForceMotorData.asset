@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.PlanarForceMotorData
   thrustAcceleration: 63.1
   clampPlanarSpeed: 1
-  maxPlanarSpeed: 30.87
+  _maxPlanarSpeed: 5
+  boostUpgrade: 10
+  boostUpgradeEnabled: 0
