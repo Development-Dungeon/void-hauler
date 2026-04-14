@@ -11,25 +11,6 @@ using UnityEngine.InputSystem.HID;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-/*
- * TODO
- * 1. display the players coins
- * 2. display the players junk that they have in their pockets
- * 3. sell the junk for a price
- *      a. grey out when there is nothing left to sell
- * 4. display the upgrade for increasing speed
- * 5. buy the upgrade
- *      a. grey out when there is nothing left to sell
- */
-
-
-/*
- * I need a method for displaying the upgrades in the list?
- * what if i created a prefab for the upgrade entry and then just init that?
- *  i think this can be v 2
- *  lets just get this working
- *
- */
 
 namespace Upgrades
 {

@@ -21,7 +21,6 @@ namespace Utility
         /// </summary>
         public void SetPlanarThrustInput(Vector2 worldDirectionXY)
         {
-            // _thrustInput = worldDirectionXY.sqrMagnitude > 1f ? worldDirectionXY.normalized : worldDirectionXY;
             _thrustInput = Vector2.ClampMagnitude(worldDirectionXY, 1f);
         }
         

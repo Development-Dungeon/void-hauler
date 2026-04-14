@@ -25,7 +25,6 @@ namespace Attributes
 
         private void Awake()
         {
-            // what to do here?
             if (_currentFuel == null)
                 _currentFuel = Instantiate(templateFuel);
             

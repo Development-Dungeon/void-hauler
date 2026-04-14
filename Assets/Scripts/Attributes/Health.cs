@@ -7,8 +7,6 @@ namespace Attributes
 {
     public class Health : MonoBehaviour
     {
-        // [SerializeField] public float maxHealth = 100f;
-        // [SerializeField] private float currentHealth;
         public HealthData templateHealthData;
         private HealthData _currentHealthData;
     
@@ -25,7 +23,7 @@ namespace Attributes
         private void Awake()
         {
             if(_currentHealthData == null)
-                _currentHealthData = Instantiate(templateHealthData); // this will handle non-players who have health
+                _currentHealthData = Instantiate(templateHealthData); 
         }
 
         private void Start()

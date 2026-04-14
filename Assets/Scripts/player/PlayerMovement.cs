@@ -81,10 +81,6 @@ namespace player
                 controller.ClearThrust();
                 return;
             }
-            // if (userMovementInput == Vector2.zero)
-            //     return;
-            // if (!fuel.HasFuel)
-                // return;
 
             var aim = new Vector2(transform.up.x, transform.up.y);
             if (aim.sqrMagnitude < 1e-6f)
