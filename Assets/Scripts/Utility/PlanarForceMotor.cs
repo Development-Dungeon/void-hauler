@@ -1,3 +1,4 @@
+using Attributes;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,34 +12,32 @@ namespace Utility
     public class PlanarForceMotor : MonoBehaviour
     {
         [SerializeField] [Get] private Rigidbody body;
-        [SerializeField] private float thrustAcceleration = 35f;
-        [SerializeField] private float maxPlanarSpeed = 10f;
         [SerializeField] private ForceMode forceMode = ForceMode.Acceleration;
-        [SerializeField] private bool clampPlanarSpeed = true;
         private Vector2 _thrustInput;
+        public PlanarForceMotorData planarForceMotorData;
 
         /// <summary>
         /// World-space direction on the XY plane. Magnitude is clamped to 0–1.
         /// </summary>
         public void SetPlanarThrustInput(Vector2 worldDirectionXY)
         {
-            _thrustInput = worldDirectionXY.sqrMagnitude > 1f ? worldDirectionXY.normalized : worldDirectionXY;
+            _thrustInput = Vector2.ClampMagnitude(worldDirectionXY, 1f);
         }
-
+        
         void FixedUpdate()
         {
             if (_thrustInput.sqrMagnitude < 1e-8f)
                 return;
 
-            body.AddForce(new Vector3(_thrustInput.x, _thrustInput.y, 0f) * thrustAcceleration, forceMode);
+            body.AddForce(new Vector3(_thrustInput.x, _thrustInput.y, 0f) * planarForceMotorData.thrustAcceleration, forceMode);
 
-            if (clampPlanarSpeed && maxPlanarSpeed > 0f)
+            if (planarForceMotorData.clampPlanarSpeed && planarForceMotorData.MaxPlanarSpeed > 0f)
             {
                 var v = body.linearVelocity;
                 var planar = new Vector2(v.x, v.y);
-                if (planar.sqrMagnitude > maxPlanarSpeed * maxPlanarSpeed)
+                if (planar.sqrMagnitude > planarForceMotorData.MaxPlanarSpeed * planarForceMotorData.MaxPlanarSpeed)
                 {
-                    planar = planar.normalized * maxPlanarSpeed;
+                    planar = planar.normalized * planarForceMotorData.MaxPlanarSpeed;
                     body.linearVelocity = new Vector3(planar.x, planar.y, v.z);
                 }
             }

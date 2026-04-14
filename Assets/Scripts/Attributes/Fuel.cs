@@ -1,46 +1,59 @@
 using System;
 using UnityEngine;
 using EventChannel.templates;
+using VContainer;
 
 namespace Attributes
 {
     public class Fuel : MonoBehaviour
     {
-        [SerializeField] private float maxFuel = 100f;
-        [SerializeField] private float fuelPerMeter = 0.25f;
-        [SerializeField] private float currentFuel;
-
+        public FuelData templateFuel;
+        private FuelData _currentFuel;
+        
         public EventChannel<float> fuelChannel;
+        public EventChannel<Empty> emptyFuelChannel;
 
-        public float Normalized => maxFuel > 0f ? currentFuel / maxFuel : 0f;
-        public bool HasFuel => currentFuel > 0f;
+        public float Normalized => _currentFuel.maxFuel > 0f ? _currentFuel.currentFuel / _currentFuel.maxFuel : 0f;
+        public bool HasFuel => _currentFuel.currentFuel > 0f;
 
-        void Awake()
+
+        [Inject]
+        public void Construct(IObjectResolver resolver)
         {
-            currentFuel = maxFuel;
+            _currentFuel = resolver.ResolveOrDefault<FuelData>();
         }
 
-        void Start()
+        private void Awake()
         {
-            fuelChannel?.Invoke(currentFuel);
+            if (_currentFuel == null)
+                _currentFuel = Instantiate(templateFuel);
+            
+        }
+
+        private void Start()
+        {
+            SetCurrentFuel(_currentFuel.maxFuel);
         }
 
         public void RegisterMovement(float metersOnXYPlane)
         {
-            if (metersOnXYPlane <= 0f || currentFuel <= 0f)
+            if (metersOnXYPlane <= 0f || _currentFuel.currentFuel <= 0f)
                 return;
-            SetCurrentFuel(Mathf.Max(0f, currentFuel - metersOnXYPlane * fuelPerMeter));
+            SetCurrentFuel(Mathf.Max(0f, _currentFuel.currentFuel - metersOnXYPlane * _currentFuel.fuelPerMeter));
+            
         }
 
         private void SetCurrentFuel(float newFuel)
         {
-            currentFuel = newFuel;
-            fuelChannel?.Invoke(currentFuel);
+            _currentFuel.currentFuel = newFuel;
+            fuelChannel?.Invoke(_currentFuel.currentFuel);
+            if(_currentFuel.currentFuel <= 0f)
+                emptyFuelChannel?.Invoke(new Empty());
         }
 
         public void AddFuel(float amount)
         {
-            SetCurrentFuel(Mathf.Min(maxFuel, currentFuel + amount));
+            SetCurrentFuel(Mathf.Min(_currentFuel.maxFuel, _currentFuel.currentFuel + amount));
         }
     }
 }

@@ -1,21 +1,21 @@
 using System;
+using UnityEngine;
 
 namespace Inventory
 {
     [Serializable]
     public class Item
     {
+        public ItemType itemType;
 
-        public string itemName;
-
-        public Item(string _itemName)
+        public Item(ItemType itemType)
         {
-            itemName = _itemName;
+            this.itemType = itemType;
         }
-        
+
         protected bool Equals(Item other)
         {
-            return itemName == other.itemName;
+            return itemType == other.itemType;
         }
 
         public override bool Equals(object obj)
@@ -28,8 +28,7 @@ namespace Inventory
 
         public override int GetHashCode()
         {
-            return (itemName != null ? itemName.GetHashCode() : 0);
+            return (int)itemType;
         }
-        
     }
 }

@@ -4,123 +4,135 @@ using UnityEngine.InputSystem;
 using Utility;
 using VContainer;
 
-[RequireComponent(typeof(PlayerMovementController))]
-[RequireComponent(typeof(Fuel))]
-public class PlayerMovement : MonoBehaviour
+namespace player
 {
-    [Get] [SerializeField] private PlayerMovementController controller;
-    [Get] [SerializeField] private Fuel fuel;
-
-    [Inject] private Camera _camera;
-
-    private Vector2 _userInput;
-    private Quaternion _rotationTarget;
-    private Vector2 _lastPositionForFuel;
-
-    [SerializeField] private float turnSmoothing = 25f;
-
-    void Awake()
+    [RequireComponent(typeof(PlayerMovementController))]
+    [RequireComponent(typeof(Fuel))]
+    public class PlayerMovement : MonoBehaviour
     {
-        _rotationTarget = transform.rotation;
-        _lastPositionForFuel = new Vector2(transform.position.x, transform.position.y);
-    }
+        [Get] [SerializeField] private PlayerMovementController controller;
+        [Get] [SerializeField] private Fuel fuel;
 
-    public void OnMove(InputValue value)
-    {
-        _userInput = value.Get<Vector2>();
-    }
+        private Camera _camera;
 
-    void Update()
-    {
-        ApplyMouseFacing();
-        ApplyThrust(_userInput);
-        ApplyCameraFollow();
-    }
+        private Vector2 _userInput;
+        private Quaternion _rotationTarget;
+        private Vector2 _lastPositionForFuel;
 
-    void FixedUpdate()
-    {
-        controller.SyncRotation(_rotationTarget);
-    }
+        public MovementData movementDataTemplate; 
+        private MovementData _currentMovementData;
 
-    void LateUpdate()
-    {
-        var xy = new Vector2(transform.position.x, transform.position.y);
-        if (_userInput != Vector2.zero && fuel != null && fuel.HasFuel)
+        [Inject]
+        public void Construct(IObjectResolver resolver)
         {
-            var traveled = Vector2.Distance(xy, _lastPositionForFuel);
-            if (traveled > 1e-5f)
-                fuel.RegisterMovement(traveled);
+            _camera = resolver.Resolve<Camera>();
+            _currentMovementData = resolver.ResolveOrDefault<MovementData>();
         }
 
-        _lastPositionForFuel = xy;
-    }
+        void Awake()
+        {
+            if (_currentMovementData == null)
+                _currentMovementData = Instantiate(movementDataTemplate);
+            
+            _rotationTarget = transform.rotation;
+            _lastPositionForFuel = new Vector2(transform.position.x, transform.position.y);
+        }
 
-    private void ApplyCameraFollow()
-    {
-        var currentPlayerPosition = transform.position;
-        _camera.transform.position = new Vector3(currentPlayerPosition.x, currentPlayerPosition.y, _camera.transform.position.z);
-    }
+        public void OnMove(InputValue value)
+        {
+            _userInput = value.Get<Vector2>();
+        }
 
-    void ApplyThrust(Vector2 userMovementInput)
-    {
-        controller.ClearThrust();
-        if (fuel == null)
-            return;
-        if (userMovementInput == Vector2.zero)
-            return;
-        if (!fuel.HasFuel)
-            return;
+        void Update()
+        {
+            ApplyMouseFacing();
+            ApplyThrust(_userInput);
+            ApplyCameraFollow();
+        }
 
-        var aim = new Vector2(transform.up.x, transform.up.y);
-        if (aim.sqrMagnitude < 1e-6f)
-            aim = Vector2.up;
-        else
-            aim.Normalize();
+        void FixedUpdate()
+        {
+            controller.SyncRotation(_rotationTarget);
+        }
 
-        var strafe = new Vector2(-aim.y, aim.x);
-        var move = strafe * userMovementInput.x + aim * userMovementInput.y;
-        if (move.sqrMagnitude > 1f)
-            move.Normalize();
+        void LateUpdate()
+        {
+            var xy = new Vector2(transform.position.x, transform.position.y);
+            if (_userInput != Vector2.zero && fuel != null && fuel.HasFuel)
+            {
+                var traveled = Vector2.Distance(xy, _lastPositionForFuel);
+                if (traveled > 1e-5f)
+                    fuel.RegisterMovement(traveled);
+            }
 
-        controller.SetPlanarThrust(move);
-    }
+            _lastPositionForFuel = xy;
+        }
 
-    void ApplyMouseFacing()
-    {
-        if (!TryGetMouseAimInPlayPlane(out var dir))
-            return;
+        private void ApplyCameraFollow()
+        {
+            var currentPlayerPosition = transform.position;
+            _camera.transform.position = new Vector3(currentPlayerPosition.x, currentPlayerPosition.y, _camera.transform.position.z);
+        }
 
-        var forward = Vector3.Cross(Vector3.up, dir);
-        if (forward.sqrMagnitude < 1e-6f)
-            forward = Vector3.Cross(Vector3.forward, dir);
-        if (forward.sqrMagnitude < 1e-6f)
-            return;
-        forward.Normalize();
+        void ApplyThrust(Vector2 userMovementInput)
+        {
+            if (fuel == null || !fuel.HasFuel || userMovementInput == Vector2.zero)
+            {
+                controller.ClearThrust();
+                return;
+            }
 
-        var target = Quaternion.LookRotation(forward, dir);
-        _rotationTarget = Quaternion.Slerp(
-            _rotationTarget,
-            target,
-            1f - Mathf.Exp(-turnSmoothing * Time.deltaTime));
-    }
+            var aim = new Vector2(transform.up.x, transform.up.y);
+            if (aim.sqrMagnitude < 1e-6f)
+                aim = Vector2.up;
+            else
+                aim.Normalize();
 
-    bool TryGetMouseAimInPlayPlane(out Vector3 dir)
-    {
-        dir = default;
-        if (_camera == null || Mouse.current == null)
-            return false;
+            var strafe = new Vector2(-aim.y, aim.x);
+            var move = strafe * userMovementInput.x + aim * userMovementInput.y;
+            if (move.sqrMagnitude > 1f)
+                move.Normalize();
 
-        var ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-        var plane = new Plane(Vector3.forward, transform.position);
-        if (!plane.Raycast(ray, out float distance))
-            return false;
+            controller.SetPlanarThrust(move);
+        }
 
-        var point = ray.GetPoint(distance);
-        dir = point - transform.position;
-        dir.z = 0f;
-        if (dir.sqrMagnitude < 1e-6f)
-            return false;
-        dir.Normalize();
-        return true;
+        void ApplyMouseFacing()
+        {
+            if (!TryGetMouseAimInPlayPlane(out var dir))
+                return;
+
+            var forward = Vector3.Cross(Vector3.up, dir);
+            if (forward.sqrMagnitude < 1e-6f)
+                forward = Vector3.Cross(Vector3.forward, dir);
+            if (forward.sqrMagnitude < 1e-6f)
+                return;
+            forward.Normalize();
+
+            var target = Quaternion.LookRotation(forward, dir);
+            _rotationTarget = Quaternion.Slerp(
+                _rotationTarget,
+                target,
+                1f - Mathf.Exp(-_currentMovementData.turnSmoothing * Time.deltaTime));
+        }
+
+        bool TryGetMouseAimInPlayPlane(out Vector3 dir)
+        {
+            dir = default;
+            if (_camera == null || Mouse.current == null)
+                return false;
+
+            var ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            var plane = new Plane(Vector3.forward, transform.position);
+            if (!plane.Raycast(ray, out float distance))
+                return false;
+
+            var point = ray.GetPoint(distance);
+            dir = point - transform.position;
+            dir.z = 0f;
+            if (dir.sqrMagnitude < 1e-6f)
+                return false;
+            dir.Normalize();
+            return true;
+        }
     }
 }
