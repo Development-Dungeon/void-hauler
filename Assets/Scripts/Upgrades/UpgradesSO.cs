@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using EventChannel.templates;
+using Inventory;
 using UnityEngine;
 
 namespace Upgrades
@@ -18,6 +19,7 @@ namespace Upgrades
     {
         public string name;
         public string description;
+        public ItemType itemCost;
         public float price;
         public bool purchased;
     }

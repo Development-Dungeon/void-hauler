@@ -1,11 +1,11 @@
 using System;
+using UnityEngine;
 
 namespace Inventory
 {
-    [Serializable]
-    public enum ItemType
+    
+    [CreateAssetMenu(fileName = "Item", menuName = "Items/Item")]
+    public class ItemType : ScriptableObject
     {
-        Money,
-        Junk
     }
 }

@@ -17,14 +17,17 @@ namespace Upgrades
     [Serializable]
     public class ShopCatalogEntry
     {
-        public ItemType itemType;
+        public ItemType itemForSale;
         public float salePrice;
+        public ItemType saleItemType;
     }
 
     public class ShopManager : MonoBehaviour
     {
         public List<ShopCatalogEntry> catalog = new();
         public Upgrades upgradeSo;
+        public ItemType coinItemType;
+        public ItemType sellJunkItemType;
 
         // Player Data
         public HealthData playerHealth;
@@ -67,7 +70,7 @@ namespace Upgrades
                 upgradeCostText.text = firstUpgrade.price.ToString();
             if (upgradeBuyButton != null)
             {
-                var playerCanAffordUpgrade = playerInventory.CanRemove(ItemType.Money, firstUpgrade.price);
+                var playerCanAffordUpgrade = playerInventory.CanRemove(firstUpgrade.itemCost, firstUpgrade.price);
                 upgradeBuyButton.interactable = playerCanAffordUpgrade && !firstUpgrade.purchased;
             }
         }
@@ -84,7 +87,7 @@ namespace Upgrades
             if (playerInventory == null)
                 return;
 
-            var junk = playerInventory.items.Find(i => i.item.itemType.Equals(ItemType.Junk));
+            var junk = playerInventory.items.Find(i => i.item.itemType.Equals(sellJunkItemType));
 
             if (junk == null)
                 return;
@@ -104,7 +107,7 @@ namespace Upgrades
             if (playerInventory == null)
                 return;
 
-            var coins = playerInventory.items.Find(i => i.item.itemType.Equals(ItemType.Money));
+            var coins = playerInventory.items.Find(i => i.item.itemType.Equals(coinItemType));
 
             if (coins == null)
                 return;
@@ -114,15 +117,15 @@ namespace Upgrades
 
         public void SellButtonJunk()
         {
-            if (!playerInventory.CanRemove(ItemType.Junk, 1)) return;
+            if (!playerInventory.CanRemove(sellJunkItemType, 1)) return;
 
-            var catalogEntry = catalog.Find(e => e.itemType.Equals(ItemType.Junk));
+            var catalogEntry = catalog.Find(e => e.itemForSale.Equals(sellJunkItemType));
 
-            if (catalogEntry is not { salePrice: var price } || !playerInventory.CanAddItem(ItemType.Money, price))
+            if (catalogEntry is not { salePrice: var price } || !playerInventory.CanAddItem(catalogEntry.saleItemType, price))
                 return;
 
-            if (playerInventory.Remove(ItemType.Junk))
-                playerInventory.Add(ItemType.Money, price);
+            if (playerInventory.Remove(sellJunkItemType))
+                playerInventory.Add(catalogEntry.saleItemType, price);
 
             RefreshUI();
         }
@@ -136,11 +139,11 @@ namespace Upgrades
             var firstUpgrade = upgradeSo.upgrades.First();
             var price = firstUpgrade.price;
             
-            if (!playerInventory.CanRemove(ItemType.Money, price)) return;
+            if (!playerInventory.CanRemove(firstUpgrade.itemCost, price)) return;
             
             planarForceMotor.boostUpgradeEnabled = true;
             firstUpgrade.purchased = true;
-            playerInventory.Remove(ItemType.Money, price);
+            playerInventory.Remove(firstUpgrade.itemCost, price);
             
             RefreshUI();
 

@@ -92,7 +92,7 @@ namespace player
             var move = strafe * userMovementInput.x + aim * userMovementInput.y;
             if (move.sqrMagnitude > 1f)
                 move.Normalize();
-
+            
             controller.SetPlanarThrust(move);
         }
 
@@ -101,14 +101,10 @@ namespace player
             if (!TryGetMouseAimInPlayPlane(out var dir))
                 return;
 
-            var forward = Vector3.Cross(Vector3.up, dir);
-            if (forward.sqrMagnitude < 1e-6f)
-                forward = Vector3.Cross(Vector3.forward, dir);
-            if (forward.sqrMagnitude < 1e-6f)
-                return;
-            forward.Normalize();
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+    
+            Quaternion target = Quaternion.Euler(0, 0, angle - 90f);
 
-            var target = Quaternion.LookRotation(forward, dir);
             _rotationTarget = Quaternion.Slerp(
                 _rotationTarget,
                 target,
