@@ -38,7 +38,7 @@ namespace Utility
                 if (planar.sqrMagnitude > planarForceMotorData.MaxPlanarSpeed * planarForceMotorData.MaxPlanarSpeed)
                 {
                     planar = planar.normalized * planarForceMotorData.MaxPlanarSpeed;
-                    body.linearVelocity = new Vector3(planar.x, planar.y, v.z);
+                    body.linearVelocity = new Vector3(planar.x, planar.y, 0f);
                 }
             }
 

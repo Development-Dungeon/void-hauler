@@ -28,7 +28,7 @@ namespace Inventory
 
         public override int GetHashCode()
         {
-            return (int)itemType;
+            return (itemType != null ? itemType.GetHashCode() : 0);
         }
     }
 }

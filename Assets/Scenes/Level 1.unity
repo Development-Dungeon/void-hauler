@@ -560,7 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
   inventoryEntries:
   - item:
-      itemType: 1
+      itemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
     count: 1
   destroyOnTouch: 1
 --- !u!114 &138370915
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
   inventoryEntries:
   - item:
-      itemType: 1
+      itemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
     count: 1
   destroyOnTouch: 1
 --- !u!114 &372088753
@@ -1993,7 +1993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
   inventoryEntries:
   - item:
-      itemType: 1
+      itemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
     count: 1
   destroyOnTouch: 1
 --- !u!114 &861945414
@@ -2685,7 +2685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
   inventoryEntries:
   - item:
-      itemType: 1
+      itemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
     count: 1
   destroyOnTouch: 1
 --- !u!114 &1507711731
@@ -3050,7 +3050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.OnTouchCollect
   inventoryEntries:
   - item:
-      itemType: 1
+      itemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
     count: 1
   destroyOnTouch: 1
 --- !u!114 &1846780426

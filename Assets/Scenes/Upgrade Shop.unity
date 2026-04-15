@@ -556,9 +556,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   catalog:
-  - itemType: 1
+  - itemForSale: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
     salePrice: 1
+    saleItemType: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
   upgradeSo: {fileID: 11400000, guid: 636ae9691b841401aa8ae5f177270b32, type: 2}
+  coinItemType: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
+  sellJunkItemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
   playerHealth: {fileID: 11400000, guid: 756a4368e16a0400f9479414f581093c, type: 2}
   planarForceMotor: {fileID: 11400000, guid: 0aeeefcea765747ec9686fd035e70554, type: 2}
   playerInventory: {fileID: 11400000, guid: b4c38931c0eda47eb9167204188e3757, type: 2}

@@ -15,5 +15,6 @@ MonoBehaviour:
   upgrades:
   - name: Boost Thrusters
     description: Increase Speed Upgrade
+    itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
     price: 15
-    purchased: 0
+    purchased: 1
