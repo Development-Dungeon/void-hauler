@@ -28,7 +28,6 @@ namespace Upgrades
         public InventoryData playerInventory;
 
         // UI data
-        public Button sellJunkButton;
         public TMP_Text upgradeText;
         public TMP_Text upgradeCostText;
         public Button upgradeBuyButton;
@@ -40,7 +39,6 @@ namespace Upgrades
 
         private void RefreshUI()
         {
-            sellJunkButton.interactable = false;
             upgradeBuyButton.interactable = false;
 
             SetUpgrade();
@@ -66,7 +64,6 @@ namespace Upgrades
 
         public void SellButtonJunk()
         {
-            Debug.Log("inside sell button");
             if (catalogByTier == null)
                 return;
             
