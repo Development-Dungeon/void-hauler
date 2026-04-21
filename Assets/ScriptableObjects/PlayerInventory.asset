@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory.InventoryData
   items:
   - item:
-      itemType: {fileID: 11400000, guid: d33032250c34546efa4641f19014d453, type: 2}
-    count: 4
+      itemType: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
+    count: 7
+  - item:
+      itemType: {fileID: 11400000, guid: 8a0e9d3ef69864156b7c0a141f38192c, type: 2}
+    count: 20
+  - item:
+      itemType: {fileID: 11400000, guid: f6de5e2aa8dad448783293ae28c5bd43, type: 2}
+    count: 2
+  - item:
+      itemType: {fileID: 11400000, guid: 051cfcff25b924363864575bbe7ad73a, type: 2}
+    count: 2
   maxInventorySize: 5
