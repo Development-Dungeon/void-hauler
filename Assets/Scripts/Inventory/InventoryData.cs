@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Inventory
@@ -11,6 +12,11 @@ namespace Inventory
         public int maxInventorySize;
         public Action<ItemType, float> OnItemAdded;
         public Action<ItemType, float> OnItemRemoved;
+
+        public bool Remove(InventoryEntry inventoryEntry)
+        {
+            return inventoryEntry != null && Remove(inventoryEntry.item.itemType, inventoryEntry.count);
+        }
 
         public bool Remove(ItemType itemType, float quantity = 1)
         {
@@ -30,6 +36,17 @@ namespace Inventory
             OnItemRemoved?.Invoke(itemType, quantity);
 
             return true;
+        }
+
+        public bool CanRemoveByTier(ItemType tierType, float quantity = 1)
+        {
+            var itemsOfTier = items.Where(entry => tierType.GetType().IsAssignableFrom(entry.item.itemType.GetType())).ToList();
+
+            if (!itemsOfTier.Any()) return false;
+            
+            var totalItemsOfTier = itemsOfTier.Sum(entry => entry.count);
+
+            return totalItemsOfTier >= quantity;
         }
 
         public bool CanRemove(ItemType itemType, float quantity)
@@ -73,9 +90,19 @@ namespace Inventory
 
         }
 
-        public InventoryEntry Find(ItemType catalogEntryTierForSale)
+        public InventoryEntry FindByTier(ItemType tier)
         {
-            return items.Find(entry => entry.item.itemType.Equals(catalogEntryTierForSale));
+            return items.Find(entry => tier.GetType().IsAssignableFrom(entry.item.itemType.GetType()));
+        }
+
+        public List<InventoryEntry> FindAllByTier(ItemType tier)
+        {
+            return items.FindAll(entry => tier.GetType().IsAssignableFrom(entry.item.itemType.GetType()));
+        }
+
+        public List<InventoryEntry> FindAll(ItemType itemToFilterBy)
+        {
+            return items.FindAll(entry => entry.item.itemType.Equals(itemToFilterBy));
         }
     }
 }

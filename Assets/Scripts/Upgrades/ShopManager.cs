@@ -19,7 +19,7 @@ namespace Upgrades
 
     public class ShopManager : MonoBehaviour
     {
-        public List<ShopCatalogEntry> catalog = new();
+        public List<ShopCatalogEntry> catalogByTier = new();
         public Upgrades upgradeSo;
 
         // Player Data
@@ -67,29 +67,31 @@ namespace Upgrades
         public void SellButtonJunk()
         {
             Debug.Log("inside sell button");
-            if (catalog == null)
+            if (catalogByTier == null)
                 return;
             
-            foreach (var catalogEntry in catalog)
+            foreach (var catalogEntry in catalogByTier)
             {
-                // check if the player has the item
-                if (!playerInventory.CanRemove(catalogEntry.tierForSale, 1)) continue;
-                
                 // if the player does have the item, check how many the player has and if we can remove them all
-                var playerEntry = playerInventory.Find(catalogEntry.tierForSale);
-                if(!playerInventory.CanRemove(catalogEntry.tierForSale, playerEntry.count)) continue;
+                var inventoryEntries = playerInventory.FindAllByTier(catalogEntry.tierForSale);
                 
-                // check if i can add money equivalent to the number sold times the price
-                var itemsToAdd = catalogEntry.salePrice * playerEntry.count;
-                if (!playerInventory.CanAddItem(catalogEntry.saleItemType, itemsToAdd)) continue;
+                if(inventoryEntries.Count == 0) continue;
                 
-                // if everything is good then perform the add and remove
-                if (playerInventory.Remove(catalogEntry.tierForSale, playerEntry.count))
-                    playerInventory.Add(catalogEntry.saleItemType, itemsToAdd);
+                foreach (var inventoryEntry in inventoryEntries)
+                {
+                   if(!playerInventory.CanRemove(inventoryEntry.item.itemType, inventoryEntry.count)) continue;
+                   
+                   var totalPrice = inventoryEntry.count * catalogEntry.salePrice;
+                   
+                   if(!playerInventory.CanAddItem(catalogEntry.saleItemType, totalPrice)) continue;
+                   
+                   playerInventory.Remove(inventoryEntry);
+                   playerInventory.Add(catalogEntry.saleItemType, totalPrice);
+                   
+                }
 
-                RefreshUI();
-                
             }
+            RefreshUI();
             
         }
 
@@ -110,6 +112,13 @@ namespace Upgrades
             
             RefreshUI();
 
+        }
+
+        public bool CanSell(InventoryData inventoryData)
+        {
+            if (inventoryData == null) return false;
+
+            return catalogByTier.Any(shopCatalogEntry => inventoryData.CanRemoveByTier(shopCatalogEntry.tierForSale));
         }
     }
 }

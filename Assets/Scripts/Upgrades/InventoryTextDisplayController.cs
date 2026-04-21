@@ -6,13 +6,14 @@ using Utility;
 
 namespace Upgrades
 {
-
-    public class TierShopTextScript : MonoBehaviour
+    [RequireComponent(typeof(TMP_Text))]
+    public class InventoryTextDisplayController : MonoBehaviour
     {
         public InventoryData inventoryData;
-        public string outputTextFormat = "0";
-        [Get] public TMP_Text outputText;
         public InventoryCounter counterStrategy;
+        public string outputTextFormat = "0";
+        
+        [Get] public TMP_Text outputText;
 
         void Start()
         {

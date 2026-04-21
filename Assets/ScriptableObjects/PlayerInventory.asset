@@ -15,8 +15,8 @@ MonoBehaviour:
   items:
   - item:
       itemType: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
-    count: 6
+    count: 80
   - item:
-      itemType: {fileID: 11400000, guid: e3ae903f7675a49dcb5503e7f1b0e403, type: 2}
-    count: 4
+      itemType: {fileID: 11400000, guid: 8a0e9d3ef69864156b7c0a141f38192c, type: 2}
+    count: 20
   maxInventorySize: 5
