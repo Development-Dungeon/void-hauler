@@ -19,15 +19,18 @@ namespace Upgrades
 
     public class ShopManager : MonoBehaviour
     {
+        [Header("Shop Data")]
         public List<ShopCatalogEntry> catalogByTier = new();
         public Upgrades upgradeSo;
 
         // Player Data
+        [Header("Player Data")]
         public HealthData playerHealth;
         public PlanarForceMotorData planarForceMotor;
         public InventoryData playerInventory;
 
         // UI data
+        [Header("UI Data")]
         public TMP_Text upgradeText;
         public TMP_Text upgradeCostText;
         public Button upgradeBuyButton;
