@@ -1,10 +1,8 @@
-using System;
-using Inventory;
 using TMPro;
 using UnityEngine;
 using Utility;
 
-namespace Upgrades
+namespace Inventory
 {
     [RequireComponent(typeof(TMP_Text))]
     public class InventoryTextDisplayController : MonoBehaviour

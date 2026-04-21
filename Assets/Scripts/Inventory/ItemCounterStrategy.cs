@@ -1,8 +1,7 @@
 using System.Linq;
-using Inventory;
 using UnityEngine;
 
-namespace Upgrades
+namespace Inventory
 {
     [CreateAssetMenu(fileName = "ItemCounterStrategy", menuName = "Items/Counters/ItemCounterStrategy")]
     public class ItemCounterStrategy : InventoryCounter

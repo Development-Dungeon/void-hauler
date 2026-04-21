@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using Inventory;
-using UnityEditor;
 using UnityEngine;
 
-namespace Upgrades
+namespace Inventory
 {
     public abstract class InventoryCounter : ScriptableObject
     {

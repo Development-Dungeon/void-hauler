@@ -1,59 +1,59 @@
 using System;
-using System.Linq;
 using Inventory;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Utility;
 
-
-[Serializable]
-public class LaunchCost
+namespace Upgrades
 {
-    public ItemType item;
-    public float cost;
-}
-
-public class LaunchButtonController : MonoBehaviour
-{
-    [SerializeField] public LaunchCost launchCost;
-    public InventoryData playerInventory;
-    [Get] public Button launchButton;
-    
-    [Header("On Successful Payment")]
-    public UnityEvent onLaunch;
-
-    private void Awake()
+    [Serializable]
+    public class LaunchCost
     {
-        launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
-        playerInventory.OnItemAdded += OnItemAdded;
-        playerInventory.OnItemRemoved += OnItemRemoved;
+        public ItemType item;
+        public float cost;
     }
-    
-    public void Launch()
+
+    public class LaunchButtonController : MonoBehaviour
     {
-        if (!playerInventory.CanRemove(launchCost.item, launchCost.cost)) return;
+        [SerializeField] public LaunchCost launchCost;
+        public InventoryData playerInventory;
+        [Get] public Button launchButton;
+    
+        [Header("On Successful Payment")]
+        public UnityEvent onLaunch;
+
+        private void Awake()
+        {
+            launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
+            playerInventory.OnItemAdded += OnItemAdded;
+            playerInventory.OnItemRemoved += OnItemRemoved;
+        }
+    
+        public void Launch()
+        {
+            if (!playerInventory.CanRemove(launchCost.item, launchCost.cost)) return;
         
-        playerInventory.Remove(launchCost.item, launchCost.cost);
+            playerInventory.Remove(launchCost.item, launchCost.cost);
         
-        onLaunch.Invoke();
+            onLaunch.Invoke();
             
-    }
+        }
 
-    private void OnItemRemoved(ItemType arg1, float arg2)
-    {
-        launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
-    }
+        private void OnItemRemoved(ItemType arg1, float arg2)
+        {
+            launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
+        }
 
-    private void OnItemAdded(ItemType arg1, float arg2)
-    {
-        launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
-    }
+        private void OnItemAdded(ItemType arg1, float arg2)
+        {
+            launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
+        }
 
-    private void OnDestroy()
-    {
-        playerInventory.OnItemAdded -= OnItemAdded;
-        playerInventory.OnItemRemoved -= OnItemRemoved;
+        private void OnDestroy()
+        {
+            playerInventory.OnItemAdded -= OnItemAdded;
+            playerInventory.OnItemRemoved -= OnItemRemoved;
+        }
     }
 }
