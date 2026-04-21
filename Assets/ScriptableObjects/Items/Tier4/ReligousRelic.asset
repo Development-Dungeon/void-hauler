@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 551ba94e3f6e4cf5ab41263c3fddd9bc, type: 3}
-  m_Name: Junk2
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory.ItemType
+  m_Script: {fileID: 11500000, guid: 272c05c1bf7147428892b27f49dadc02, type: 3}
+  m_Name: ReligousRelic
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades.Tier4

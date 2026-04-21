@@ -1,23 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using Attributes;
 using Inventory;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-
 
 namespace Upgrades
 {
     [Serializable]
     public class ShopCatalogEntry
     {
-        public ItemType itemForSale;
+        public ItemType tierForSale;
         public float salePrice;
         public ItemType saleItemType;
     }
@@ -26,8 +21,6 @@ namespace Upgrades
     {
         public List<ShopCatalogEntry> catalog = new();
         public Upgrades upgradeSo;
-        public ItemType coinItemType;
-        public ItemType sellJunkItemType;
 
         // Player Data
         public HealthData playerHealth;
@@ -35,8 +28,6 @@ namespace Upgrades
         public InventoryData playerInventory;
 
         // UI data
-        public TMP_Text coinText;
-        public TMP_Text junkText;
         public Button sellJunkButton;
         public TMP_Text upgradeText;
         public TMP_Text upgradeCostText;
@@ -52,8 +43,6 @@ namespace Upgrades
             sellJunkButton.interactable = false;
             upgradeBuyButton.interactable = false;
 
-            SetCoinText();
-            SetJunkText();
             SetUpgrade();
         }
 
@@ -75,59 +64,33 @@ namespace Upgrades
             }
         }
 
-        private void SetJunkText()
-        {
-            sellJunkButton.interactable = false;
-
-            if (junkText == null)
-                return;
-
-            junkText.text = "Junk : 0";
-
-            if (playerInventory == null)
-                return;
-
-            var junk = playerInventory.items.Find(i => i.item.itemType.Equals(sellJunkItemType));
-
-            if (junk == null)
-                return;
-
-            junkText.text = "Junk : " + junk.count;
-
-            sellJunkButton.interactable = junk.count >= 1;
-        }
-
-        private void SetCoinText()
-        {
-            if (coinText == null)
-                return;
-
-            coinText.text = "Coins : 0";
-
-            if (playerInventory == null)
-                return;
-
-            var coins = playerInventory.items.Find(i => i.item.itemType.Equals(coinItemType));
-
-            if (coins == null)
-                return;
-
-            coinText.text = "Coins : " + coins.count;
-        }
-
         public void SellButtonJunk()
         {
-            if (!playerInventory.CanRemove(sellJunkItemType, 1)) return;
-
-            var catalogEntry = catalog.Find(e => e.itemForSale.Equals(sellJunkItemType));
-
-            if (catalogEntry is not { salePrice: var price } || !playerInventory.CanAddItem(catalogEntry.saleItemType, price))
+            Debug.Log("inside sell button");
+            if (catalog == null)
                 return;
+            
+            foreach (var catalogEntry in catalog)
+            {
+                // check if the player has the item
+                if (!playerInventory.CanRemove(catalogEntry.tierForSale, 1)) continue;
+                
+                // if the player does have the item, check how many the player has and if we can remove them all
+                var playerEntry = playerInventory.Find(catalogEntry.tierForSale);
+                if(!playerInventory.CanRemove(catalogEntry.tierForSale, playerEntry.count)) continue;
+                
+                // check if i can add money equivalent to the number sold times the price
+                var itemsToAdd = catalogEntry.salePrice * playerEntry.count;
+                if (!playerInventory.CanAddItem(catalogEntry.saleItemType, itemsToAdd)) continue;
+                
+                // if everything is good then perform the add and remove
+                if (playerInventory.Remove(catalogEntry.tierForSale, playerEntry.count))
+                    playerInventory.Add(catalogEntry.saleItemType, itemsToAdd);
 
-            if (playerInventory.Remove(sellJunkItemType))
-                playerInventory.Add(catalogEntry.saleItemType, price);
-
-            RefreshUI();
+                RefreshUI();
+                
+            }
+            
         }
 
         public void PurchaseUpgradeButton()

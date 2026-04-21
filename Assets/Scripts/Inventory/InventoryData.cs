@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Inventory
     {
         public List<InventoryEntry> items = new();
         public int maxInventorySize;
+        public Action<ItemType, float> OnItemAdded;
+        public Action<ItemType, float> OnItemRemoved;
 
         public bool Remove(ItemType itemType, float quantity = 1)
         {
@@ -20,9 +23,11 @@ namespace Inventory
                 return false;
            
             inventoryEntry.count -= quantity;
+
+            if (inventoryEntry.count == 0)
+                items.Remove(inventoryEntry);
             
-            if(inventoryEntry.count == 0)
-                return items.Remove(inventoryEntry);
+            OnItemRemoved?.Invoke(itemType, quantity);
 
             return true;
         }
@@ -62,8 +67,15 @@ namespace Inventory
             else
                 inventoryEntry.count += count;
             
+            OnItemAdded?.Invoke(itemType, count);
+            
             return true;
 
+        }
+
+        public InventoryEntry Find(ItemType catalogEntryTierForSale)
+        {
+            return items.Find(entry => entry.item.itemType.Equals(catalogEntryTierForSale));
         }
     }
 }
