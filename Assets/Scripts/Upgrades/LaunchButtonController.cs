@@ -17,8 +17,6 @@ public class LaunchCost
 
 public class LaunchButtonController : MonoBehaviour
 {
-    // when the player clicks, then check if the player has the cost
-    // if they do, then call the next level
     [SerializeField] public LaunchCost launchCost;
     public InventoryData playerInventory;
     [Get] public Button launchButton;
@@ -29,8 +27,8 @@ public class LaunchButtonController : MonoBehaviour
     private void Awake()
     {
         launchButton.interactable = playerInventory.CanRemove(launchCost.item, launchCost.cost);
-       playerInventory.OnItemAdded += OnItemAdded;
-       playerInventory.OnItemRemoved += OnItemRemoved;
+        playerInventory.OnItemAdded += OnItemAdded;
+        playerInventory.OnItemRemoved += OnItemRemoved;
     }
     
     public void Launch()
