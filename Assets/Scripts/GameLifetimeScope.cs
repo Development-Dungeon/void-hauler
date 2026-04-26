@@ -11,14 +11,17 @@ public class GameLifetimeScope : LifetimeScope
     [SerializeField] private HealthData playerHealthData;
     [SerializeField] private MovementData playerMovementData;
     [SerializeField] private InventoryData playerInventoryData;
+    [SerializeField] private FuelData playerFuelData;
     
     
     protected override void Configure(IContainerBuilder builder)
     {
         builder.RegisterComponentInHierarchy<PlayerMovement>();
+        builder.RegisterComponentInHierarchy<PlayerMovementController>();
         builder.RegisterComponent(cam);
         builder.RegisterComponent(playerHealthData);
         builder.RegisterComponent(playerMovementData);
         builder.RegisterComponent(playerInventoryData);
+        builder.RegisterComponent(playerFuelData);
     }
 }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2085f2dcf1794e9a86b8ba2d91bc9615, type: 3}
+  m_Name: MerchantShopData3
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades.MerchantShopData
+  catalogByTier:
+  - tierForSale: {fileID: 11400000, guid: d7092c94bc49b4531b819552d1d670f5, type: 2}
+    salePrice: 2
+    saleItemType: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
+  upgradeSo: {fileID: 11400000, guid: 67301acaef9504b7887829baa1238bd5, type: 2}
+  launchCost:
+    item: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
+    cost: 0.1

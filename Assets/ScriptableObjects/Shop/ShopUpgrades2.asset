@@ -10,11 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a36aa643d3644c3bbd5a576af727a7fb, type: 3}
-  m_Name: PlayerUpgrades
+  m_Name: ShopUpgrades2
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.Upgrades
   upgrades:
-  - name: Boost Thrusters
-    description: Increase Speed Upgrade
+  - name: Upgrade 3
+    description: Increase Speed Upgrade 1
     itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
-    price: 15
-    purchased: 1
+    price: 45
+    purchased: 0
+  - name: Upgrade 4
+    description: Increase Speed Upgrade 2
+    itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
+    price: 60
+    purchased: 0
