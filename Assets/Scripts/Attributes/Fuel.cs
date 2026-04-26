@@ -55,5 +55,6 @@ namespace Attributes
         {
             SetCurrentFuel(Mathf.Min(_currentFuel.maxFuel, _currentFuel.currentFuel + amount));
         }
+
     }
 }

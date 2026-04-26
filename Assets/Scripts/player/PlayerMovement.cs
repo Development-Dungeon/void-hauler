@@ -10,8 +10,8 @@ namespace player
     [RequireComponent(typeof(Fuel))]
     public class PlayerMovement : MonoBehaviour
     {
-        [Get] [SerializeField] private PlayerMovementController controller;
         [Get] [SerializeField] private Fuel fuel;
+        private PlayerMovementController _controller;
 
         private Camera _camera;
 
@@ -27,6 +27,7 @@ namespace player
         {
             _camera = resolver.Resolve<Camera>();
             _currentMovementData = resolver.ResolveOrDefault<MovementData>();
+            _controller = resolver.Resolve<PlayerMovementController>();
         }
 
         void Awake()
@@ -52,7 +53,7 @@ namespace player
 
         void FixedUpdate()
         {
-            controller.SyncRotation(_rotationTarget);
+            _controller.SyncRotation(_rotationTarget);
         }
 
         void LateUpdate()
@@ -78,7 +79,7 @@ namespace player
         {
             if (fuel == null || !fuel.HasFuel || userMovementInput == Vector2.zero)
             {
-                controller.ClearThrust();
+                _controller.ClearThrust();
                 return;
             }
 
@@ -93,7 +94,7 @@ namespace player
             if (move.sqrMagnitude > 1f)
                 move.Normalize();
             
-            controller.SetPlanarThrust(move);
+            _controller.SetPlanarThrust(move);
         }
 
         void ApplyMouseFacing()

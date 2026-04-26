@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Attributes
@@ -8,5 +9,10 @@ namespace Attributes
         public float maxFuel;
         public float fuelPerMeter;
         public float currentFuel;
+        
+        public float GetFuelToFill()
+        {
+            return Math.Max(maxFuel - currentFuel, 0);
+        }
     }
 }

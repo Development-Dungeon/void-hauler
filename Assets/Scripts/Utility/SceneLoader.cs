@@ -16,9 +16,15 @@ namespace Utility
             SceneManager.LoadScene("Level 1");
         }
 
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+
         public void LoadUpgradeShop()
         {
             SceneManager.LoadScene("Upgrade Shop");
         }
+        
     }
 }
