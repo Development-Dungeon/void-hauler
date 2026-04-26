@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.MerchantShopData
   catalogByTier:
   - tierForSale: {fileID: 11400000, guid: d7092c94bc49b4531b819552d1d670f5, type: 2}
-    salePrice: 1
+    salePrice: 2
     saleItemType: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
   upgradeSo: {fileID: 11400000, guid: 67301acaef9504b7887829baa1238bd5, type: 2}
   launchCost:

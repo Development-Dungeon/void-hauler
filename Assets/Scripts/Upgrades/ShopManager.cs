@@ -86,7 +86,7 @@ namespace Upgrades
             if (upgradebutton != null)
             {
                 var playerCanAffordUpgrade = playerInventory.CanRemove(firstUpgrade.itemCost, firstUpgrade.price);
-                upgradebutton.interactable = playerCanAffordUpgrade && !firstUpgrade.purchased;
+                upgradebutton.interactable = playerCanAffordUpgrade;
             }
         }
 

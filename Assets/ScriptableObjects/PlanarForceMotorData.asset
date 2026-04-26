@@ -16,4 +16,4 @@ MonoBehaviour:
   clampPlanarSpeed: 1
   _maxPlanarSpeed: 5
   boostUpgrade: 10
-  boostUpgradeEnabled: 0
+  boostUpgradeEnabled: 1
