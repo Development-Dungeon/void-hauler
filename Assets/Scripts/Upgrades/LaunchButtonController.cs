@@ -14,13 +14,11 @@ namespace Upgrades
     public class LaunchCost
     {
         public ItemType item;
-        [Description ("cost per fuel")] // TODO confirm that this is working
         public float cost;
     }
 
     public class LaunchButtonController : MonoBehaviour
     {
-        // [SerializeField] public LaunchCost launchCost;
         public UpgradeScreenData upgradeScreenData;
         public InventoryData playerInventory;
         public FuelData playerFuel;

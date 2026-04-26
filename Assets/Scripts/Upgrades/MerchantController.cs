@@ -9,8 +9,6 @@ namespace Upgrades
     public class MerchantController : MonoBehaviour
     {
         
-        // merchants are not selectable for 1 second after they are used
-        // this will help with respon logic but also allowing things a moment before triggering again
         
         public MerchantShopData merchantShopData;
         public UpgradeScreenData upgradeScreenData;

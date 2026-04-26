@@ -15,10 +15,6 @@ public class SaveManger : MonoBehaviour
     
     public PlanarForceMotorData planarForceMotorData;
     
-    void Start()
-    {
-        
-    }
 
     public void Load()
     {
