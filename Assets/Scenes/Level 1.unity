@@ -2893,6 +2893,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1659609728}
     m_Modifications:
     - target: {fileID: 2430304418188425490, guid: 78e74ce6da16b2a42b81dece85266956, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 5198325c93ee44123832bb0b17f22c28, type: 2}
+    - target: {fileID: 2430304418188425490, guid: 78e74ce6da16b2a42b81dece85266956, type: 3}
       propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1037225092}
@@ -3055,6 +3059,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4362061127193517089, guid: 8d95636e2bd44d9479440d6e10f62dff, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 5198325c93ee44123832bb0b17f22c28, type: 2}
+    - target: {fileID: 4362061127193517089, guid: 8d95636e2bd44d9479440d6e10f62dff, type: 3}
       propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1037225092}
@@ -3121,6 +3129,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6657031217581197221, guid: 56257ecc7d06a3340a4f7bb6acadb541, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 5198325c93ee44123832bb0b17f22c28, type: 2}
     - target: {fileID: 6657031217581197221, guid: 56257ecc7d06a3340a4f7bb6acadb541, type: 3}
       propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
