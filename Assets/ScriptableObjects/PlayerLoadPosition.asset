@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d1aaa1746f4e5f8ce7a8bace14f3d2, type: 3}
   m_Name: PlayerLoadPosition
   m_EditorClassIdentifier: Assembly-CSharp::player.PositionSo
+  defaultPosition: {x: 0, y: 0, z: 0}
