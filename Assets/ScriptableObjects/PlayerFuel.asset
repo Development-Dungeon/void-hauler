@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerFuel
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.FuelData
   maxFuel: 100
-  fuelPerMeter: 1
-  currentFuel: 76.72673
+  fuelPerMeter: 0.2
+  currentFuel: 98.46396
