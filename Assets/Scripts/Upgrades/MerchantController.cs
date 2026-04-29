@@ -43,7 +43,7 @@ namespace Upgrades
                 return;
             
             upgradeScreenData.SetValues(merchantShopData, other.transform, merchantShopData.launchCost);
-            playerPosition.Position = respawnPoint.position;
+            playerPosition.PushPosition(respawnPoint.position);
             OnTouch?.Invoke();
         }
 
