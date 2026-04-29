@@ -18,8 +18,7 @@ namespace player
 
         private void Start()
         {
-            if (playerPosition?.Position != null) 
-                _playerMovement.Body.position = playerPosition.Position.Value;
+            _playerMovement.Body.position = playerPosition.PopPositionOrDefault();
         }
     }
 }
