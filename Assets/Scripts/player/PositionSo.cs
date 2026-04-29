@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,11 @@ namespace player
     {
         public Vector3 defaultPosition;
         private readonly Stack<Vector3> _positions= new ();
+
+        private void OnEnable()
+        {
+            ClearStackManual();
+        }
 
         public Vector3 PopPositionOrDefault()
         {
@@ -21,6 +27,7 @@ namespace player
         public void PushPosition(Vector3 position)
         {
             _positions.Push(position);
+            Debug.Log("the stack count is" + _positions.Count);
         }
         
 #if UNITY_EDITOR
