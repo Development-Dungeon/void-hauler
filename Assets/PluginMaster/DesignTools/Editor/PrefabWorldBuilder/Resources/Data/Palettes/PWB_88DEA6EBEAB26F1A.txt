@@ -1,0 +1,3113 @@
+{
+    "_version": "4.5",
+    "_name": "Palette",
+    "_id": -8584240307536498918,
+    "_brushes": [
+        {
+            "_id": 639131515105305089,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T1_OldBattery",
+            "_items": [
+                {
+                    "_id": 639131515105305090,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "130c385afbcaf411ea5e6fab72629636",
+                    "_prefabPath": "Assets/Prefabs/Junk_T1_OldBattery.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131515105305089,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131515107466084,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T1_OldDish",
+            "_items": [
+                {
+                    "_id": 639131515107466085,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "206497ddf1c86426db1e88708fa52c91",
+                    "_prefabPath": "Assets/Prefabs/Junk_T1_OldDish.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131515107466084,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131515109831870,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T1_OldGear",
+            "_items": [
+                {
+                    "_id": 639131515109831871,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "b778bd444f3db49269575b50fdd0e067",
+                    "_prefabPath": "Assets/Prefabs/Junk_T1_OldGear.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131515109831870,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131515112105762,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T1_ShipArmour",
+            "_items": [
+                {
+                    "_id": 639131515112105763,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "bdb745e8f69534ee192f2a8dc5d8876c",
+                    "_prefabPath": "Assets/Prefabs/Junk_T1_ShipArmour.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131515112105762,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131515114457429,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T1_ShipJunk",
+            "_items": [
+                {
+                    "_id": 639131515114457430,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "72b458af046c943049b32a16a0afaaaf",
+                    "_prefabPath": "Assets/Prefabs/Junk_T1_ShipJunk.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131515114457429,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131516286588118,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T1_Grafiti",
+            "_items": [
+                {
+                    "_id": 639131516286588119,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "835ed3a1ea9aa40a0a665d13e507e02a",
+                    "_prefabPath": "Assets/Prefabs/Junk_T1_Grafiti.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131516286588118,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131521766392107,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T3_AlienToy",
+            "_items": [
+                {
+                    "_id": 639131521766392108,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "1346ba78c580747bab66a6fef4309906",
+                    "_prefabPath": "Assets/Prefabs/Junk_T3_AlienToy.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131521766392107,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131521768990464,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T3_BrokenAICore",
+            "_items": [
+                {
+                    "_id": 639131521768990465,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "74c4be57b71e7415ebd94de67dfce98f",
+                    "_prefabPath": "Assets/Prefabs/Junk_T3_BrokenAICore.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131521768990464,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131521770978769,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T3_LittleFriend",
+            "_items": [
+                {
+                    "_id": 639131521770978770,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "10381ccabeb674cdd9a681bc0dfeca22",
+                    "_prefabPath": "Assets/Prefabs/Junk_T3_LittleFriend.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131521770978769,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131519429777626,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T2_Fruit",
+            "_items": [
+                {
+                    "_id": 639131519429777627,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "dfc4be09b8c9b4ca1bbcb5bd17fc48a7",
+                    "_prefabPath": "Assets/Prefabs/Junk_T2_Fruit.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131519429777626,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131519432419445,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T2_Hand",
+            "_items": [
+                {
+                    "_id": 639131519432419446,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "5c2b22c414662428c91b07e9264bc938",
+                    "_prefabPath": "Assets/Prefabs/Junk_T2_Hand.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131519432419445,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131519434866857,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T2_New Battery",
+            "_items": [
+                {
+                    "_id": 639131519434866858,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "24279dea0b94248db9951c41c578c90f",
+                    "_prefabPath": "Assets/Prefabs/Junk_T2_New Battery.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131519434866857,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        },
+        {
+            "_id": 639131519437052441,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.4700000286102296,
+                "_targetEuler": {
+                    "x": 17.5,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": -0.05999999865889549
+                },
+                "_useCustomImage": false
+            },
+            "_name": "Junk_T2_OddCircutBoard",
+            "_items": [
+                {
+                    "_id": 639131519437052442,
+                    "_surfaceDistance": 0.0,
+                    "_randomSurfaceDistance": false,
+                    "_randomSurfaceDistanceRange": {
+                        "_v1": -0.004999999888241291,
+                        "_v2": 0.004999999888241291,
+                        "_min": -0.004999999888241291,
+                        "_max": 0.004999999888241291
+                    },
+                    "_embedInSurface": false,
+                    "_embedAtPivotHeight": true,
+                    "_localPositionOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_rotateToTheSurface": true,
+                    "_eulerOffset": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "_addRandomRotation": false,
+                    "_rotationFactor": 90.0,
+                    "_rotateInMultiples": false,
+                    "_randomEulerOffset": {
+                        "x": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "y": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        },
+                        "z": {
+                            "_v1": 0.0,
+                            "_v2": 0.0,
+                            "_min": 0.0,
+                            "_max": 0.0
+                        }
+                    },
+                    "_alwaysOrientUp": false,
+                    "_separateScaleAxes": false,
+                    "_scaleMultiplier": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplierRange": {
+                        "x": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "y": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        },
+                        "z": {
+                            "_v1": 1.0,
+                            "_v2": 1.0,
+                            "_min": 1.0,
+                            "_max": 1.0
+                        }
+                    },
+                    "_flipX": 0,
+                    "_flipY": 0,
+                    "_thumbnailSettings": {
+                        "_backgroudColor": {
+                            "r": 0.5,
+                            "g": 0.5,
+                            "b": 0.5,
+                            "a": 1.0
+                        },
+                        "_lightEuler": {
+                            "x": 130.0,
+                            "y": -165.0
+                        },
+                        "_lightColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "_lightIntensity": 1.0,
+                        "_zoom": 1.0,
+                        "_targetEuler": {
+                            "x": 0.0,
+                            "y": 125.0,
+                            "z": 0.0
+                        },
+                        "_targetOffset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "_useCustomImage": false
+                    },
+                    "_overwriteSettings": false,
+                    "_guid": "3bbdc6a15996a4e24a127e435e298508",
+                    "_prefabPath": "Assets/Prefabs/Junk_T2_OddCircutBoard.prefab",
+                    "_frequency": 1.0,
+                    "_parentId": 639131519437052441,
+                    "_overwriteThumbnailSettings": false,
+                    "_includeInThumbnail": true,
+                    "_isAsset2D": true
+                }
+            ],
+            "_frequencyMode": 0,
+            "_pattern": "1...",
+            "_restartPatternForEachStroke": true
+        }
+    ],
+    "_brushCreationSettings": {
+        "_includeSubfolders": true,
+        "_addLabelsToDroppedPrefabs": false,
+        "_labelsCSV": "",
+        "_defaultBrushSettings": {
+            "_id": -1,
+            "_surfaceDistance": 0.0,
+            "_randomSurfaceDistance": false,
+            "_randomSurfaceDistanceRange": {
+                "_v1": -0.004999999888241291,
+                "_v2": 0.004999999888241291,
+                "_min": -0.004999999888241291,
+                "_max": 0.004999999888241291
+            },
+            "_embedInSurface": false,
+            "_embedAtPivotHeight": true,
+            "_localPositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_rotateToTheSurface": true,
+            "_eulerOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "_addRandomRotation": false,
+            "_rotationFactor": 90.0,
+            "_rotateInMultiples": false,
+            "_randomEulerOffset": {
+                "x": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "y": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                },
+                "z": {
+                    "_v1": 0.0,
+                    "_v2": 0.0,
+                    "_min": 0.0,
+                    "_max": 0.0
+                }
+            },
+            "_alwaysOrientUp": false,
+            "_separateScaleAxes": false,
+            "_scaleMultiplier": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "_randomScaleMultiplier": false,
+            "_randomScaleMultiplierRange": {
+                "x": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "y": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                },
+                "z": {
+                    "_v1": 1.0,
+                    "_v2": 1.0,
+                    "_min": 1.0,
+                    "_max": 1.0
+                }
+            },
+            "_flipX": 0,
+            "_flipY": 0,
+            "_thumbnailSettings": {
+                "_backgroudColor": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5,
+                    "a": 1.0
+                },
+                "_lightEuler": {
+                    "x": 130.0,
+                    "y": -165.0
+                },
+                "_lightColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                },
+                "_lightIntensity": 1.0,
+                "_zoom": 1.0,
+                "_targetEuler": {
+                    "x": 0.0,
+                    "y": 125.0,
+                    "z": 0.0
+                },
+                "_targetOffset": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "_useCustomImage": false
+            }
+        },
+        "_defaultThumbnailSettings": {
+            "_backgroudColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5,
+                "a": 1.0
+            },
+            "_lightEuler": {
+                "x": 130.0,
+                "y": -165.0
+            },
+            "_lightColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "_lightIntensity": 1.0,
+            "_zoom": 1.0,
+            "_targetEuler": {
+                "x": 0.0,
+                "y": 125.0,
+                "z": 0.0
+            },
+            "_targetOffset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "_useCustomImage": false
+        }
+    }
+}

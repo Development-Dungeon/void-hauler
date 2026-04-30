@@ -22,11 +22,11 @@
     "_tempCollidersAction": 1,
     "_paletteManager": {
         "_selectedPaletteIdx": 0,
-        "_selectedBrushIdx": -1,
+        "_selectedBrushIdx": 8,
         "_showBrushName": false,
         "_viewList": false,
         "_showTabsInMultipleRows": false,
-        "_iconSize": 64
+        "_iconSize": 104
     },
     "_pinManager": {
         "_profileKeys": [
@@ -482,21 +482,21 @@
         ],
         "_selectedProfileName": "Default",
         "_unsavedProfile": {
-            "_radius": 1.0,
+            "_radius": 37.099998474121097,
             "_paintTool": {
                 "_parentGlobalId": "",
                 "_autoCreateParent": true,
                 "_setSurfaceAsParent": false,
-                "_createSubparentPerPalette": true,
-                "_createSubparentPerTool": true,
+                "_createSubparentPerPalette": false,
+                "_createSubparentPerTool": false,
                 "_createSubparentPerBrush": false,
-                "_createSubparentPerPrefab": true,
-                "_overwritePrefabLayer": false,
+                "_createSubparentPerPrefab": false,
+                "_overwritePrefabLayer": true,
                 "_layer": 0,
-                "_overwriteBrushProperties": false,
+                "_overwriteBrushProperties": true,
                 "_brushSettings": {
                     "_id": -1,
-                    "_surfaceDistance": 0.0,
+                    "_surfaceDistance": 1.0,
                     "_randomSurfaceDistance": false,
                     "_randomSurfaceDistanceRange": {
                         "_v1": -0.004999999888241291,
@@ -504,14 +504,14 @@
                         "_min": -0.004999999888241291,
                         "_max": 0.004999999888241291
                     },
-                    "_embedInSurface": false,
-                    "_embedAtPivotHeight": true,
+                    "_embedInSurface": true,
+                    "_embedAtPivotHeight": false,
                     "_localPositionOffset": {
                         "x": 0.0,
                         "y": 0.0,
                         "z": 0.0
                     },
-                    "_rotateToTheSurface": true,
+                    "_rotateToTheSurface": false,
                     "_eulerOffset": {
                         "x": 0.0,
                         "y": 0.0,
@@ -568,8 +568,8 @@
                             "_max": 1.0
                         }
                     },
-                    "_flipX": 0,
-                    "_flipY": 0,
+                    "_flipX": 2,
+                    "_flipY": 2,
                     "_thumbnailSettings": {
                         "_backgroudColor": {
                             "r": 0.5,
@@ -602,8 +602,8 @@
                     }
                 }
             },
-            "_brushShape": 1,
-            "_density": 50,
+            "_brushShape": 2,
+            "_density": 1,
             "_orientAlongBrushstroke": false,
             "_additionalOrientationAngle": {
                 "x": 0.0,
@@ -611,12 +611,12 @@
                 "z": 0.0
             },
             "_spacingType": 0,
-            "_minSpacing": 0.9060001373291016,
+            "_minSpacing": 1.268327236175537,
             "_randomizePositions": true,
             "_randomness": 1.0,
             "_paintOnSurfaceToolSettings": {
                 "_paintOnMeshesWithoutCollider": false,
-                "_paintOnSelectedOnly": false,
+                "_paintOnSelectedOnly": true,
                 "_paintOnPalettePrefabs": false,
                 "_mode": 0,
                 "_paralellToTheSurface": true
@@ -626,7 +626,7 @@
             "_avoidOverlapping": 4,
             "_layerFilter": {
                 "serializedVersion": "2",
-                "m_Bits": 4294967295
+                "m_Bits": 127
             },
             "_tagFilter": [
                 "Untagged",
