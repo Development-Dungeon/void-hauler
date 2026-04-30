@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 4f0731ec385bbab4b920cd0d4cc81730
+guid: e18142cfbe5b7d242895caaee1693acb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1452237554680135515
-    second: PlayerShip21-exportwiththrust_0
+      213: 7990934363739798202
+    second: 548506611_0
+  - first:
+      213: 8284209220211841973
+    second: 548506611_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerShip21-exportwiththrust_0
+      name: 548506611_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 194
-        height: 31
+        x: 115
+        y: 222
+        width: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a00fc763ad98dbe0800000000000000
-      internalID: -1452237554680135515
+      spriteID: aba3c2e477085ee60800000000000000
+      internalID: 7990934363739798202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 548506611_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 57
+        width: 157
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb1eb7e46c67f270800000000000000
+      internalID: 8284209220211841973
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ca3c38f8ae6bea246ad282e58bb920a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerShip21-exportwiththrust_0: -1452237554680135515
+      548506611_0: 7990934363739798202
+      548506611_1: 8284209220211841973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

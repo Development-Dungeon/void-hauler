@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4f0731ec385bbab4b920cd0d4cc81730
+guid: b79847b842ed1724eba64138fb5989ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1452237554680135515
-    second: PlayerShip21-exportwiththrust_0
+      213: -6855164559362824803
+    second: 4008438772_0
+  - first:
+      213: -2387005594074589032
+    second: 4008438772_1
+  - first:
+      213: -92183084268844139
+    second: 4008438772_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerShip21-exportwiththrust_0
+      name: 4008438772_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 194
-        height: 31
+        x: 69
+        y: 75
+        width: 91
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a00fc763ad98dbe0800000000000000
-      internalID: -1452237554680135515
+      spriteID: d95e45a47209dd0a0800000000000000
+      internalID: -6855164559362824803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4008438772_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 83
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89850502f07afded0800000000000000
+      internalID: -2387005594074589032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4008438772_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 13
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b0bd729ff78bef0800000000000000
+      internalID: -92183084268844139
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ca3c38f8ae6bea246ad282e58bb920a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerShip21-exportwiththrust_0: -1452237554680135515
+      4008438772_0: -6855164559362824803
+      4008438772_1: -2387005594074589032
+      4008438772_2: -92183084268844139
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

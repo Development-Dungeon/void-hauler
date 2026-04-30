@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4f0731ec385bbab4b920cd0d4cc81730
+guid: 19f3cfd890bdd1046a2cf1909cbfb5c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1452237554680135515
-    second: PlayerShip21-exportwiththrust_0
+      213: 7373903264472844947
+    second: 1571325240_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerShip21-exportwiththrust_0
+      name: 1571325240_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 194
-        height: 31
+        x: 47
+        y: 26
+        width: 161
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a00fc763ad98dbe0800000000000000
-      internalID: -1452237554680135515
+      spriteID: 39a4ffe43fd555660800000000000000
+      internalID: 7373903264472844947
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ca3c38f8ae6bea246ad282e58bb920a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerShip21-exportwiththrust_0: -1452237554680135515
+      1571325240_0: 7373903264472844947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
