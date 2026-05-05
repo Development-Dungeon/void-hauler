@@ -11,5 +11,6 @@ namespace Upgrades
         public LaunchCost launchCost;
         public string merchantName;
         public string merchantDescription;
+        public Sprite merchantIcon;
     }
 }

@@ -1002,6 +1002,7 @@ MonoBehaviour:
   - {fileID: 994749235}
   merchantName: {fileID: 1397271748}
   merchantDescription: {fileID: 1283803021}
+  merchantImage: {fileID: 924413156}
 --- !u!4 &487195997
 Transform:
   m_ObjectHideFlags: 0
@@ -2386,7 +2387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6817545331801519896, guid: e2d4ce8c6331e324696340722a4da59c, type: 3}
+  m_Sprite: {fileID: 7254674698615963211, guid: c8e0850562d7b9a48b231033b871b4ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

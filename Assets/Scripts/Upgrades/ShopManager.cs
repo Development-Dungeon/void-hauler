@@ -36,6 +36,7 @@ namespace Upgrades
         // UI data
         public TMP_Text merchantName;
         public TMP_Text merchantDescription;
+        public Image merchantImage;
 
 
         private void Start()
@@ -54,6 +55,8 @@ namespace Upgrades
                uiController.RefreshUI(CanBuy(uiController.upgradeEntry), anyAlreadyPurchased); 
             merchantName.text = upgradeScreenData.merchantShopData.merchantName;
             merchantDescription.text = upgradeScreenData.merchantShopData.merchantDescription;
+            merchantImage.sprite = upgradeScreenData.merchantShopData.merchantIcon;
+
         }
 
         private UpgradeEntry GetUpgradeByNumber(UpgradeScreenData screenData, int i)

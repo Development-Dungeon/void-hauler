@@ -22,3 +22,4 @@ MonoBehaviour:
     cost: 0.1
   merchantName: Merchant Name
   merchantDescription: IF ITS STRANGE, ITS WORTH SOMETHING
+  merchantIcon: {fileID: -6817545331801519896, guid: e2d4ce8c6331e324696340722a4da59c, type: 3}

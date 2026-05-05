@@ -20,3 +20,6 @@ MonoBehaviour:
   launchCost:
     item: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
     cost: 0.1
+  merchantName: 
+  merchantDescription: 
+  merchantIcon: {fileID: 3556936048649724480, guid: 55276ddf00f1e02498a8728d227b31e1, type: 3}
