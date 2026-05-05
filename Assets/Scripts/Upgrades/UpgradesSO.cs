@@ -21,5 +21,6 @@ namespace Upgrades
         public ItemType itemCost;
         public float price;
         public bool purchased;
+        public string stateDescription;
     }
 }

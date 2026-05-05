@@ -9,5 +9,7 @@ namespace Upgrades
         public List<ShopCatalogEntry> catalogByTier = new();
         public Upgrades upgradeSo;
         public LaunchCost launchCost;
+        public string merchantName;
+        public string merchantDescription;
     }
 }

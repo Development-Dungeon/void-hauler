@@ -17,6 +17,7 @@ namespace Upgrades
         public ItemType saleItemType;
     }
 
+
     public class ShopManager : MonoBehaviour
     {
         [Header("Shop Data")]
@@ -27,41 +28,32 @@ namespace Upgrades
         public HealthData playerHealth;
         public PlanarForceMotorData planarForceMotor;
         public InventoryData playerInventory;
+        
+        // Upgrade UI
+        [Header("Upgrade Controllers")]
+        public List<UpgradeUIController> upgradeUIController = new ();
 
         // UI data
-        [Header("UI Data")]
-        public TMP_Text upgradeText1;
-        public TMP_Text upgradeCostText1;
-        public Button upgradeBuyButton1;
-        
-        public TMP_Text upgradeText2;
-        public TMP_Text upgradeCostText2;
-        public Button upgradeBuyButton2;
+        public TMP_Text merchantName;
+        public TMP_Text merchantDescription;
+
 
         private void Start()
         {
+            // populate the UI controllers with the upgrade information
+            upgradeUIController[0].Init(GetUpgradeByNumber(upgradeScreenData, 1) );
+            upgradeUIController[1].Init(GetUpgradeByNumber(upgradeScreenData, 2) );
+            
             RefreshUI();
+            
         }
         private void RefreshUI()
         {
-            upgradeBuyButton1.interactable = false;
-            upgradeBuyButton2.interactable = false;
-
-            PopulateUpgrade(upgradeText1, upgradeCostText1, upgradeBuyButton1, GetUpgradeByNumber(upgradeScreenData, 1));
-            PopulateUpgrade(upgradeText2, upgradeCostText2, upgradeBuyButton2, GetUpgradeByNumber(upgradeScreenData, 2));
-            
-            // determine if one of the upgrades area already bought and then deactivate them
-            DeactivateButton(upgradeBuyButton1, upgradeBuyButton2, GetUpgradeByNumber(upgradeScreenData, 1), GetUpgradeByNumber(upgradeScreenData, 2));
-        }
-
-
-        private void DeactivateButton(Button button1, Button button2, UpgradeEntry upgrade1, UpgradeEntry upgrade2)
-        {
-            if (upgrade1.purchased || upgrade2.purchased)
-            {
-                button1.interactable = false;
-                button2.interactable = false;
-            }
+            var anyAlreadyPurchased = upgradeUIController.Any(u => u.upgradeEntry.purchased);
+            foreach (var uiController in upgradeUIController)
+               uiController.RefreshUI(CanBuy(uiController.upgradeEntry), anyAlreadyPurchased); 
+            merchantName.text = upgradeScreenData.merchantShopData.merchantName;
+            merchantDescription.text = upgradeScreenData.merchantShopData.merchantDescription;
         }
 
         private UpgradeEntry GetUpgradeByNumber(UpgradeScreenData screenData, int i)
@@ -71,23 +63,9 @@ namespace Upgrades
             return upgrades?.Count >= i ? upgrades[i-1] : null;
         }
 
-        private void PopulateUpgrade(TMP_Text upgradeText, TMP_Text upgradeCostText, Button upgradebutton, UpgradeEntry firstUpgrade)
+        public bool CanBuy(UpgradeEntry upgrade)
         {
-
-            if (firstUpgrade == null)
-            {
-                return;
-            }
-
-            if (upgradeText != null)
-                upgradeText.text = firstUpgrade.name;
-            if (upgradeCostText != null)
-                upgradeCostText.text = firstUpgrade.price.ToString();
-            if (upgradebutton != null)
-            {
-                var playerCanAffordUpgrade = playerInventory.CanRemove(firstUpgrade.itemCost, firstUpgrade.price);
-                upgradebutton.interactable = playerCanAffordUpgrade;
-            }
+            return playerInventory.CanRemove(upgrade.itemCost, upgrade.price);
         }
 
         public void SellButtonJunk()
@@ -119,13 +97,16 @@ namespace Upgrades
             RefreshUI();
             
         }
-        public void PurchaseUpgradeButton1()
+        
+        public void PurchaseUpgrade(UpgradeUIController _upgradeUIController)
         {
-            if (upgradeScreenData.merchantShopData.upgradeSo == null || upgradeScreenData.merchantShopData.upgradeSo.upgrades == null || upgradeScreenData.merchantShopData.upgradeSo.upgrades.Count == 0) return;
+            // get the upgrade and search my list for what upgrade is being purchased?
+            var upgradeToPurchase = _upgradeUIController?.upgradeEntry;
+
+            if (upgradeToPurchase == null) return;
 
             if (playerInventory == null) return;
 
-            var upgradeToPurchase = GetUpgradeByNumber(upgradeScreenData, 1);
             var price = upgradeToPurchase.price;
             
             if (!playerInventory.CanRemove(upgradeToPurchase.itemCost, price)) return;
@@ -135,26 +116,6 @@ namespace Upgrades
             playerInventory.Remove(upgradeToPurchase.itemCost, price);
             
             RefreshUI();
-
-        }
-
-        public void PurchaseUpgradeButton2()
-        {
-            if (upgradeScreenData.merchantShopData.upgradeSo == null || upgradeScreenData.merchantShopData.upgradeSo.upgrades == null || upgradeScreenData.merchantShopData.upgradeSo.upgrades.Count == 0) return;
-
-            if (playerInventory == null) return;
-
-            var upgradeToPurchase = GetUpgradeByNumber(upgradeScreenData, 2);
-            var price = upgradeToPurchase.price;
-            
-            if (!playerInventory.CanRemove(upgradeToPurchase.itemCost, price)) return;
-            
-            planarForceMotor.boostUpgradeEnabled = true;
-            upgradeToPurchase.purchased = true;
-            playerInventory.Remove(upgradeToPurchase.itemCost, price);
-            
-            RefreshUI();
-
         }
 
         public bool CanSell(InventoryData inventoryData)
