@@ -19,9 +19,11 @@ MonoBehaviour:
     price: 45
     purchased: 1
     stateDescription: 10% Increase to speed
+    icon: {fileID: -2772975462585251770, guid: 8223375eabc88774297e3d2ecbb448eb, type: 3}
   - name: Upgrade 2
     description: Increase Speed Upgrade 2
     itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
     price: 60
     purchased: 0
     stateDescription: 10% Increase to speed
+    icon: {fileID: 9129159782241988419, guid: e9d0caaea9ed9874c86e309bf4f85421, type: 3}

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Inventory;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Upgrades
 {
@@ -22,5 +23,6 @@ namespace Upgrades
         public float price;
         public bool purchased;
         public string stateDescription;
+        public Sprite icon;
     }
 }

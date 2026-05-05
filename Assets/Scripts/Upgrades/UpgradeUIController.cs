@@ -14,6 +14,7 @@ namespace Upgrades
         public Color32 canBuyColor = new Color32(255,255,255,255);
         public Color32 cannotBuyColor = new Color32(255,0,0,255);
         public Color32 activeColor = new Color32(127, 255, 0, 255); 
+        public Image upgradeIcon;
         
         [Header("Data - Do Not Modify")] public UpgradeEntry upgradeEntry;
         public bool canBuy;
@@ -29,6 +30,7 @@ namespace Upgrades
             if (upgradeName != null) upgradeName.text = GetName();
             if (upgradeDescription != null) upgradeDescription.text = GetDescription();
             if (upgradeStatDescription != null) upgradeStatDescription.text = GetStatDescription();
+            if (upgradeIcon != null) upgradeIcon.sprite = upgradeEntry.icon;
             if (price != null)
             {
                 if (upgradeEntry.purchased)

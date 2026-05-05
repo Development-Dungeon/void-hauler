@@ -729,6 +729,7 @@ MonoBehaviour:
   activeColor:
     serializedVersion: 2
     rgba: 4278255487
+  upgradeIcon: {fileID: 583878440}
   upgradeEntry:
     name: 
     description: 
@@ -736,8 +737,9 @@ MonoBehaviour:
     price: 0
     purchased: 0
     stateDescription: 
+    icon: {fileID: 0}
   canBuy: 0
-  unavilable: 0
+  unavailable: 0
 --- !u!114 &404378629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1767,7 +1769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2772975462585251770, guid: 8223375eabc88774297e3d2ecbb448eb, type: 3}
+  m_Sprite: {fileID: 2132135144609685139, guid: 084322da388ccb9439c281cb5feab95d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2530,6 +2532,7 @@ MonoBehaviour:
   activeColor:
     serializedVersion: 2
     rgba: 4278255487
+  upgradeIcon: {fileID: 617997097}
   upgradeEntry:
     name: 
     description: 
@@ -2537,8 +2540,9 @@ MonoBehaviour:
     price: 0
     purchased: 0
     stateDescription: 
+    icon: {fileID: 0}
   canBuy: 0
-  unavilable: 0
+  unavailable: 0
 --- !u!114 &994749236
 MonoBehaviour:
   m_ObjectHideFlags: 0
