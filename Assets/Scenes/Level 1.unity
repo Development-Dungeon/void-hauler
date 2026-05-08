@@ -7503,7 +7503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   upgradeIconPrefab: {fileID: 147408499040732179, guid: 209875126a42447b898ee500996831ed, type: 3}
-  playerUpgrades: {fileID: 11400000, guid: 2a0e042f7f4ca40eeb650145e1d1a6ae, type: 2}
+  playerUpgradesSo: {fileID: 11400000, guid: 2a0e042f7f4ca40eeb650145e1d1a6ae, type: 2}
 --- !u!114 &519675199
 MonoBehaviour:
   m_ObjectHideFlags: 0
