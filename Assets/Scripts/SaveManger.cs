@@ -9,9 +9,9 @@ public class SaveManger : MonoBehaviour
     public Item money;
     public Item tier1;
 
-    public Upgrades.Upgrades upgrade1;
-    public Upgrades.Upgrades upgrade2;
-    public Upgrades.Upgrades upgrade3;
+    public Upgrades.UpgradesSo upgrade1;
+    public Upgrades.UpgradesSo upgrade2;
+    public Upgrades.UpgradesSo upgrade3;
     
     public PlanarForceMotorData planarForceMotorData;
     

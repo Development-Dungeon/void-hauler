@@ -7,7 +7,7 @@ namespace Upgrades
     public class MerchantShopData : ScriptableObject
     {
         public List<ShopCatalogEntry> catalogByTier = new();
-        public Upgrades upgradeSo;
+        public UpgradesSo upgradeSoSo;
         public LaunchCost launchCost;
         public string merchantName;
         public string merchantDescription;

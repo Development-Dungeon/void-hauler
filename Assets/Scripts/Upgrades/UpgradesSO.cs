@@ -7,8 +7,8 @@ using UnityEngine.UIElements;
 namespace Upgrades
 {
 
-    [CreateAssetMenu(fileName = "Upgrades", menuName = "Upgrades/Upgrades")]
-    public class Upgrades : ScriptableObject
+    [CreateAssetMenu(fileName = "UpgradeSO", menuName = "Upgrades/Upgrades")]
+    public class UpgradesSo : ScriptableObject
     {
         [SerializeField]
         public List<UpgradeEntry> upgrades;

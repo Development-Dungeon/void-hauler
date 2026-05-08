@@ -61,7 +61,7 @@ namespace Upgrades
 
         private UpgradeEntry GetUpgradeByNumber(UpgradeScreenData screenData, int i)
         {
-            var upgrades = screenData?.merchantShopData?.upgradeSo?.upgrades;
+            var upgrades = screenData?.merchantShopData?.upgradeSoSo?.upgrades;
 
             return upgrades?.Count >= i ? upgrades[i-1] : null;
         }
