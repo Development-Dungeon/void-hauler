@@ -20251,6 +20251,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1937608378976746059, guid: 835ed3a1ea9aa40a0a665d13e507e02a, type: 3}
   m_PrefabInstance: {fileID: 1665098267}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1666900460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1666900462}
+  - component: {fileID: 1666900461}
+  m_Layer: 0
+  m_Name: PopupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1666900461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666900460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43cb87240e7e4396b8c152b6608a741b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Debris.WorldPopUpController
+  popUpPrefab: {fileID: 1303444488542121420, guid: 69c30be4540374a25ba9eadc9423f0ab, type: 3}
+  canvas: {fileID: 229612978}
+  popUpDuration: 1
+  mainCamera: {fileID: 948884653}
+--- !u!4 &1666900462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666900460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 350.34012, y: 953.5099, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672753201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27317,3 +27365,4 @@ SceneRoots:
   - {fileID: 1659609728}
   - {fileID: 1037225093}
   - {fileID: 208657172}
+  - {fileID: 1666900462}
