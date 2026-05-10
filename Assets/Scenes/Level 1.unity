@@ -676,6 +676,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -2662,6 +2666,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -4000,6 +4008,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1
@@ -5412,6 +5424,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -5953,6 +5969,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6023,6 +6043,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6808,6 +6832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1
@@ -7108,6 +7136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -7852,6 +7884,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -9676,6 +9712,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -10168,6 +10208,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1
@@ -11016,6 +11060,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -11446,6 +11494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -11508,6 +11560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1
@@ -12397,6 +12453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1
@@ -12463,6 +12523,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -12595,6 +12659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -13234,6 +13302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -13435,6 +13507,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -13642,6 +13718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -14265,6 +14345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -15498,6 +15582,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1
@@ -15671,6 +15759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -16162,6 +16254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -17174,6 +17270,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -18527,6 +18627,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -18955,6 +19059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -19341,6 +19449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -19841,6 +19953,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -20107,6 +20223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -22222,6 +22342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -22363,6 +22487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -22535,6 +22663,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -22912,6 +23044,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -22979,6 +23115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -23181,6 +23321,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -23818,6 +23962,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -23888,6 +24036,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8503216181038716403, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_Name
       value: Junk_T1_ShipArmour
@@ -23950,6 +24102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383357930263283637, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
+      propertyPath: inventoryEntries.Array.data[0].item.itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: c76465454a1f241928d518d5bbe69797, type: 2}
     - target: {fileID: 8075466005286047534, guid: bdb745e8f69534ee192f2a8dc5d8876c, type: 3}
       propertyPath: m_FlipY
       value: 1

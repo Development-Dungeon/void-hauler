@@ -49,7 +49,7 @@ namespace Upgrades
             if (unavailable) SetUnavailable();
         }
 
-        private string GetName() => upgradeEntry == null ? "" : upgradeEntry.name;
+        private string GetName() => upgradeEntry == null ? "" : upgradeEntry.upgradeName;
         private string GetDescription() => upgradeEntry == null ? "" : upgradeEntry.description;
         private string GetStatDescription() => upgradeEntry == null ? "" : upgradeEntry.stateDescription;
         private string GetPrice() => upgradeEntry == null ? "" : upgradeEntry.price.ToString("$0");

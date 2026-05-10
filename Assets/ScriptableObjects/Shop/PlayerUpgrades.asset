@@ -13,17 +13,4 @@ MonoBehaviour:
   m_Name: PlayerUpgrades
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.Upgrades
   upgrades:
-  - name: one
-    description: 
-    itemCost: {fileID: 0}
-    price: 0
-    purchased: 0
-    stateDescription: 
-    icon: {fileID: -7090918153942273498, guid: b8bd1afdcf47a5e4994bfd5c591eeb57, type: 3}
-  - name: one
-    description: 
-    itemCost: {fileID: 0}
-    price: 0
-    purchased: 0
-    stateDescription: 
-    icon: {fileID: -1992384533642836006, guid: e2622c12a43336345bc5efb1f1780a49, type: 3}
+  - {fileID: 11400000, guid: 85751df93232146cc8d614d54057444f, type: 2}

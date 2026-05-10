@@ -13,13 +13,5 @@ MonoBehaviour:
   m_Name: ShopUpgrades3
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.Upgrades
   upgrades:
-  - name: Upgrade 5
-    description: Increase Speed Upgrade 1
-    itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
-    price: 45
-    purchased: 0
-  - name: Upgrade 6
-    description: Increase Speed Upgrade 2
-    itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
-    price: 60
-    purchased: 0
+  - {fileID: 11400000, guid: fd4241df9fa7f423db86266256e8a8a2, type: 2}
+  - {fileID: 11400000, guid: 2ace9284e5740480a8a78b30343ba411, type: 2}

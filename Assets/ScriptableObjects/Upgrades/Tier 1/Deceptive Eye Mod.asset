@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2995ba50104d70afde240f1dbd3e05, type: 3}
+  m_Name: Deceptive Eye Mod
+  m_EditorClassIdentifier: Assembly-CSharp:Upgrades:UpgradeEntry
+  upgradeName: DECEPTIVE EYE MOD
+  description: A VISION ENHANCEMENT THAT DOES NOT IMRPOVE EYESIGHT SO MUCH AS IT
+    NEGOTIATES WITH REALITY
+  itemCost: {fileID: 11400000, guid: 9538f91717d3945c3adea1c1839a63d6, type: 2}
+  price: 200
+  purchased: 0
+  stateDescription: INCREASES VISION RANGE
+  icon: {fileID: 9129159782241988419, guid: e9d0caaea9ed9874c86e309bf4f85421, type: 3}

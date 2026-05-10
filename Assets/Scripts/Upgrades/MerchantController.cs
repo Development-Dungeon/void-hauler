@@ -9,7 +9,6 @@ namespace Upgrades
     public class MerchantController : MonoBehaviour
     {
         
-        
         public MerchantShopData merchantShopData;
         public UpgradeScreenData upgradeScreenData;
         public UnityEvent OnTouch;
