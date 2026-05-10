@@ -67,6 +67,13 @@ namespace Debris
     {
         public float contactDamage = 10;
         public float damageCooldownTimer = .5f;
+        public bool destroyOnTouch = false;
+
+        public void Init(float damage, bool destroySelfOnTouch)
+        {
+            contactDamage = damage;
+            destroyOnTouch= destroySelfOnTouch;
+        }
 
 
         private Dictionary<Collider, DamageOnTouchController> _touches = new();
@@ -91,8 +98,11 @@ namespace Debris
             var damageController = new DamageOnTouchController(contactDamage, damageCooldownTimer, health);
 
             damageController.TakeDamage();
-                
-            _touches.Add(other,damageController) ;
+            
+            if(destroyOnTouch)
+                Destroy(this.gameObject);
+            else 
+                _touches.Add(other,damageController) ;
             
         }
 
