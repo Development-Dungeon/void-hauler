@@ -14,9 +14,6 @@ public enum EnemyState
     Engage
 }
 
-// This controller will control the enemy
-// will be patrolling
-// when the enemy runs into? a player, they will stop patrolling, and start attacking him by facing him and then shooting a bullet
 [RequireComponent(typeof(CirclePatrol))]
 public class EnemyShipController : MonoBehaviour
 {

@@ -30,7 +30,6 @@ public class BulletController : MonoBehaviour
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-            // look at the target
             LookAt(targetPos);
         }
     }
