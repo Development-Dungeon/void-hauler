@@ -23,7 +23,7 @@ namespace Debris
             {
                 var added = inventory.AddItem(entry.item, entry.count);
                 if (added)
-                    WorldPopUpController.INSTANCE.AddEvent(entry.item, transform.position);
+                    WorldPopUpController.Instance.AddEvent(entry.item, transform.position);
 
 
                 return added;

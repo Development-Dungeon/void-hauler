@@ -20283,7 +20283,6 @@ MonoBehaviour:
   popUpPrefab: {fileID: 1303444488542121420, guid: 69c30be4540374a25ba9eadc9423f0ab, type: 3}
   canvas: {fileID: 229612978}
   popUpDuration: 1
-  mainCamera: {fileID: 948884653}
 --- !u!4 &1666900462
 Transform:
   m_ObjectHideFlags: 0
@@ -21105,6 +21104,7 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 475221166}
   - {fileID: 1735995950}
+  - {fileID: 1666900460}
   cam: {fileID: 948884653}
   playerHealthData: {fileID: 11400000, guid: 756a4368e16a0400f9479414f581093c, type: 2}
   playerMovementData: {fileID: 11400000, guid: 66acfd2eb20454df8960b7c9a63e0312, type: 2}
