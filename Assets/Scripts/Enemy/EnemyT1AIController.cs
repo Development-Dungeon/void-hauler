@@ -51,8 +51,8 @@ namespace Enemy
             var toPatrolStateNode = new StateNode(EnemyState.ToPatrol);
 
             patrolStateNode
-                .AddInit(() => circlePatrol.enableScript = true)
-                .AddExit(() => circlePatrol.enableScript = false)
+                .OnEnter(() => circlePatrol.enableScript = true)
+                .OnExit(() => circlePatrol.enableScript = false)
                 .AddPerform(null)
                 .AddTransition(sightStateNode, () =>
                     {
@@ -75,8 +75,8 @@ namespace Enemy
 
             engageStateNode
                 .AddPerform(PerformEngage)
-                .AddInit(() => _attackTimer.Start())
-                .AddExit(() => _attackTimer.Pause())
+                .OnEnter(() => _attackTimer.Start())
+                .OnExit(() => _attackTimer.Pause())
                 .AddTransition(sightStateNode, () =>
                 {
                     var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
@@ -89,8 +89,8 @@ namespace Enemy
                     });
 
             toPatrolStateNode
-                .AddInit(() => _toPatrolTimer.Start())
-                .AddExit(() => _toPatrolTimer.Pause())
+                .OnEnter(() => _toPatrolTimer.Start())
+                .OnExit(() => _toPatrolTimer.Pause())
                 .AddPerform(null)
                 .AddTransition(patrolStateNode, () => _toPatrolTimer.IsFinished);
             

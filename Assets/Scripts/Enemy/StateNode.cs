@@ -14,8 +14,8 @@ namespace Enemy
         private Dictionary<StateNode, Func<bool>> _stateTransitions = new ();
         private Action _eventInvoker;
         
-        private Action _initFunc;
-        private Action _exitInvoker;
+        private Action _onEnterFunc;
+        private Action _onExitFunc;
 
         public StateNode(EnemyState patrol)
         {
@@ -44,23 +44,23 @@ namespace Enemy
 
         public void ExitState()
         {
-            _exitInvoker?.Invoke();
+            _onExitFunc?.Invoke();
         }
 
-        public StateNode AddInit(Action func)
+        public StateNode OnEnter(Action func)
         {
-            _initFunc = func;
+            _onEnterFunc = func;
             return this;
         }
 
         public void EnterState()
         {
-            _initFunc?.Invoke();
+            _onEnterFunc?.Invoke();
         }
 
-        public StateNode AddExit(Action func)
+        public StateNode OnExit(Action func)
         {
-            _exitInvoker = func;
+            _onExitFunc = func;
             return this;
         }
 
