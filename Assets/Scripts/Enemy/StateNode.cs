@@ -10,7 +10,6 @@ namespace Enemy
         [SerializeField]
         public EnemyState stateEnum;
         
-        private Func<bool> _transitionFunc;
         private Dictionary<StateNode, Func<bool>> _stateTransitions = new ();
         private Action _eventInvoker;
         
