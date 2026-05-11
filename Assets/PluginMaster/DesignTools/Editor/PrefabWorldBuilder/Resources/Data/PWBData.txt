@@ -22,7 +22,7 @@
     "_tempCollidersAction": 1,
     "_paletteManager": {
         "_selectedPaletteIdx": 0,
-        "_selectedBrushIdx": 8,
+        "_selectedBrushIdx": 0,
         "_showBrushName": false,
         "_viewList": false,
         "_showTabsInMultipleRows": false,
@@ -177,7 +177,7 @@
             "_paintOnPalettePrefabs": false,
             "_mode": 0,
             "_paralellToTheSurface": true,
-            "_repeat": false,
+            "_repeat": true,
             "_flatteningSettings": {
                 "_hardness": 0.0,
                 "_padding": 0.0,
@@ -482,7 +482,7 @@
         ],
         "_selectedProfileName": "Default",
         "_unsavedProfile": {
-            "_radius": 37.099998474121097,
+            "_radius": 19.587678909301759,
             "_paintTool": {
                 "_parentGlobalId": "",
                 "_autoCreateParent": true,
@@ -517,15 +517,15 @@
                         "y": 0.0,
                         "z": 0.0
                     },
-                    "_addRandomRotation": false,
+                    "_addRandomRotation": true,
                     "_rotationFactor": 90.0,
-                    "_rotateInMultiples": false,
+                    "_rotateInMultiples": true,
                     "_randomEulerOffset": {
                         "x": {
-                            "_v1": 0.0,
-                            "_v2": 0.0,
-                            "_min": 0.0,
-                            "_max": 0.0
+                            "_v1": 360.0,
+                            "_v2": 360.0,
+                            "_min": 360.0,
+                            "_max": 360.0
                         },
                         "y": {
                             "_v1": 0.0,
@@ -540,36 +540,36 @@
                             "_max": 0.0
                         }
                     },
-                    "_alwaysOrientUp": false,
+                    "_alwaysOrientUp": true,
                     "_separateScaleAxes": false,
                     "_scaleMultiplier": {
                         "x": 1.0,
                         "y": 1.0,
                         "z": 1.0
                     },
-                    "_randomScaleMultiplier": false,
+                    "_randomScaleMultiplier": true,
                     "_randomScaleMultiplierRange": {
                         "x": {
-                            "_v1": 1.0,
-                            "_v2": 1.0,
-                            "_min": 1.0,
-                            "_max": 1.0
+                            "_v1": 2.0,
+                            "_v2": 6.0,
+                            "_min": 2.0,
+                            "_max": 6.0
                         },
                         "y": {
-                            "_v1": 1.0,
-                            "_v2": 1.0,
-                            "_min": 1.0,
-                            "_max": 1.0
+                            "_v1": 2.0,
+                            "_v2": 6.0,
+                            "_min": 2.0,
+                            "_max": 6.0
                         },
                         "z": {
-                            "_v1": 1.0,
-                            "_v2": 1.0,
-                            "_min": 1.0,
-                            "_max": 1.0
+                            "_v1": 2.0,
+                            "_v2": 6.0,
+                            "_min": 2.0,
+                            "_max": 6.0
                         }
                     },
-                    "_flipX": 2,
-                    "_flipY": 2,
+                    "_flipX": 0,
+                    "_flipY": 0,
                     "_thumbnailSettings": {
                         "_backgroudColor": {
                             "r": 0.5,
@@ -602,28 +602,28 @@
                     }
                 }
             },
-            "_brushShape": 2,
-            "_density": 1,
+            "_brushShape": 1,
+            "_density": 4,
             "_orientAlongBrushstroke": false,
             "_additionalOrientationAngle": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
             },
-            "_spacingType": 0,
-            "_minSpacing": 1.268327236175537,
+            "_spacingType": 1,
+            "_minSpacing": 1.0,
             "_randomizePositions": true,
             "_randomness": 1.0,
             "_paintOnSurfaceToolSettings": {
                 "_paintOnMeshesWithoutCollider": false,
                 "_paintOnSelectedOnly": true,
-                "_paintOnPalettePrefabs": false,
+                "_paintOnPalettePrefabs": true,
                 "_mode": 0,
                 "_paralellToTheSurface": true
             },
-            "_maxHeightFromCenter": 2.0,
+            "_maxHeightFromCenter": 19.587678909301759,
             "_heightType": 1,
-            "_avoidOverlapping": 4,
+            "_avoidOverlapping": 1,
             "_layerFilter": {
                 "serializedVersion": "2",
                 "m_Bits": 127
@@ -639,9 +639,9 @@
             ],
             "_slopeFilter": {
                 "_v1": 0.0,
-                "_v2": 60.0,
+                "_v2": 0.0,
                 "_min": 0.0,
-                "_max": 60.0
+                "_max": 0.0
             },
             "_terrainLayerIds": [],
             "_showPreview": false
@@ -936,7 +936,7 @@
                 "z": 0.0
             },
             "_spacingType": 0,
-            "_minSpacing": 1.135819435119629,
+            "_minSpacing": 100.0,
             "_randomizePositions": true,
             "_randomness": 1.0,
             "_simData": {

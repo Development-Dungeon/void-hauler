@@ -31,7 +31,7 @@ namespace Inventory
         public void AddEvent(Item entryItem, Vector3 transformPosition)
         {
             var popup = _resolver.Instantiate(popUpPrefab, canvas.transform);
-            popup.GetComponent<WorldPopUp>().Setup(entryItem.itemType.name, Color.red, transformPosition);
+            popup.GetComponent<WorldPopUp>().Setup(entryItem.itemType.name, Color.white, transformPosition);
             Destroy(popup, popUpDuration);
 
         }
