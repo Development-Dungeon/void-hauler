@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6978187589048498926}
   - component: {fileID: 5261011701907430557}
   - component: {fileID: 1140480312998119123}
-  - component: {fileID: 485055446101368421}
+  - component: {fileID: 205939601577439375}
   m_Layer: 0
-  m_Name: Enemy Ship
+  m_Name: Enemy Ship T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,11 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652f0088d84c49259ea1f7ef1ed29c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.CirclePatrol
-  speed: 1
-  radius: 1.54
+  speed: 0.5
+  radius: 10
   faceDirection: 1
   enableScript: 1
---- !u!114 &485055446101368421
+--- !u!114 &205939601577439375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,12 +118,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6804447360030222055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3452fb43703d24dfcbf956a7961b4391, type: 3}
+  m_Script: {fileID: 11500000, guid: cc4f311d11bc4b58bfb5c8aef79767a3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyAiController
+  playerMovementController: {fileID: 0}
   circlePatrol: {fileID: 1140480312998119123}
+  bulletPrefab: {fileID: 840212333311008958, guid: c66a91c30948747919ae9e33aba1dcf6, type: 3}
+  toPatrolCooldownTimer: 0.5
   sightRange: 10
-  attackRange: 10
-  attackCoolDownTimeInSeconds: 1
-  bulletPrefab: {fileID: 2451390265581960182, guid: c66a91c30948747919ae9e33aba1dcf6, type: 3}
-  currentState: 0
+  attackCooldownTimer: 1
+  attackRange: 8
+  stateMachine:
+    currentState:
+      stateEnum: 0
