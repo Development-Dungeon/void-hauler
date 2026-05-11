@@ -23557,6 +23557,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6804447360030222055, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
   m_PrefabInstance: {fileID: 5531793989709421093}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963739817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1140480312998119123, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
+  m_PrefabInstance: {fileID: 5531793989709421093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963739815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652f0088d84c49259ea1f7ef1ed29c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Debris.CirclePatrol
+--- !u!114 &1963739820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963739815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f311d11bc4b58bfb5c8aef79767a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyAiController
+  playerMovementController: {fileID: 475221183}
+  circlePatrol: {fileID: 1963739817}
+  bulletPrefab: {fileID: 840212333311008958, guid: c66a91c30948747919ae9e33aba1dcf6, type: 3}
+  toPatrolCooldownTimer: 0.5
+  sightRange: 10
+  attackCooldownTimer: 1
+  attackRange: 8
+  stateMachine:
+    currentState:
+      stateEnum: 0
 --- !u!1001 &1963995942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26665,6 +26698,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 485055446101368421, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485055446101368421, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
       propertyPath: sightRange
       value: 7
       objectReference: {fileID: 0}
@@ -26736,10 +26773,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 485055446101368421, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6804447360030222055, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963739820}
   m_SourcePrefab: {fileID: 100100000, guid: f3793c6cb9b9745aca047a57bdd099f9, type: 3}
 --- !u!1001 &5781878025499023341
 PrefabInstance:
