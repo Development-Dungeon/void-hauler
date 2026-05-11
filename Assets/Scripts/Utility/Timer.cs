@@ -18,6 +18,7 @@ namespace Utility
         {
             InitialTime = value;
             IsRunning = false;
+            Time = InitialTime;
         }
 
         public void Start()
