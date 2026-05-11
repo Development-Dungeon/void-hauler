@@ -74,9 +74,9 @@ namespace Enemy
                 });
 
             engageStateNode
-                .AddPerform(PerformEngage)
                 .OnEnter(() => _attackTimer.Start())
                 .OnExit(() => _attackTimer.Pause())
+                .AddPerform(PerformEngage)
                 .AddTransition(sightStateNode, () =>
                 {
                     var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
