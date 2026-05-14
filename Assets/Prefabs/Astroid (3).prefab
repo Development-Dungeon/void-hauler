@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 8527588677648842574}
   - component: {fileID: 818942248230024280}
   - component: {fileID: 8323854553595168812}
-  - component: {fileID: 364302597376248325}
   - component: {fileID: 7648247271187346078}
   - component: {fileID: 1052710893282251790}
   - component: {fileID: 1722997393579556193}
   - component: {fileID: 8693880866707898408}
   - component: {fileID: 6236554264712896010}
+  - component: {fileID: 6415568133604728912}
+  - component: {fileID: 3625202584276356298}
   m_Layer: 0
   m_Name: Astroid (3)
   m_TagString: Untagged
@@ -31,7 +32,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8159226603171128911}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
@@ -100,27 +101,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &364302597376248325
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8159226603171128911}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7648247271187346078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.CirclePatrol
   speed: 1
   radius: 1.73
+  faceDirection: 0
+  enableScript: 1
 --- !u!114 &1052710893282251790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Debris.DamageOnTouch
   contactDamage: 10
   damageCooldownTimer: 3
+  destroyOnTouch: 0
 --- !u!222 &1722997393579556193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -200,3 +183,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris.ZRotator
   rotationSpeed: 50
+--- !u!54 &6415568133604728912
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159226603171128911}
+  serializedVersion: 5
+  m_Mass: 50
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 8
+  m_CollisionDetection: 0
+--- !u!136 &3625202584276356298
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159226603171128911}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3153777
+  m_Height: 0.834946
+  m_Direction: 1
+  m_Center: {x: -0.0025520325, y: 0.011060327, z: 0}

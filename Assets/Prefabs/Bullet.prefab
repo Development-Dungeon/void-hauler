@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletController
   targetPos: {x: 0, y: 0, z: 0}
-  speed: 3.16
-  damage: 10
-  maxTimeAlive: 30
+  speed: 10
+  damage: 1
+  maxTimeAlive: 500
   damageOnTouch: {fileID: 7001218058611138070}
 --- !u!65 &8498456713042281564
 BoxCollider:
