@@ -1,5 +1,7 @@
+using System;
 using Attributes;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 namespace Utility
@@ -15,6 +17,54 @@ namespace Utility
         [SerializeField] private ForceMode forceMode = ForceMode.Acceleration;
         private Vector2 _thrustInput;
         public PlanarForceMotorData planarForceMotorData;
+        
+        [Header("Upgrades")]
+        [Space]
+        public PlayerUpgradeController playerUpgradeController;
+        [Space]
+        public bool speedUpgradePurchased;
+        public float speedUpgradeIncrease = 10f;
+        [Space]
+        public bool boostUpgradePurchased;
+        public bool boostUpgradeEnabled;
+        public float boostUpgradeIncrease = 10f;
+        [Space]
+        public InputAction inputAction;
+
+
+        private void OnEnable()
+        {
+            inputAction.Enable();
+            
+            // subscribe to the events
+            inputAction.performed += ctx => boostUpgradeEnabled = true;
+            inputAction.canceled += ctx => boostUpgradeEnabled = false;
+        }
+
+        private void OnDisable()
+        {
+            inputAction.Disable();
+        }
+
+        private void Awake()
+        {
+            if (playerUpgradeController != null)
+            {
+                playerUpgradeController.thrusterUpgrade.Action += EnableThrusterUpgrade;
+                playerUpgradeController.boostUpgrade.Action += EnableBoostUpgrade;
+            }
+        }
+
+        private void EnableBoostUpgrade()
+        {
+            boostUpgradePurchased = true;
+        }
+
+        private void EnableThrusterUpgrade()
+        {
+            speedUpgradePurchased = true;
+        }
+
 
         /// <summary>
         /// World-space direction on the XY plane. Magnitude is clamped to 0–1.
@@ -31,18 +81,37 @@ namespace Utility
 
             body.AddForce(new Vector3(_thrustInput.x, _thrustInput.y, 0f) * planarForceMotorData.thrustAcceleration, forceMode);
 
-            if (planarForceMotorData.clampPlanarSpeed && planarForceMotorData.MaxPlanarSpeed > 0f)
+            if (planarForceMotorData.clampPlanarSpeed && GetMaxSpeed() > 0f)
             {
                 var v = body.linearVelocity;
                 var planar = new Vector2(v.x, v.y);
-                if (planar.sqrMagnitude > planarForceMotorData.MaxPlanarSpeed * planarForceMotorData.MaxPlanarSpeed)
+                if (planar.sqrMagnitude > GetMaxSpeed() * GetMaxSpeed())
                 {
-                    planar = planar.normalized * planarForceMotorData.MaxPlanarSpeed;
+                    planar = planar.normalized * GetMaxSpeed();
                     body.linearVelocity = new Vector3(planar.x, planar.y, 0f);
                 }
             }
 
             body.linearVelocity = new Vector3(body.linearVelocity.x, body.linearVelocity.y, 0f);
+        }
+
+        private float GetMaxSpeed()
+        {
+            var bonusSpeed = 0f;
+            
+            bonusSpeed += speedUpgradePurchased ? speedUpgradeIncrease : 0f;
+            bonusSpeed += boostUpgradePurchased && boostUpgradeEnabled ? boostUpgradeIncrease : 0f;
+            
+            return planarForceMotorData.MaxPlanarSpeed + bonusSpeed;
+        }
+
+        private void OnDestroy()
+        {
+            if (playerUpgradeController != null)
+            {
+                playerUpgradeController.thrusterUpgrade.Action += EnableThrusterUpgrade;
+                playerUpgradeController.boostUpgrade.Action += EnableBoostUpgrade;
+            }
         }
     }
 }

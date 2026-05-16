@@ -12,9 +12,6 @@ public class SaveManger : MonoBehaviour
     public Upgrades.UpgradesSo upgrade1;
     public Upgrades.UpgradesSo upgrade2;
     public Upgrades.UpgradesSo upgrade3;
-    
-    public PlanarForceMotorData planarForceMotorData;
-    
 
     public void Load()
     {
@@ -25,8 +22,6 @@ public class SaveManger : MonoBehaviour
         upgrade1.upgrades.ForEach(u => u.purchased = false);
         upgrade2.upgrades.ForEach(u => u.purchased = false);
         upgrade3.upgrades.ForEach(u => u.purchased = false);
-
-        planarForceMotorData.boostUpgradeEnabled = false;
 
     }
 
