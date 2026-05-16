@@ -25,8 +25,6 @@ namespace Upgrades
 
         // Player Data
         [Header("Player Data")]
-        public HealthData playerHealth;
-        public PlanarForceMotorData planarForceMotor;
         public InventoryData playerInventory;
         
         // Upgrade UI
@@ -114,7 +112,6 @@ namespace Upgrades
             
             if (!playerInventory.CanRemove(upgradeToPurchase.itemCost, price)) return;
             
-            planarForceMotor.boostUpgradeEnabled = true;
             upgradeToPurchase.purchased = true;
             playerInventory.Remove(upgradeToPurchase.itemCost, price);
             

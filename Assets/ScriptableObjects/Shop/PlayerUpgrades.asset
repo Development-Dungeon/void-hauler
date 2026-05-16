@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: PlayerUpgrades
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.Upgrades
   upgrades:
-  - {fileID: 11400000, guid: 85751df93232146cc8d614d54057444f, type: 2}
+  - {fileID: 11400000, guid: 2ace9284e5740480a8a78b30343ba411, type: 2}
+  - {fileID: 11400000, guid: 1dead431aa51f4c5294c28bd98498a65, type: 2}
+  - {fileID: 11400000, guid: fd4241df9fa7f423db86266256e8a8a2, type: 2}

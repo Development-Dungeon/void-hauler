@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using EventChannel.templates;
+using Upgrades;
 using VContainer;
 
 namespace Attributes
@@ -13,9 +14,14 @@ namespace Attributes
         public EventChannel<float> fuelChannel;
         public EventChannel<Empty> emptyFuelChannel;
 
-        public float Normalized => _currentFuel.maxFuel > 0f ? _currentFuel.currentFuel / _currentFuel.maxFuel : 0f;
+        [Header("Upgrades")]
+        [Space]
+        public PlayerUpgradeController playerUpgradeController;
+        [Space]
+        public float fuelTakeUpgradeIncrease = 25f;
+        public bool fuelTakeUpgradeEnabled;
+        
         public bool HasFuel => _currentFuel.currentFuel > 0f;
-
 
         [Inject]
         public void Construct(IObjectResolver resolver)
@@ -28,11 +34,27 @@ namespace Attributes
             if (_currentFuel == null)
                 _currentFuel = Instantiate(templateFuel);
             
+            if(playerUpgradeController != null)
+                playerUpgradeController.fuelUpgrade.Action += EnableUpgrade;
         }
+
+        private void EnableUpgrade()
+        {
+            fuelTakeUpgradeEnabled = true;
+        }
+
 
         private void Start()
         {
-            SetCurrentFuel(_currentFuel.maxFuel);
+            SetCurrentFuel(GetMaxFuel());
+        }
+
+        private float GetMaxFuel()
+        {
+           if(!fuelTakeUpgradeEnabled) 
+               return _currentFuel.maxFuel;
+           
+           return _currentFuel.maxFuel + fuelTakeUpgradeIncrease;
         }
 
         public void RegisterMovement(float metersOnXYPlane)
@@ -53,8 +75,13 @@ namespace Attributes
 
         public void AddFuel(float amount)
         {
-            SetCurrentFuel(Mathf.Min(_currentFuel.maxFuel, _currentFuel.currentFuel + amount));
+            SetCurrentFuel(Mathf.Min(GetMaxFuel(), _currentFuel.currentFuel + amount));
         }
 
+        private void OnDestroy()
+        {
+            if(playerUpgradeController != null)
+                playerUpgradeController.fuelUpgrade.Action -= EnableUpgrade;
+        }
     }
 }
