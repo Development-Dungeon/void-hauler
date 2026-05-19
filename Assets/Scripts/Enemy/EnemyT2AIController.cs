@@ -160,6 +160,9 @@ namespace Enemy
         private void PerformEngage()
         {
             LookAt(playerMovementController.transform.position);
+            AudioEvents.RequestSound(
+                AudioEvent.HeavyLaserShoot,
+                transform.position);
             
             Instantiate(bulletPrefab, transform.position, Quaternion.identity)
                 .Init(playerMovementController.transform.position);

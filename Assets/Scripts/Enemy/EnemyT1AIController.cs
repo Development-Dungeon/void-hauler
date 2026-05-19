@@ -162,7 +162,13 @@ namespace Enemy
                     .Init(playerMovementController.transform.position);
                 _attackTimer.Reset(attackCooldownTimer);
                 _attackTimer.Start();
+                
+                // AUDIO EVENT
+                AudioEvents.RequestSound(
+                    AudioEvent.LaserShoot,
+                    transform.position);
             }
+            
             else if (!_attackTimer.IsRunning)
             {
                 _attackTimer.Reset(attackCooldownTimer);

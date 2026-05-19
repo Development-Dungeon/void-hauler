@@ -24,6 +24,10 @@ namespace Inventory
 
         public bool AddItem(Item item, float quantity = 1)
         {
+            AudioEvents.RequestSound(
+                AudioEvent.ItemPickup,
+                transform.position);
+            
             var inventoryEntry = _inventoryData.items.Find(entry => Equals(entry.item, item));
             if (inventoryEntry != null)
             {

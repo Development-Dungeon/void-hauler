@@ -135,7 +135,7 @@ MonoBehaviour:
   stateMachine:
     currentState:
       stateEnum: 0
-  drawGizmos: 0
+  drawGizmos: 1
 --- !u!54 &5516057712191948737
 Rigidbody:
   m_ObjectHideFlags: 0

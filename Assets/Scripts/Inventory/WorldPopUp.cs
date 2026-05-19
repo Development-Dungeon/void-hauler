@@ -24,6 +24,7 @@ namespace Inventory
             // Every frame, translate that 3D point to where it should be on your monitor
             _worldPosition += Vector3.up * Time.deltaTime;
             var screenPos = _mainCam.WorldToScreenPoint(_worldPosition);
+            
 
             transform.position = screenPos;
         }
