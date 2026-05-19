@@ -7,14 +7,6 @@ using Utility;
 
 namespace Enemy
 {
-    /*
-     * this one needs to patrol
-     * then it needs to have a large attack range
-     * then it needs to prepare to fire
-     *  draw the line
-     * then it needs to wait
-     * then it needs to find a fast round
-     */
     
     [RequireComponent(typeof(LineRenderer))]
     public class EnemyT2AIController : MonoBehaviour
