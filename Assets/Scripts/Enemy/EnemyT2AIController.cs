@@ -65,7 +65,7 @@ namespace Enemy
             stateMachine = new StateMachine();
             
             var patrolStateNode = new StateNode(EnemyState.Patrol);
-            var lockOnStateNode = new StateNode(EnemyState.LockOn); // draw the red line and wait some amount of time
+            var lockOnStateNode = new StateNode(EnemyState.LockOn);
             var reloadStateNode = new StateNode(EnemyState.Reload);
             var engageStateNode = new StateNode(EnemyState.Engage);
             var toPatrolStateNode = new StateNode(EnemyState.ToPatrol);
