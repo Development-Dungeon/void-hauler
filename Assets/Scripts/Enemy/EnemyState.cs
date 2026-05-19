@@ -5,6 +5,8 @@ namespace Enemy
         Patrol,
         Engage,
         ToPatrol,
-        Chase
+        Chase,
+        LockOn,
+        Reload
     }
 }
