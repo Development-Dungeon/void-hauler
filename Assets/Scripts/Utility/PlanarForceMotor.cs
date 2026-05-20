@@ -10,11 +10,11 @@ namespace Utility
     /// Applies thrust in the world XY plane via <see cref="Rigidbody.AddForce"/>.
     /// Attach to any dynamic <see cref="Rigidbody"/> that should move on a 2D play plane (Z locked by constraints).
     /// </summary>
-    //[RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Rigidbody))]
     public class PlanarForceMotor : MonoBehaviour
     {
-        [SerializeField] [Get] private Rigidbody2D body;
-        [SerializeField] private ForceMode2D forceMode = ForceMode2D.Impulse;
+        [SerializeField] [Get] private Rigidbody body;
+        [SerializeField] private ForceMode forceMode = ForceMode.Acceleration;
         private Vector2 _thrustInput;
         public PlanarForceMotorData planarForceMotorData;
         
@@ -79,8 +79,7 @@ namespace Utility
             if (_thrustInput.sqrMagnitude < 1e-8f)
                 return;
 
-            body.AddForce(new Vector2(_thrustInput.x, _thrustInput.y) * planarForceMotorData.thrustAcceleration, forceMode);
-
+            body.AddForce(new Vector3(_thrustInput.x, _thrustInput.y, 0f) * planarForceMotorData.thrustAcceleration, forceMode);
 
             if (planarForceMotorData.clampPlanarSpeed && GetMaxSpeed() > 0f)
             {
