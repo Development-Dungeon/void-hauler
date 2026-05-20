@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2762cff76be44d66af0c28939c2077e2, type: 3}
   m_Name: PlayerFuel
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.FuelData
-  maxFuel: 100
+  maxFuel: 250
   fuelPerMeter: 0.2
-  currentFuel: 98.46396
+  currentFuel: 208.4273

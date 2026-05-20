@@ -14,7 +14,7 @@ namespace Utility
     public class PlanarForceMotor : MonoBehaviour
     {
         [SerializeField] [Get] private Rigidbody2D body;
-        [SerializeField] private ForceMode2D forceMode = ForceMode2D.Force;
+        [SerializeField] private ForceMode2D forceMode = ForceMode2D.Impulse;
         private Vector2 _thrustInput;
         public PlanarForceMotorData planarForceMotorData;
         
