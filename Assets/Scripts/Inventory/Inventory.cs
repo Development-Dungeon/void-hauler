@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace Inventory
     {
         public InventoryData inventoryDataTemplate;
         private InventoryData _inventoryData;
+        
+        public event Action<GameObject> OnItemAdded;
 
         [Inject]
         public void Construct(IObjectResolver resolver)
@@ -20,26 +23,35 @@ namespace Inventory
         {
             if(_inventoryData == null)
                 _inventoryData = Instantiate(inventoryDataTemplate);
+            
+            _inventoryData.OnItemAdded += (item, q) => OnItemAdded?.Invoke(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            _inventoryData.OnItemAdded -= (item, q) => OnItemAdded?.Invoke(gameObject);
         }
 
         public bool AddItem(Item item, float quantity = 1)
         {
-            AudioEvents.RequestSound(
-                AudioEvent.ItemPickup,
-                transform.position);
+            var added =_inventoryData.Add(item.itemType, quantity);
             
-            var inventoryEntry = _inventoryData.items.Find(entry => Equals(entry.item, item));
-            if (inventoryEntry != null)
-            {
-                inventoryEntry.count++;
-                return true;
-            }
-
-            if (_inventoryData.items.Count >= _inventoryData.maxInventorySize)
-                return false;
-
-            _inventoryData.items.Add(new InventoryEntry(item));
-            return true;
+            if(added) 
+                OnItemAdded?.Invoke(gameObject);
+            
+            return added;
+            // var inventoryEntry = _inventoryData.items.Find(entry => Equals(entry.item, item));
+            // if (inventoryEntry != null)
+            // {
+            //     inventoryEntry.count++;
+            //     return true;
+            // }
+            //
+            // if (_inventoryData.items.Count >= _inventoryData.maxInventorySize)
+            //     return false;
+            //
+            // _inventoryData.items.Add(new InventoryEntry(item));
+            // return true;
         }
     }
 }
