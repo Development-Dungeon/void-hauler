@@ -102,7 +102,7 @@ namespace Inventory
 
         public List<InventoryEntry> FindAll(ItemType itemToFilterBy)
         {
-            return items.FindAll(entry => entry.item.itemType.Equals(itemToFilterBy));
+            return items.FindAll(entry => entry?.item?.itemType != null && entry.item.itemType.Equals(itemToFilterBy));
         }
     }
 }

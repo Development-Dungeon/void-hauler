@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Inventory;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Debris
@@ -10,7 +11,7 @@ namespace Debris
         public List<InventoryEntry> inventoryEntries;
         public bool destroyOnTouch;
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (inventoryEntries == null || inventoryEntries.Count == 0)
                 return;
