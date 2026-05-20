@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a75719b1744a83914b1a66e332d680, type: 3}
   m_Name: PlanarForceMotorData
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.PlanarForceMotorData
-  thrustAcceleration: 300
+  thrustAcceleration: 1000
   clampPlanarSpeed: 1
-  _maxPlanarSpeed: 5
+  _maxPlanarSpeed: 17.22

@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da63af924d134b4b82606467c46af8c0, type: 3}
   m_Name: PlayerMovement
   m_EditorClassIdentifier: Assembly-CSharp::Attributes.MovementData
-  speed: 1
-  turnSmoothing: 25
+  turnSmoothing: 144.8

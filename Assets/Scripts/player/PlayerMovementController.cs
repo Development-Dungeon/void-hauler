@@ -3,14 +3,14 @@ using Utility;
 
 namespace player
 {
-    //[RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(PlanarForceMotor))]
     public class PlayerMovementController : MonoBehaviour
     {
-        [Get] [SerializeField] private Rigidbody body;
+        [Get] [SerializeField] private Rigidbody2D body;
         [Get] [SerializeField] private PlanarForceMotor motor;
 
-        public Rigidbody Body => body;
+        public Rigidbody2D Body => body;
 
         public void ClearThrust() => motor.SetPlanarThrustInput(Vector2.zero);
 
@@ -22,7 +22,7 @@ namespace player
         public void SyncRotation(Quaternion rotation)
         {
             body.MoveRotation(rotation);
-            body.angularVelocity = Vector3.zero;
+            body.angularVelocity = 0;
         }
     }
 }
