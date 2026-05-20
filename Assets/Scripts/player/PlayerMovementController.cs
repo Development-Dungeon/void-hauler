@@ -3,7 +3,7 @@ using Utility;
 
 namespace player
 {
-    [RequireComponent(typeof(Rigidbody))]
+    //[RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(PlanarForceMotor))]
     public class PlayerMovementController : MonoBehaviour
     {
