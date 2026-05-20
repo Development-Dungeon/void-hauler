@@ -14,9 +14,10 @@ THE SOFTWARE.
 #if !UNITY_2020_2_OR_NEWER
 using System.Linq;
 #endif
+using PluginMaster.DesignTools.Editor.Common.Scripts;
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     public static class DistanceUtils
     {

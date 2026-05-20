@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.CommonPaint.Scripts
 {
     // A node in a BoundsOctree
     public class BoundsOctreeNode<T>

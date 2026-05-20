@@ -13,9 +13,10 @@ THE SOFTWARE.
 */
 
 using System.Linq;
+using PluginMaster.DesignTools.Editor.Common.Scripts;
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     [UnityEditor.InitializeOnLoad]
     public class RenderPipelineDefine

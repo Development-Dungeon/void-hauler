@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098fbb169dab45aa8f6ac10598c6561f, type: 3}
   m_Name: OldGear
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades.Tier1
+  pickUpSound: {fileID: 8300000, guid: f101515e87e97614c8d23a64ed574cd9, type: 3}
+  pickUpSoundVolume: 0.2

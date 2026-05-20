@@ -11,9 +11,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
+
+using PluginMaster.DesignTools.Editor.Common.Scripts;
+using PluginMaster.DesignTools.Editor.CommonPaint.Scripts;
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     public class BrushProperties : UnityEditor.EditorWindow, ISerializationCallbackReceiver
     {
@@ -1249,7 +1252,7 @@ namespace PluginMaster
                     else if (Event.current.type == EventType.DragPerform)
                     {
                         bool multiBrushChanged = false;
-                        var droppedItems = PluginMaster.DropUtils.GetDroppedPrefabs();
+                        var droppedItems = DropUtils.GetDroppedPrefabs();
                         foreach (var droppedItem in droppedItems)
                         {
                             var item = new MultibrushItemSettings(droppedItem.obj, selectedBrush);
@@ -1535,7 +1538,7 @@ namespace PluginMaster
         private void CreateItemsFromEachPrefabInFolder(object obj)
         {
             _newItemIdx = (int)obj;
-            var items = PluginMaster.DropUtils.GetFolderItems();
+            var items = DropUtils.GetFolderItems();
             if (items == null) return;
             for (int i = 0; i < items.Length; ++i)
             {

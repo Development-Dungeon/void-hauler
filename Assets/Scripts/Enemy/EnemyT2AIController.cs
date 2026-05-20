@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using Debris;
+using EventChannel.Audio_events;
+using EventChannel.concrete;
 using player;
 using UnityEngine;
 using UnityEngine.AI;
 using Utility;
+using Weapons;
 
 namespace Enemy
 {
@@ -16,7 +19,8 @@ namespace Enemy
         
         [Header("Enemy Movement And Data")]
         [Get] public CirclePatrol circlePatrol;
-        public BulletController bulletPrefab; 
+        public BulletController bulletPrefab;
+        public Weapon weapon;
         
         [Tooltip("degrees per second")]
         public float rotationSpeed = 90;
@@ -48,6 +52,8 @@ namespace Enemy
         private Vector3 _startingPosition;
         public bool drawGizmos = true;
 
+        public EnemyStateEventChannel onLockOnChannel;
+        public EnemyStateEventChannel onFireChannel;
  
         private void Awake()
         {
@@ -86,6 +92,7 @@ namespace Enemy
                 {
                     lockOnLine.enabled = true;
                     _lockOnTimer.Start();
+                    onLockOnChannel.Invoke(new EnemyStateContext(transform.position, weapon));
                 })
                 .OnExit(() =>
                 {
@@ -108,7 +115,10 @@ namespace Enemy
                 ;
 
             engageStateNode
-                .OnEnter(null)
+                .OnEnter(() =>
+                {
+                    onFireChannel.Invoke(new EnemyStateContext(transform.position, weapon));
+                })
                 .OnExit(null)
                 .AddPerform(PerformEngage)
                 .AddTransition(reloadStateNode, () =>
@@ -160,10 +170,6 @@ namespace Enemy
         private void PerformEngage()
         {
             LookAt(playerMovementController.transform.position);
-            AudioEvents.RequestSound(
-                AudioEvent.HeavyLaserShoot,
-                transform.position);
-            
             Instantiate(bulletPrefab, transform.position, Quaternion.identity)
                 .Init(playerMovementController.transform.position);
         }

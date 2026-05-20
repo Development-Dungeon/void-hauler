@@ -11,9 +11,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
+
+using PluginMaster.DesignTools.Editor.Common.Scripts;
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     public class SnapSettingsWindow : UnityEditor.EditorWindow
     {

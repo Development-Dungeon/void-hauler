@@ -1,6 +1,9 @@
-public enum AudioEvent
+namespace EventChannel.Audio_events
 {
-    LaserShoot,
-    HeavyLaserShoot,
-    ItemPickup
+    public enum AudioEvent
+    {
+        LaserShoot,
+        HeavyLaserShoot,
+        ItemPickup
+    }
 }

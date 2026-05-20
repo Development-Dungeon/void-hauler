@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public class PlayerBounds : MonoBehaviour
+namespace Utility
 {
-    [Header("World Bounds")]
-    public float minX = -164f;
-    public float maxX = 164f;
-    public float minY = -164f;
-    public float maxY = 164f;
-
-    void LateUpdate()
+    public class PlayerBounds : MonoBehaviour
     {
-        Vector3 pos = transform.position;
+        [Header("World Bounds")]
+        public float minX = -164f;
+        public float maxX = 164f;
+        public float minY = -164f;
+        public float maxY = 164f;
 
-        pos.x = Mathf.Clamp(pos.x, minX, maxX);
-        pos.y = Mathf.Clamp(pos.y, minY, maxY);
+        void LateUpdate()
+        {
+            Vector3 pos = transform.position;
 
-        transform.position = pos;
+            pos.x = Mathf.Clamp(pos.x, minX, maxX);
+            pos.y = Mathf.Clamp(pos.y, minY, maxY);
+
+            transform.position = pos;
+        }
     }
 }

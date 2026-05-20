@@ -1,66 +1,54 @@
+using System;
+using System.Diagnostics.Tracing;
+using Enemy;
+using EventChannel.concrete;
+using EventChannel.templates;
+using Inventory;
+using Unity.VisualScripting;
 using UnityEngine;
+using VContainer;
+using Random = UnityEngine.Random;
 
-public class AudioManager : MonoBehaviour
+namespace EventChannel.Audio_events
 {
-    [Header("Weapon Sounds")]
-    public AudioClip laserShootClip;
-    [Range(0f, 1f)] public float laserShootVolume = 0.4f;
-
-    public AudioClip heavyLaserShootClip;
-    [Range(0f, 1f)] public float heavyLaserShootVolume = 0.8f;
-
-    [Header("Item Sounds")]
-    public AudioClip itemPickupClip;
-    [Range(0f, 1f)] public float itemPickupVolume = 0.2f;
-
-    private void OnEnable()
+    public class AudioManager : MonoBehaviour
     {
-        AudioEvents.OnSoundRequested += HandleSoundRequest;
-    }
-
-    private void OnDisable()
-    {
-        AudioEvents.OnSoundRequested -= HandleSoundRequest;
-    }
-
-    private void HandleSoundRequest(AudioEvent audioEvent, Vector3 position)
-    {
-        switch (audioEvent)
+        public void OnItemPickupChannel(InventoryEventContext inventoryEventContext)
         {
-            case AudioEvent.LaserShoot:
-                PlayClip(laserShootClip, laserShootVolume, position);
-                break;
-
-            case AudioEvent.HeavyLaserShoot:
-                PlayClip(heavyLaserShootClip, heavyLaserShootVolume, position);
-                break;
-
-            case AudioEvent.ItemPickup:
-                PlayClip(itemPickupClip, itemPickupVolume, position);
-                break;
+            PlayClip(inventoryEventContext.itemType.pickUpSound, inventoryEventContext.itemType.pickUpSoundVolume, inventoryEventContext.position);
         }
-    }
 
-    private void PlayClip(AudioClip clip, float volume, Vector3 position)
-    {
-        if (clip == null) return;
+        public void OnFireChannel(EnemyStateContext enemyStateContext)
+        {
+            PlayClip(enemyStateContext.weapon.fireSound, enemyStateContext.weapon.fireVolume, enemyStateContext.position);
+        }
+        
+        public void OnLockOnChannel(EnemyStateContext enemyStateContext)
+        {
+            PlayClip(enemyStateContext.weapon.lockOnSound, enemyStateContext.weapon.lockOnVolume, enemyStateContext.position);
+        }
 
-        GameObject tempAudio = new GameObject("TempAudio");
-        tempAudio.transform.position = position;
+        private void PlayClip(AudioClip clip, float volume, Vector3 position)
+        {
+            if (!clip) return;
 
-        AudioSource source = tempAudio.AddComponent<AudioSource>();
+            GameObject tempAudio = new GameObject("TempAudio");
+            tempAudio.transform.position = position;
 
-        source.clip = clip;
-        source.volume = volume;
+            AudioSource source = tempAudio.AddComponent<AudioSource>();
 
-        // Slight randomization
-        source.pitch = Random.Range(0.96f, 1.04f);
+            source.clip = clip;
+            source.volume = volume;
 
-        // 2D sound
-        source.spatialBlend = 0f;
+            // Slight randomization
+            source.pitch = Random.Range(0.96f, 1.04f);
 
-        source.Play();
+            // 2D sound
+            source.spatialBlend = 0f;
 
-        Destroy(tempAudio, clip.length);
+            source.Play();
+
+            Destroy(tempAudio, clip.length);
+        }
     }
 }

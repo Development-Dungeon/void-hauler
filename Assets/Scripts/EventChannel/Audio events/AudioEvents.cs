@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 
-public static class AudioEvents
+namespace EventChannel.Audio_events
 {
-    public static Action<AudioEvent, Vector3> OnSoundRequested;
-
-    public static void RequestSound(AudioEvent audioEvent, Vector3 position)
+    public static class AudioEvents
     {
-        OnSoundRequested?.Invoke(audioEvent, position);
+        public static Action<AudioEvent, Vector3> OnSoundRequested;
+
+        public static void RequestSound(AudioEvent audioEvent, Vector3 position)
+        {
+            OnSoundRequested?.Invoke(audioEvent, position);
+        }
     }
 }

@@ -14,7 +14,7 @@ THE SOFTWARE.
 #if UNITY_2019_1_OR_NEWER
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     public static partial class Shortcuts
     {

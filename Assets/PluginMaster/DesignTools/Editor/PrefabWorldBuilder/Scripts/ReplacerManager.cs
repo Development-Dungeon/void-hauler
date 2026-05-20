@@ -12,10 +12,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-using UnityEngine;
 using System.Linq;
+using PluginMaster.DesignTools.Editor.Common.Scripts;
+using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     #region DATA & SETTINGS
     [System.Serializable]

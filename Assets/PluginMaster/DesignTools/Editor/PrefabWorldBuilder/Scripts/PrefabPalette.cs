@@ -11,10 +11,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
+
 using System.Linq;
+using PluginMaster.DesignTools.Editor.Common.Scripts;
 using UnityEngine;
 
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     public class PrefabPalette : UnityEditor.EditorWindow, ISerializationCallbackReceiver
     {
@@ -1008,7 +1010,7 @@ namespace PluginMaster
 
         private void CreateBrushFromFolder()
         {
-            var items = PluginMaster.DropUtils.GetFolderItems();
+            var items = DropUtils.GetFolderItems();
             if (items == null) return;
             RegisterUndo("Add Brush");
             var brush = new MultibrushSettings(items[0].obj, PaletteManager.selectedPalette);
@@ -1026,7 +1028,7 @@ namespace PluginMaster
 
         private void CreateBrushFromEachPrefabInFolder()
         {
-            var items = PluginMaster.DropUtils.GetFolderItems();
+            var items = DropUtils.GetFolderItems();
             if (items == null) return;
             foreach (var item in items)
             {

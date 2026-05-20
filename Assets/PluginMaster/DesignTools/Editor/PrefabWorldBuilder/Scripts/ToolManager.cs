@@ -11,9 +11,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-using System;
 
-namespace PluginMaster
+using System;
+using PluginMaster.DesignTools.Editor.Common.Scripts;
+
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     [UnityEditor.InitializeOnLoad]
     public static class ToolManager

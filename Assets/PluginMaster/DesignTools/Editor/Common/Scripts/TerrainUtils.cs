@@ -13,7 +13,8 @@ THE SOFTWARE.
 */
 
 using UnityEngine;
-namespace PluginMaster
+
+namespace PluginMaster.DesignTools.Editor.Common.Scripts
 {
     public static class TerrainUtils
     {

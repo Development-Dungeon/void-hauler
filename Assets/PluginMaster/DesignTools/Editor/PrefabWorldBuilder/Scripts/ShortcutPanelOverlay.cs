@@ -12,8 +12,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 #if UNITY_2022_2_OR_NEWER
-using UnityEngine;
-namespace PluginMaster
+namespace PluginMaster.DesignTools.Editor.PrefabWorldBuilder.Scripts
 {
     [UnityEditor.Overlays.Overlay(typeof(UnityEditor.SceneView), displayName: "PWB Shortcuts",
     defaultDisplay: false, defaultDockZone = UnityEditor.Overlays.DockZone.Floating)]
