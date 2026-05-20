@@ -15,44 +15,48 @@ namespace Inventory
     }
     public class WorldPopUpController : MonoBehaviour
     {
-        public static WorldPopUpController Instance;
+        public Inventory playerInventory;
         public WorldPopUp popUpPrefab;
         public GameObject canvas;
         public float popUpDuration = 1f;
         private IObjectResolver _resolver;
 
         [SerializeField] public List<TierToColor> TierToColors = new();
+        
 
         [Inject]
         public void Construct(IObjectResolver objectResolver)
         {
             _resolver = objectResolver;
         }
-        
-        private void Awake()
-        {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(this.gameObject);
-                return;
-            }
-            Instance = this;
-        }
 
-        public void AddEvent(Item entryItem, Vector3 transformPosition)
+        private void OnItemAdded(InventoryEventContext obj)
         {
+            if (obj == null || obj.item == null || obj.position == null) return;
+            
+            var spawnPosition = obj.position ?? Vector3.zero;
+            
             var itemColor = TierToColors.FirstOrDefault(ttc =>
             {
-                var pickedUpItem = entryItem.itemType.GetType();
+                var pickedUpItem = obj.item.GetType();
                 var tierToFilter = ttc.ItemType.GetType();
                 return pickedUpItem == tierToFilter || tierToFilter.IsAssignableFrom(pickedUpItem);
             })?.Color ?? Color.red;
                 
             var popup = _resolver.Instantiate(popUpPrefab, canvas.transform);
-            popup.Setup(entryItem.itemType.name, itemColor, transformPosition);
+            popup.Setup(obj.item.name, itemColor, spawnPosition);
+            
             Destroy(popup.gameObject, popUpDuration);
-
+            
         }
-        
+
+        private void Start()
+        {
+            playerInventory.OnItemAdded += OnItemAdded;
+        }
+        private void OnDestroy()
+        {
+            playerInventory.OnItemAdded -= OnItemAdded;
+        }
     }
 }

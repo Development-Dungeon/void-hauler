@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Inventory;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Debris
@@ -20,15 +19,7 @@ namespace Debris
             if (inventory == null)
                 return;
 
-            inventoryEntries.RemoveAll(entry =>
-            {
-                var added = inventory.AddItem(entry.item, entry.count);
-                if (added)
-                    WorldPopUpController.Instance.AddEvent(entry.item, transform.position);
-
-
-                return added;
-            });
+            inventoryEntries.RemoveAll(entry => inventory.AddItem(entry.item, entry.count, gameObject.transform.position));
 
             if (inventoryEntries.Count == 0 && destroyOnTouch)
                 Destroy(gameObject);

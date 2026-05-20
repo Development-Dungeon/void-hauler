@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
@@ -5,10 +6,25 @@ using VContainer;
 
 namespace Inventory
 {
+    public class InventoryEventContext
+    {
+        public ItemType item;
+        public float quantity;
+        public Vector3? position;
+
+        public InventoryEventContext(ItemType item, float quantity, Vector3? position)
+        {
+            this.item = item;
+            this.quantity = quantity;
+            this.position = position;
+        }
+    }
     public class Inventory : MonoBehaviour
     {
         public InventoryData inventoryDataTemplate;
         private InventoryData _inventoryData;
+        
+        public event Action<InventoryEventContext> OnItemAdded;
 
         [Inject]
         public void Construct(IObjectResolver resolver)
@@ -27,19 +43,20 @@ namespace Inventory
             AudioEvents.RequestSound(
                 AudioEvent.ItemPickup,
                 transform.position);
+
+            var added = _inventoryData.Add(item.itemType, quantity);
             
-            var inventoryEntry = _inventoryData.items.Find(entry => Equals(entry.item, item));
-            if (inventoryEntry != null)
-            {
-                inventoryEntry.count++;
-                return true;
-            }
+            if(added)
+                OnItemAdded?.Invoke(new InventoryEventContext(item.itemType, quantity, null));
+            return added;
+        }
 
-            if (_inventoryData.items.Count >= _inventoryData.maxInventorySize)
-                return false;
-
-            _inventoryData.items.Add(new InventoryEntry(item));
-            return true;
+        public bool AddItem(Item entryItem, float entryCount, Vector3 fromLocation)
+        {
+            var added = AddItem(entryItem, entryCount);
+            if(added)
+                OnItemAdded?.Invoke(new InventoryEventContext(entryItem.itemType, entryCount, fromLocation));
+            return added;
         }
     }
 }
