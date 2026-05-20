@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Debris;
 using player;
@@ -47,6 +48,8 @@ namespace Enemy
         private StateMachine stateMachine;
         private Vector3 _startingPosition;
         public bool drawGizmos = true;
+
+        public static event Action<GameObject> OnFireEvent;
 
  
         private void Awake()
@@ -108,7 +111,7 @@ namespace Enemy
                 ;
 
             engageStateNode
-                .OnEnter(null)
+                .OnEnter(() => OnFireEvent?.Invoke(gameObject))
                 .OnExit(null)
                 .AddPerform(PerformEngage)
                 .AddTransition(reloadStateNode, () =>

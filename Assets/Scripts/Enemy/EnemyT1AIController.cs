@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using Debris;
+using EventChannel.concrete;
 using player;
 using UnityEngine;
 using Utility;
@@ -14,7 +16,8 @@ namespace Enemy
         
         [Header("Enemy Movement And Data")]
         [Get] public CirclePatrol circlePatrol;
-        public BulletController bulletPrefab; 
+        public BulletController bulletPrefab;
+        
         [Tooltip("degrees per second")]
         public float rotationSpeed = 90;
         [Header("Patrol")]
@@ -39,6 +42,8 @@ namespace Enemy
         private StateMachine stateMachine;
         private Vector3 _startingPosition;
         public bool drawGizmos = true;
+
+        public static event Action<GameObject> onFireEvent;
 
         private void OnValidate()
         {
@@ -83,6 +88,7 @@ namespace Enemy
             
             var patrolStateNode = new StateNode(EnemyState.Patrol);
             var chaseStateNode = new StateNode(EnemyState.Chase);
+            var lockOnStateNode = new StateNode(EnemyState.LockOn);
             var engageStateNode = new StateNode(EnemyState.Engage);
             var toPatrolStateNode = new StateNode(EnemyState.ToPatrol);
 
@@ -101,7 +107,7 @@ namespace Enemy
                 .OnEnter(null)
                 .OnExit(null)
                 .AddPerform(PerformChase)
-                .AddTransition(engageStateNode, () =>
+                .AddTransition(lockOnStateNode, () =>
                 {
                     var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
                     return distance < attackRange;
@@ -115,11 +121,32 @@ namespace Enemy
                 })
                 ;
 
-            engageStateNode
+            lockOnStateNode
                 .OnEnter(() => _attackTimer.Start())
                 .OnExit(() => _attackTimer.Pause())
-                .AddPerform(PerformEngage)
+                .AddPerform(null)
+                .AddTransition(toPatrolStateNode, () =>
+                {
+                    var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
+                    return distance > chaseRange;
+                })
+                .AddTransition(chaseStateNode, () =>
+                {
+                    var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
+                    return distance < chaseRange && distance > attackRange;
+                })
+                .AddTransition(lockOnStateNode, () => _attackTimer.IsRunning)
                 .AddTransition(engageStateNode, () =>
+                {
+                    var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
+                    return distance < attackRange;
+                });
+
+            engageStateNode
+                .OnEnter(() => onFireEvent?.Invoke(gameObject))
+                .OnExit(null)
+                .AddPerform(PerformEngage)
+                .AddTransition(lockOnStateNode, () =>
                     {
                         var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
                         return distance < attackRange;
@@ -156,24 +183,9 @@ namespace Enemy
         private void PerformEngage()
         {
             LookAt(playerMovementController.transform.position);
-            if (_attackTimer.IsFinished)
-            {
-                Instantiate(bulletPrefab, transform.position, Quaternion.identity)
-                    .Init(playerMovementController.transform.position);
-                _attackTimer.Reset(attackCooldownTimer);
-                _attackTimer.Start();
-                
-                // AUDIO EVENT
-                AudioEvents.RequestSound(
-                    AudioEvent.LaserShoot,
-                    transform.position);
-            }
             
-            else if (!_attackTimer.IsRunning)
-            {
-                _attackTimer.Reset(attackCooldownTimer);
-                _attackTimer.Start();
-            }
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity)
+                .Init(playerMovementController.transform.position);
         
         }
         

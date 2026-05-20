@@ -1,44 +1,46 @@
+using System;
+using Enemy;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
+[Serializable]
+public class AudiotEventMapper {
+    public AudioClip audioClip;
+    [Range(0f, 1f)] public float volume;
+}
 public class AudioManager : MonoBehaviour
 {
-    [Header("Weapon Sounds")]
-    public AudioClip laserShootClip;
-    [Range(0f, 1f)] public float laserShootVolume = 0.4f;
+    public AudiotEventMapper laserShooterMapper;
+    public AudiotEventMapper heavyLaserShooterMapper;
+    public AudiotEventMapper itemPickupMapper;
+    public Inventory.Inventory playerInventory;
 
-    public AudioClip heavyLaserShootClip;
-    [Range(0f, 1f)] public float heavyLaserShootVolume = 0.8f;
-
-    [Header("Item Sounds")]
-    public AudioClip itemPickupClip;
-    [Range(0f, 1f)] public float itemPickupVolume = 0.2f;
-
-    private void OnEnable()
+    private void Awake()
     {
-        AudioEvents.OnSoundRequested += HandleSoundRequest;
+        EnemyT1AIController.onFireEvent += OnFireLaserShoot;
+        EnemyT2AIController.OnFireEvent += OnFireHeavyLaserShoot;
     }
 
-    private void OnDisable()
+    private void Start()
     {
-        AudioEvents.OnSoundRequested -= HandleSoundRequest;
+        if (!playerInventory) return;
+        playerInventory.OnItemAdded += OnItemAdded;
     }
 
-    private void HandleSoundRequest(AudioEvent audioEvent, Vector3 position)
+    private void OnItemAdded(GameObject obj)
     {
-        switch (audioEvent)
-        {
-            case AudioEvent.LaserShoot:
-                PlayClip(laserShootClip, laserShootVolume, position);
-                break;
+        PlayClip(itemPickupMapper.audioClip, itemPickupMapper.volume, obj.transform.position);
+    }
 
-            case AudioEvent.HeavyLaserShoot:
-                PlayClip(heavyLaserShootClip, heavyLaserShootVolume, position);
-                break;
 
-            case AudioEvent.ItemPickup:
-                PlayClip(itemPickupClip, itemPickupVolume, position);
-                break;
-        }
+
+    private void OnFireHeavyLaserShoot(GameObject obj)
+    {
+        PlayClip(heavyLaserShooterMapper.audioClip, heavyLaserShooterMapper.volume, obj.transform.position);
+    }
+    private void OnFireLaserShoot(GameObject obj)
+    {
+        PlayClip(laserShooterMapper.audioClip, laserShooterMapper.volume, obj.transform.position);
     }
 
     private void PlayClip(AudioClip clip, float volume, Vector3 position)
@@ -62,5 +64,12 @@ public class AudioManager : MonoBehaviour
         source.Play();
 
         Destroy(tempAudio, clip.length);
+    }
+    
+    private void OnDestroy()
+    {
+        EnemyT1AIController.onFireEvent -= OnFireLaserShoot;
+        EnemyT2AIController.OnFireEvent -= OnFireHeavyLaserShoot;
+        playerInventory.OnItemAdded -= OnItemAdded;
     }
 }
