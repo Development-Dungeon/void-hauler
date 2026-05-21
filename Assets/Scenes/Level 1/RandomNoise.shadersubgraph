@@ -287,8 +287,8 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "x": 12.0,
-        "y": 7423.0,
+        "x": 80.0,
+        "y": 5124.0,
         "z": 0.0,
         "w": 0.0
     }
@@ -484,9 +484,9 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": -1157.0,
-            "y": -29.999998092651368,
+            "y": -30.0,
             "width": 91.0,
-            "height": 33.999996185302737
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -532,7 +532,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 41232.0,
+    "m_Value": 18512.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
