@@ -23,7 +23,7 @@ public class PlayerCameraZoom2D : MonoBehaviour
             return;
 
         // Get player speed
-        float speed = rb.velocity.magnitude;
+        float speed = rb.linearVelocity.magnitude;
 
         // Convert speed into 0-1 value
         float speedPercent = Mathf.InverseLerp(minSpeed, maxSpeed, speed);

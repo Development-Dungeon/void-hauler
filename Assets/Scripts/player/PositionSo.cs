@@ -10,11 +10,6 @@ namespace player
         public Vector3 defaultPosition;
         private readonly Stack<Vector3> _positions= new ();
 
-        private void OnEnable()
-        {
-            ClearStackManual();
-        }
-
         public Vector3 PopPositionOrDefault()
         {
             if (_positions.Count == 0)
@@ -30,9 +25,25 @@ namespace player
             Debug.Log("the stack count is" + _positions.Count);
         }
         
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        public static void ClearOnLoad() {
+            
+            var positions = Resources.FindObjectsOfTypeAll<PositionSo>();
+            if (positions == null) return;
+            foreach (var positionSo in positions)
+            {
+                positionSo.ClearStackManual();
+            }
+            
+        }
+        
 #if UNITY_EDITOR
         [ContextMenu("Clear Stack")]
-        private void ClearStackManual() => _positions.Clear();
+        public void ClearStackManual()
+        {
+            Debug.Log("clearing player position stack");
+            _positions.Clear();
+        }
 #endif
     }
 }
