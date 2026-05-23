@@ -76,7 +76,7 @@ namespace Debris
         }
 
 
-        private Dictionary<Collider, DamageOnTouchController> _touches = new();
+        private Dictionary<Collider2D, DamageOnTouchController> _touches = new();
 
         private void Update()
         {
@@ -88,7 +88,7 @@ namespace Debris
 
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             
             var health = other.gameObject.GetComponent<Health>();
@@ -111,7 +111,7 @@ namespace Debris
             _touches.Clear();
         }
 
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit2D(Collider2D other)
         {
             _touches.Remove(other);
         }
