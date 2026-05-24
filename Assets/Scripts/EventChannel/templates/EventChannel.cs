@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EventChannel.templates
 {
-    public abstract class EventChannel<T> : ScriptableObject
+    public class EventChannel<T> : ScriptableObject
     {
         private readonly HashSet<EventListener<T>> _observers = new();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Attributes;
 using Inventory;
+using player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,6 +36,8 @@ namespace Upgrades
         public TMP_Text merchantName;
         public TMP_Text merchantDescription;
         public Image merchantImage;
+        
+        public PositionSo positionSo;
 
 
         private void Start()

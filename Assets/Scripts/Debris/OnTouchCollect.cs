@@ -10,6 +10,12 @@ namespace Debris
         public List<InventoryEntry> inventoryEntries;
         public bool destroyOnTouch;
 
+        public void SetQuantity(int quantity)
+        {
+            if (inventoryEntries == null) return;
+            inventoryEntries.ForEach(entry => entry.count = quantity);
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (inventoryEntries == null || inventoryEntries.Count == 0)

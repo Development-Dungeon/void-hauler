@@ -11,5 +11,12 @@ namespace EventChannel.templates
         private void Awake() => channel?.Register(this);
         private void OnDestroy() => channel?.Deregister(this);
         public void Raise(T value) => unityEvent?.Invoke(value);
+
+        public void SetChannel(EventChannel<T> newChannel)
+        {
+            channel?.Deregister(this);
+            channel = newChannel;
+            channel?.Register(this);
+        }
     }
 }

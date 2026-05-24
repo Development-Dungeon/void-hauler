@@ -47,6 +47,7 @@ namespace Enemy
         private StateMachine stateMachine;
         private Vector3 _startingPosition;
         public bool drawGizmos = true;
+        [Get] public Collider2D selfCollider;
 
  
         private void Awake()
@@ -165,7 +166,7 @@ namespace Enemy
                 transform.position);
             
             Instantiate(bulletPrefab, transform.position, Quaternion.identity)
-                .Init(playerMovementController.transform.position);
+                .Init(playerMovementController.transform.position, selfCollider);
         }
         
         

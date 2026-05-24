@@ -10,27 +10,47 @@ public class BulletController : MonoBehaviour
     public float speed;
     public float damage;
     public float maxTimeAlive = 30f;
+    public bool continuePastMouseTarget;
     [Get] public DamageOnTouch damageOnTouch;
     private CountdownTimer _maxLifeTimer;
+    private Vector3 _initialVector;
 
 
-    public void Init(Vector3 transformPosition)
+    public void Init(Vector3 transformPosition, Collider2D ownerCollider)
     {
         targetPos = transformPosition;
+        _initialVector = (targetPos - transform.position).normalized;
+        
         _maxLifeTimer = new CountdownTimer(maxTimeAlive);
-        _maxLifeTimer.OnTimerStop += () => Destroy(gameObject);
+        _maxLifeTimer.OnTimerStop += DestroySelf;
         _maxLifeTimer.Start();
-        damageOnTouch.Init(damage, true);
+        damageOnTouch.Init(damage, true, ownerCollider);
+    }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     private void Update()
     {
-        var distance = Vector3.Distance(transform.position, targetPos);
-        if(distance < .00001f) Destroy(gameObject);
+        _maxLifeTimer.Tick(Time.deltaTime);
+        if (continuePastMouseTarget)
+        {
+            Debug.Log($"Bullet {gameObject.GetInstanceID()} | Speed: {speed} | _initVector: {_initialVector}");
+            var nextPosition= transform.position + (_initialVector * (Time.deltaTime * speed));
+            LookAt(nextPosition);
+            transform.position = nextPosition;
+        }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-            LookAt(targetPos);
+            var distance = Vector3.Distance(transform.position, targetPos);
+            if(distance < .00001f) Destroy(gameObject);
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+                LookAt(targetPos);
+            }
         }
     }
     
