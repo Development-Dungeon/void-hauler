@@ -2,13 +2,14 @@ using System;
 using EventChannel.concrete;
 using UnityEngine;
 using UnityEngine.Events;
+using Utility;
 
 namespace Attributes
 {
     public class HealthEventBinder : MonoBehaviour
     {
         
-        public Health health;
+        [Get] public Health health;
         public FloatEventListener onHealthPercentageListener;
         public HealthEventListener onDeathListener;
         public HealthEventListener onAliveListener;
