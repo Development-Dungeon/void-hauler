@@ -25,7 +25,7 @@ namespace Debris
             if (inventory == null)
                 return;
 
-            inventoryEntries.RemoveAll(entry => inventory.AddItem(entry.item, entry.count, gameObject.transform.position));
+            inventoryEntries.RemoveAll(entry => inventory.AddItem(entry.item, gameObject.transform.position, entry.count));
 
             if (inventoryEntries.Count == 0 && destroyOnTouch)
                 Destroy(gameObject);

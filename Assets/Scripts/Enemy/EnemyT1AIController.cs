@@ -1,12 +1,23 @@
+using System;
 using System.Collections.Generic;
 using Debris;
+using EventChannel.Audio_events;
 using player;
 using UnityEngine;
 using Utility;
 
 namespace Enemy
 {
-    
+
+    public class EnemyStateChangeContext
+    {
+        public Vector3 Position;
+
+        public EnemyStateChangeContext(Vector3 position)
+        {
+            Position = position;
+        }
+    }
     public class EnemyT1AIController : MonoBehaviour
     {
         [Header("Player")]
@@ -41,33 +52,14 @@ namespace Enemy
         public bool drawGizmos = true;
         [Get] public Collider2D selfCollider;
 
+        // Events
+        public static event Action<EnemyStateChangeContext> OnEngageState;
+
         private void OnValidate()
         {
             _startingPosition = transform.position;
         }
         
-        private void OnDrawGizmos()
-        {
-            if (!drawGizmos) return;
-            DrawCircleAround(Color.white, _startingPosition, chaseRange);
-            DrawCircleAround(Color.red, transform.position, attackRange);
-        }
-
-        private void DrawCircleAround(Color colorToDraw, Vector3 attachPoint, float range)
-        {
-            // 1. Set the color
-            Gizmos.color = colorToDraw;
-
-            // 2. Set the Gizmo matrix to match the object's position/rotation, 
-            // but flatten the Z-axis to lock it to 2D
-            Gizmos.matrix = Matrix4x4.TRS(attachPoint, Quaternion.identity, new Vector3(1, 1, 0));
-
-            // 3. Draw a wire sphere at the center. It will render as a flat 2D circle.
-            Gizmos.DrawWireSphere(Vector3.zero, range);
-
-            // 4. Reset the matrix so it doesn't distort other gizmos
-            Gizmos.matrix = Matrix4x4.identity;
-        }
 
         private void Awake()
         {
@@ -84,6 +76,7 @@ namespace Enemy
             
             var patrolStateNode = new StateNode(EnemyState.Patrol);
             var chaseStateNode = new StateNode(EnemyState.Chase);
+            var lockOnStateNode = new StateNode(EnemyState.LockOn);
             var engageStateNode = new StateNode(EnemyState.Engage);
             var toPatrolStateNode = new StateNode(EnemyState.ToPatrol);
 
@@ -102,7 +95,7 @@ namespace Enemy
                 .OnEnter(null)
                 .OnExit(null)
                 .AddPerform(PerformChase)
-                .AddTransition(engageStateNode, () =>
+                .AddTransition(lockOnStateNode, () =>
                 {
                     var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
                     return distance < attackRange;
@@ -116,11 +109,35 @@ namespace Enemy
                 })
                 ;
 
-            engageStateNode
+            lockOnStateNode
                 .OnEnter(() => _attackTimer.Start())
                 .OnExit(() => _attackTimer.Pause())
-                .AddPerform(PerformEngage)
                 .AddTransition(engageStateNode, () =>
+                {
+                    if (_attackTimer.IsRunning) return false;
+                    
+                    var distance = Vector3.Distance(playerMovementController.transform.position, _startingPosition);
+                    return distance < attackRange;
+                })
+                .AddTransition(lockOnStateNode, () =>
+                {
+                    if (_attackTimer.IsFinished) return false;
+                    
+                    var distance = Vector3.Distance(playerMovementController.transform.position, _startingPosition);
+                    return distance < attackRange;
+                })
+                .AddTransition(chaseStateNode, () =>
+                {
+                    var distance = Vector3.Distance(playerMovementController.transform.position, _startingPosition);
+                    return distance > attackRange && distance < chaseRange;
+
+                });
+
+            engageStateNode
+                .OnEnter(() => OnEngageState?.Invoke(new EnemyStateChangeContext(transform.position)))
+                .OnExit(null)
+                .AddPerform(PerformEngage)
+                .AddTransition(lockOnStateNode, () =>
                     {
                         var distance = Vector3.Distance(playerMovementController.transform.position, transform.position);
                         return distance < attackRange;
@@ -157,25 +174,9 @@ namespace Enemy
         private void PerformEngage()
         {
             LookAt(playerMovementController.transform.position);
-            if (_attackTimer.IsFinished)
-            {
-                Instantiate(bulletPrefab, transform.position, Quaternion.identity)
-                    .Init(playerMovementController.transform.position, selfCollider );
-                _attackTimer.Reset(attackCooldownTimer);
-                _attackTimer.Start();
-                
-                // AUDIO EVENT
-                AudioEvents.RequestSound(
-                    AudioEvent.LaserShoot,
-                    transform.position);
-            }
             
-            else if (!_attackTimer.IsRunning)
-            {
-                _attackTimer.Reset(attackCooldownTimer);
-                _attackTimer.Start();
-            }
-        
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity)
+                .Init(playerMovementController.transform.position, selfCollider );
         }
         
         
@@ -212,6 +213,29 @@ namespace Enemy
             }
             
             stateMachine.PerformState();
+        }
+        
+        private void OnDrawGizmos()
+        {
+            if (!drawGizmos) return;
+            DrawCircleAround(Color.white, _startingPosition, chaseRange);
+            DrawCircleAround(Color.red, transform.position, attackRange);
+        }
+
+        private void DrawCircleAround(Color colorToDraw, Vector3 attachPoint, float range)
+        {
+            // 1. Set the color
+            Gizmos.color = colorToDraw;
+
+            // 2. Set the Gizmo matrix to match the object's position/rotation, 
+            // but flatten the Z-axis to lock it to 2D
+            Gizmos.matrix = Matrix4x4.TRS(attachPoint, Quaternion.identity, new Vector3(1, 1, 0));
+
+            // 3. Draw a wire sphere at the center. It will render as a flat 2D circle.
+            Gizmos.DrawWireSphere(Vector3.zero, range);
+
+            // 4. Reset the matrix so it doesn't distort other gizmos
+            Gizmos.matrix = Matrix4x4.identity;
         }
     }
 }

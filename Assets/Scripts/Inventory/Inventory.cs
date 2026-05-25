@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using EventChannel.Audio_events;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using VContainer;
@@ -38,24 +39,12 @@ namespace Inventory
                 _inventoryData = Instantiate(inventoryDataTemplate);
         }
 
-        public bool AddItem(Item item, float quantity = 1)
+        public bool AddItem(Item itemToAdd, Vector3? fromLocation, float quantity = 1)
         {
-            AudioEvents.RequestSound(
-                AudioEvent.ItemPickup,
-                transform.position);
-
-            var added = _inventoryData.Add(item.itemType, quantity);
+            var added = _inventoryData.Add(itemToAdd.itemType, quantity);
             
             if(added)
-                OnItemAdded?.Invoke(new InventoryEventContext(item.itemType, quantity, null));
-            return added;
-        }
-
-        public bool AddItem(Item entryItem, float entryCount, Vector3 fromLocation)
-        {
-            var added = AddItem(entryItem, entryCount);
-            if(added)
-                OnItemAdded?.Invoke(new InventoryEventContext(entryItem.itemType, entryCount, fromLocation));
+                OnItemAdded?.Invoke(new InventoryEventContext(itemToAdd.itemType, quantity, fromLocation));
             return added;
         }
     }

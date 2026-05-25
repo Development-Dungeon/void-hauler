@@ -1,66 +1,92 @@
+using System;
+using Enemy;
+using Inventory;
 using UnityEngine;
+using VContainer;
+using Random = UnityEngine.Random;
 
-public class AudioManager : MonoBehaviour
+namespace EventChannel.Audio_events
 {
-    [Header("Weapon Sounds")]
-    public AudioClip laserShootClip;
-    [Range(0f, 1f)] public float laserShootVolume = 0.4f;
-
-    public AudioClip heavyLaserShootClip;
-    [Range(0f, 1f)] public float heavyLaserShootVolume = 0.8f;
-
-    [Header("Item Sounds")]
-    public AudioClip itemPickupClip;
-    [Range(0f, 1f)] public float itemPickupVolume = 0.2f;
-
-    private void OnEnable()
+    [Serializable]
+    public class AudiMapper
     {
-        AudioEvents.OnSoundRequested += HandleSoundRequest;
-    }
+        public AudioClip audioClip;
+        [Range(0,1)]
+        public float volume;
 
-    private void OnDisable()
-    {
-        AudioEvents.OnSoundRequested -= HandleSoundRequest;
-    }
-
-    private void HandleSoundRequest(AudioEvent audioEvent, Vector3 position)
-    {
-        switch (audioEvent)
+        public AudiMapper(AudioClip audioClip, float volume)
         {
-            case AudioEvent.LaserShoot:
-                PlayClip(laserShootClip, laserShootVolume, position);
-                break;
-
-            case AudioEvent.HeavyLaserShoot:
-                PlayClip(heavyLaserShootClip, heavyLaserShootVolume, position);
-                break;
-
-            case AudioEvent.ItemPickup:
-                PlayClip(itemPickupClip, itemPickupVolume, position);
-                break;
+            this.audioClip = audioClip;
+            this.volume = volume;
         }
     }
-
-    private void PlayClip(AudioClip clip, float volume, Vector3 position)
+    public class AudioManager : MonoBehaviour
     {
-        if (clip == null) return;
+        [Header("Weapon Sounds")] 
+        public AudiMapper laserShootClip;
+        public AudiMapper heavyLaserShootClip;
 
-        GameObject tempAudio = new GameObject("TempAudio");
-        tempAudio.transform.position = position;
+        [Header("Item Sounds")] 
+        public AudiMapper itemPickupClip;
+        
+        [Header("Sources")]
+        [Inject]
+        [SerializeField] 
+        private Inventory.Inventory playerInventory;
 
-        AudioSource source = tempAudio.AddComponent<AudioSource>();
 
-        source.clip = clip;
-        source.volume = volume;
+        private void Start()
+        {
+            playerInventory.OnItemAdded += OnItemAdded;
+            EnemyT1AIController.OnEngageState += OnLaserShoot;
+            EnemyT2AIController.OnEngageState += OnHeavyLaserShoot;
+        }
+        
+        private void OnDestroy()
+        {
+            playerInventory.OnItemAdded -= OnItemAdded;
+            EnemyT1AIController.OnEngageState -= OnLaserShoot;
+            EnemyT2AIController.OnEngageState -= OnHeavyLaserShoot;
+        }
 
-        // Slight randomization
-        source.pitch = Random.Range(0.96f, 1.04f);
+        private void OnHeavyLaserShoot(EnemyStateChangeContext obj)
+        {
+            PlayClip(heavyLaserShootClip.audioClip, heavyLaserShootClip.volume, obj.Position);
+        }
+        
+        private void OnLaserShoot(EnemyStateChangeContext obj)
+        {
+            PlayClip(laserShootClip.audioClip, laserShootClip.volume, obj.Position);
+        }
 
-        // 2D sound
-        source.spatialBlend = 0f;
+        private void OnItemAdded(InventoryEventContext obj)
+        {
+            if (obj.position == null) return;
+            
+            PlayClip(itemPickupClip.audioClip, itemPickupClip.volume, obj.position.Value);
+        }
 
-        source.Play();
+        private void PlayClip(AudioClip clip, float volume, Vector3 position)
+        {
+            if (!clip) return;
 
-        Destroy(tempAudio, clip.length);
+            GameObject tempAudio = new GameObject("TempAudio");
+            tempAudio.transform.position = position;
+
+            AudioSource source = tempAudio.AddComponent<AudioSource>();
+
+            source.clip = clip;
+            source.volume = volume;
+
+            // Slight randomization
+            source.pitch = Random.Range(0.96f, 1.04f);
+
+            // 2D sound
+            source.spatialBlend = 0f;
+
+            source.Play();
+
+            Destroy(tempAudio, clip.length);
+        }
     }
 }

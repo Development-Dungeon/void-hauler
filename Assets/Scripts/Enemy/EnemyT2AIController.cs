@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using Debris;
+using EventChannel.Audio_events;
 using player;
 using UnityEngine;
 using UnityEngine.AI;
@@ -49,6 +51,9 @@ namespace Enemy
         public bool drawGizmos = true;
         [Get] public Collider2D selfCollider;
 
+        
+        // Events
+        public static event Action<EnemyStateChangeContext> OnEngageState;
  
         private void Awake()
         {
@@ -109,7 +114,7 @@ namespace Enemy
                 ;
 
             engageStateNode
-                .OnEnter(null)
+                .OnEnter(() => OnEngageState?.Invoke(new EnemyStateChangeContext(transform.position)))
                 .OnExit(null)
                 .AddPerform(PerformEngage)
                 .AddTransition(reloadStateNode, () =>
@@ -161,10 +166,6 @@ namespace Enemy
         private void PerformEngage()
         {
             LookAt(playerMovementController.transform.position);
-            AudioEvents.RequestSound(
-                AudioEvent.HeavyLaserShoot,
-                transform.position);
-            
             Instantiate(bulletPrefab, transform.position, Quaternion.identity)
                 .Init(playerMovementController.transform.position, selfCollider);
         }
