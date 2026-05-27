@@ -463,6 +463,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 576283997257252331}
     m_Modifications:
+    - target: {fileID: 1009616294726889715, guid: 21680317aa7a5447085104e5733b6a12, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2768802823362981746, guid: 21680317aa7a5447085104e5733b6a12, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

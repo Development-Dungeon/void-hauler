@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utility;
@@ -17,6 +18,8 @@ namespace player
         public Camera mainCamera;
         [Get] 
         public Collider2D selfCollider;
+        
+        public event Action<Vector3> OnFire;
 
         private void OnEnable()
         {
@@ -60,6 +63,7 @@ namespace player
             Instantiate(bulletPrefab, transform.position, Quaternion.identity)
                 .Init(targetLocation, selfCollider);
         
+            OnFire?.Invoke(transform.position);
         }
     }
 }

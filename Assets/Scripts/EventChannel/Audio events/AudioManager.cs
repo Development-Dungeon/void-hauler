@@ -1,6 +1,7 @@
 using System;
 using Enemy;
 using Inventory;
+using player;
 using UnityEngine;
 using VContainer;
 using Random = UnityEngine.Random;
@@ -28,20 +29,29 @@ namespace EventChannel.Audio_events
 
         [Header("Item Sounds")] 
         public AudiMapper itemPickupClip;
-        
+
+        public AudiMapper playerGun;
         [Header("Sources")]
         [Inject]
         [SerializeField] 
         private Inventory.Inventory playerInventory;
-
+        [Inject]
+        [SerializeField] 
+        private PlayerGunController gunController;
 
         private void Start()
         {
             playerInventory.OnItemAdded += OnItemAdded;
             EnemyT1AIController.OnEngageState += OnLaserShoot;
             EnemyT2AIController.OnEngageState += OnHeavyLaserShoot;
+            gunController.OnFire += OnPlayerFire;
         }
-        
+
+        private void OnPlayerFire(Vector3 obj)
+        {
+            PlayClip(playerGun.audioClip, playerGun.volume, obj);
+        }
+
         private void OnDestroy()
         {
             playerInventory.OnItemAdded -= OnItemAdded;
